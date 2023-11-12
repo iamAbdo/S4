@@ -10,6 +10,11 @@ body,html{
 
 header{
     background-color: #1d2b3a;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+    min-height: 50px;
 }
 
 a {
@@ -17,10 +22,6 @@ a {
     color: white;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-}
 
 .left-side {
     display: flex;
@@ -34,8 +35,8 @@ a {
 }
 
 .logo img {
-    height: 10vh;
-    width: auto;
+    height: 6vh;
+    min-height: 30px;
     background-color: #fff;
     border: 2px solid black;
     border-radius: 10px;
