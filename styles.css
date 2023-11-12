@@ -5,6 +5,7 @@
 }
 
 body,html{
+    font-family: 'Rubik', sans-serif;
     padding: 0px;
     margin: 0px;
 }
@@ -33,6 +34,7 @@ a {
 .logo {
     display: flex;
     gap: 10px;
+    font-weight: bold;
 }
 
 .logo img {
@@ -52,6 +54,12 @@ a {
 .nav-links a:hover {
     border: 2px solid #fff;
     border-radius: 10px;
+}
+
+.account a{
+    background-color: #000;
+    border-radius: 10px;
+    padding: 0.5vw;
 }
 
 /* main page */
