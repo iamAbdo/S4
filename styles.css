@@ -8,6 +8,15 @@ body,html{
     margin: 0px;
 }
 
+header{
+    background-color: #1d2b3a;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
