@@ -85,7 +85,7 @@ a {
     display: flex;
     flex-direction: column; /* Stack the items vertically */
     align-items: center; 
-    margin: 20px;
+    margin:  5vh 2vw ;
     border: 2px solid #fff;
     border-radius: 2vw;
     position: relative; /* bach ma yro7ch el title fo9ha ??? */
@@ -139,7 +139,43 @@ button {
     cursor: pointer;
 }
 
+/* Hotel css */
 
+.hotel-section{
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; 
+    margin:  10vh 2vw 5vh 2vw;
+    border: 2px solid #fff;
+    border-radius: 2vw;
+    position: relative; /* bach ma yro7ch el title fo9ha ??? */
+}
+
+.hotel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hotel-square {
+    width: 20%; /* Adjust as needed */
+    background: #f2f2f2;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.hotel-image img {
+    width: calc(100% - 4px);
+    padding: 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hotel-info {
+    padding: 10px;
+    text-align: center;
+}
 
 /* register page */
 .register {
