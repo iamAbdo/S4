@@ -39,17 +39,19 @@ a {
 }
 
 .logo img {
-    height: 6vh;
+    height: 10vh;
     min-height: 30px;
     width: auto;
 }
 
 .logo_name a{
     display: flex;
+    
 }
 
 .logo_name div{
     color: #0a9c9b;
+    transform: translateY(5px);
 }
 
 .nav-links{
@@ -116,7 +118,7 @@ a {
     border-radius: 20px;
     margin: 10px;
     background-image: url("./Images/Dubai.jpg");
-    background-size: contain;
+    background-size: cover;
 }
 
 .destination-image img {

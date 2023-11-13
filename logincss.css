@@ -6,12 +6,58 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: #23242a;
 }
+
+/* header */
+header{
+  background-color: #23242a;
+  border-bottom: 3px solid #1c1c1c;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+  min-height: 50px;
+}
+
+.logo img {
+  height: 10vh;
+  min-height: 30px;
+  width: auto;
+}
+
+a {
+text-decoration: none;
+color: black;
+}
+
+
+.left-side {
+display: flex;
+padding: 0px;
+margin: 0px;
+}
+
+.logo {
+display: flex;
+gap: 10px;
+font-weight: bold;
+align-items: center;
+}
+
+.logo_name a{
+display: flex;
+}
+
+.logo_name div{
+color: #0a9c9b;
+transform: translateY(5px);
+}
+
+/* sign in box */
 .box {
   position: relative;
   width: 380px;
@@ -19,6 +65,8 @@ body {
   background: #1c1c1c;
   border-radius: 8px;
   overflow: hidden;
+  left: calc(50% - 190px);
+  margin-top: 50px;
 }
 .box::before {
   content: "";
