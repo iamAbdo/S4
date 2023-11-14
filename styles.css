@@ -81,6 +81,36 @@ a {
 
 /* main page */
 
+img[usemap], map area[shape]{
+    outline-color: #F00;
+}
+
+#world-map {
+    position: relative;
+    width: 100%;
+    display: flex; /* Center the map horizontally */
+    justify-content: center;
+}
+  
+#world-map img {
+    padding: 0;
+    border: 5px solid white;
+    border-radius: 10px;
+    z-index: 1;
+    display: block; /* Treat the image as a block-level element */
+}
+  
+area {
+    position: absolute;
+    z-index: 2; /* Set a higher z-index for the areas */
+}
+  
+/* Define the border properties for the hover effect */
+area:hover {
+    outline: 2px solid white;
+}
+  
+  
 /* destinations */
 
 .destination-section{
