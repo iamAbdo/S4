@@ -59,6 +59,10 @@ a {
     height: 10vh;
     min-height: 30px;
     width: auto;
+    transition: 0.3s;
+}
+.logo img:hover {
+    transform: rotate(180);
 }
 
 .logo_name a{
