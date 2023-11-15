@@ -1,62 +1,54 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="sign up.css">
+    <title>Sign Up</title>
 </head>
 <body>
-
-    <header class="Header">
+    <header>
         <div class="left-side">
-
-        <div class="logo">
-            <img src="./Images/logo-removebg-preview.png" alt="logo" class="logo_img">
-            <div class="logo_name">
-                <a href="index.html">Travel <div>Agent</div></a>
+            <div class="logo">
+                <img src="votre_logo.png" alt="Logo">
+                <div class="logo_name">
+                    <a href="#"><div>Your Logo Name</div></a>
+                </div>
             </div>
-        </div>
-
-        <div class="nav-links">
-            <a href="https://www.messenger.com/" target="_blank">Main</a>
-            <a href="https://www.youtube.com/" target="_blank">Hotels</a>
-            <a href="./index.html">Destinatios</a>
-            <a href="./settings.html">Settings</a>
-        </div>
-
-        </div>
-
-        <div class="right-side">
-
-        <div class="account">
-            <a href="./register.html">Register</a>
-            <a href="./signIn.html">Sign in</a>
-        </div>
-        
         </div>
     </header>
 
-    <div class="app">
-        <h3>Sign in or create an account</h3>
-        <form class="register">
-            <div class="login-input" required="required">
-                <input type="text">
-                <span>First Name</span>
-            </div>
-            <div class="login-input" required="required">
-                <input type="text">
-                <span>Last Name</span>
-            </div>
-            <div class="login-input">
-                <input type="email" required="required">
-                <span>Email</span>
-            </div>
-            <div class="login-input" required="required">
-                <input type="email">
-                <span>Confirm Email</span>
-            </div>
-        </form>
+    <div class="box">
+        <div class="form">
+            <h2>Sign Up</h2>
+            <form action="#" method="post">
+                <div class="inputBox">
+                    <input type="text" name="username" required>
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" required>
+                    <span>Email</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" required>
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="confirm_password" required>
+                    <span>Confirm Password</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">Already have an account?</a>
+                </div>
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
     </div>
-
 </body>
 </html>
