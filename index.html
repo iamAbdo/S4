@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <div class="background-image"></div>
+    <div class="overlay"></div>
     <!-- Header -->
     <header class="Header">
             <div class="left-side">
@@ -38,8 +40,23 @@
             </div>
     </header>
 
-    <!-- Main front page text -->
+    <!-- Script ta3 background ta3 header-->
+    <script>
+        // JavaScript for changing header background on scroll
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.Header');
+            const scrollPosition = window.scrollY;
 
+            // Adjust this value based on when you want the background to change
+            if (scrollPosition > 1) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <!-- Main front page text -->
+    
     <!-- Main Content -->
     <div class="main-content">
         <div class="company-description">
@@ -229,6 +246,8 @@
         choose country on globe
 
     -->
+    <div class="background2-image"></div>
+    <div class="overlay2"></div>
 
 </body>
 </html>
