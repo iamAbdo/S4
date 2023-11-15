@@ -59,14 +59,13 @@ transform: translateY(5px);
 
 /* sign in box */
 .box {
-  position: relative;
-  width: 380px;
-  height: 420px;
-  background: #1c1c1c;
-  border-radius: 8px;
-  overflow: hidden;
-  left: calc(50% - 190px);
-  margin-top: 50px;
+    position: relative;
+    width: 380px; /* Ajustez la largeur selon vos besoins */
+    height: 570px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 50px auto; /* Centrez le formulaire sur la page */
 }
 .box::before {
   content: "";
