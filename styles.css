@@ -81,6 +81,35 @@ a {
 
 /* main page */
 
+/* map location selected */
+
+#overlay-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* map stuff */
+#world-map {
+    position: relative;
+    width: 100%;
+    display: flex; /* Center the map horizontally */
+    justify-content: center;
+}
+  
+#world-map img {
+    padding: 0;
+    border: 5px solid white;
+    border-radius: 10px;
+    z-index: 1;
+    display: block; /* Treat the image as a block-level element */
+}
+  
+  
 /* destinations */
 
 .destination-section{
