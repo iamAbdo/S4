@@ -94,6 +94,7 @@ a {
     background-color: #000;
     border-radius: 10px;
     padding: 0.5vw;
+    margin-right: 10px;
 }
 
 /* main page */
@@ -147,13 +148,12 @@ a {
 }
 
 .icon:hover {
-    transform: scale(1.2);
+    transform: scale(2);
 }
 
 .icon img {
     width: 40px; /* Adjust the size based on your design */
     height: 40px;
-    border-radius: 50%;
 }
 
 .icon p {
