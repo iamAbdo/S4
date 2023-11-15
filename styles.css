@@ -11,6 +11,8 @@ body,html{
     background-color: #222;
 }
 
+
+/* Main header */
 header{
     background-color: #FFF;
     display: flex;
@@ -81,6 +83,72 @@ a {
 
 /* main page */
 
+
+/* Main-containt */
+
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Content Styling */
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.company-description {
+    margin-bottom: 20px;
+}
+
+.company-description h2 {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(244, 244, 244, 0.3); 
+}
+
+.company-description p {
+    color:  #919191;
+    font-size: 24px;
+}
+
+.service-icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.icon {
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.icon img {
+    width: 40px; /* Adjust the size based on your design */
+    height: 40px;
+    border-radius: 50%;
+}
+
+.icon p {
+    margin-top: 10px;
+    color: #f4f4f4;
+}
+
+/* Additional Content Styling */
+.additional-content {
+    margin-top: 20px;
+    /* Add additional styling as needed */
+}
+
+
 /* map location selected */
 
 #overlay-text {
@@ -143,6 +211,7 @@ a {
 
 .destination-square {
     width: 20%; /* Adjust as needed */
+    height: 100%;
     background: #f2f2f2;
     border-radius: 20px;
     margin: 10px;
