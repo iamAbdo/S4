@@ -34,6 +34,7 @@ header{
     align-items: center;
     min-height: 50px;
     transition: 0.5s ease;
+    z-index: 1000;
 }
 .header.scrolled {
     background: #fff; /* Change the background color when scrolled */
