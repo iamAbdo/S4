@@ -25,6 +25,8 @@ body{
 /* Main header */
 header{
     background-color: transparent;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     height: 10vh;
@@ -35,13 +37,22 @@ header{
 }
 .header.scrolled {
     background: #fff; /* Change the background color when scrolled */
+    color: #000;
 }
 
-a {
+.header a {
     text-decoration: none;
-    color: black;
+    color: #FFF;
 }
 
+.header.scrolled a{
+    color: #000;
+}
+
+.header.scrolled .account a{
+    color: #FFF;
+    background-color: #000;
+}
 
 .left-side {
     display: flex;
@@ -94,8 +105,8 @@ a {
 }
 
 .account a{
-    color: #FFF;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
     border-radius: 10px;
     padding: 0.5vw;
     margin-right: 10px;
@@ -117,8 +128,8 @@ a {
 /* Main Content Styling */
 .main-content {
     max-width: 800px;
-    height: 90%;
-    margin: 20px auto;
+    height: 100%;
+    margin: 15vh auto;
     text-align: center;
 }
 
