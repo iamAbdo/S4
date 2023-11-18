@@ -1,6 +1,5 @@
 * {
     align-items: center;
-    font-size: calc(1vh + 1vw);
 }
 
 body{
@@ -326,11 +325,7 @@ button {
     border-radius: 10px;
     width: 100%;
 }
-span{
-    position: absolute;
-    padding-left: 10px;
-    left: 0;
-}
+
 
 /* footer */
 /*
