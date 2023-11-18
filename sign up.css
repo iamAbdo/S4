@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +11,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #23242a;
+  background: #b57a50;
 }
+
+/* normalment bayna ml asm */
 .background-image {
     position: absolute;
     top: 0;
@@ -23,27 +27,29 @@ body {
     z-index: -1;
     opacity: 0.6;
 }
+
+
 /* header */
-
-
 .logo img {
-  height: 10vh;
-  min-height: 30px;
-  width: auto;
+  height: 10vh; /* taille logo */
+  min-height: 30px;  /* taille minimum*/
+  width: auto; /* y5li meme aspect ratio */
 }
 
+/* les lien ida kayn (aslan makach fi hadi la page) */
 a {
 text-decoration: none;
 color:white;
 }
 
-
+/* 9smna el header l deux cotee doirte et gauche */
 .left-side {
 display: flex;
 padding: 0px;
 margin: 0px;
 }
 
+/* taille logo + company name */
 .logo {
 display: flex;
 gap: 10px;
@@ -51,6 +57,7 @@ font-weight: bold;
 align-items: center;
 }
 
+/* bach yban el asm fi ligne wa7da */
 .logo_name a{
 display: flex;
 }
@@ -108,7 +115,7 @@ transform: translateY(5px);
   background: transparent;
   border: none;
   outline: none;
-  color: #ffffff;
+  color: #000;
   font-size: 1em;
   letter-spacing: 0.05em;
   z-index: 10;

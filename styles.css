@@ -8,7 +8,8 @@ body{
     padding: 0px;
     margin: 0px;
     z-index: -3;
-    background-color: #333;
+    background-color: #154d52;
+    background: linear-gradient(to bottom, #154d52 ,#177b8b);
 }
 
 .background-image {

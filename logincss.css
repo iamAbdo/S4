@@ -110,7 +110,7 @@ transform: translateY(5px);
   background: transparent;
   border: none;
   outline: none;
-  color: #ffffff;
+  color: #000;
   font-size: 1em;
   letter-spacing: 0.05em;
   z-index: 10;
