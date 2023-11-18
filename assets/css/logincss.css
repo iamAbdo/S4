@@ -18,7 +18,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./assets/Images/sign.jpg'); /* Add your image URL here */
+  background-image: url('../Images/sign.jpg'); /* Add your image URL here */
   background-size: cover;
   background-position: center;
   z-index: -1;
