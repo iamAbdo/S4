@@ -94,7 +94,7 @@
     <br>
 
     <div id="world-map">
-        <img src="./assets/Images/World map.jpg" alt="World Map" usemap="#worldmap">
+        <img src="./assets/Images/World map.jpg" alt="World Map" usemap="#worldmap" id="map-image">
         <map name="worldmap">
             <!-- Define the coordinates for each country -->
             <area target="" data-country="North America" alt="NorthAmerica" title="NorthAmerica" href="#NorthAmerica" coords="41,141,22,147,3,151,15,139,25,129,35,121,61,114,84,112,96,115,117,117,134,119,128,112,144,106,154,111,163,115,172,117,187,110,195,105,210,97,220,93,235,88,249,88,257,89,273,90,294,90,315,90,325,90,326,96,318,103,312,110,308,118,290,123,275,127,265,135,258,141,251,128,251,120,255,110,246,103,235,101,225,101,215,106,219,116,224,126,219,131,218,139,218,148,221,156,222,162,222,169,216,173,201,182,182,190,162,206,151,217,143,228,143,235,130,229,120,227,108,227,102,238,102,246,111,253,119,247,122,252,123,264,130,268,135,272,135,281,126,281,109,271,99,265,75,248,71,237,65,225,54,216,51,198,59,182,67,169,67,151,60,143" shape="poly">
@@ -106,7 +106,69 @@
         </map>
     </div>
 
+    <div class="polygon" id="hover-block" >
+        <canvas id="myCanvas" width="800" height="533"></canvas>
+    </div>
     
+
+    <script>
+        const hoverBlock = document.getElementById('hover-block');
+        const mapImage = document.getElementById('map-image');
+
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const polygonCoords = [
+        41,141,22,147,3,151,15,139,25,129,35,121,61,114,84,112,96,115,117,117,134,119,128,112,144,106,154,
+        111,163,115,172,117,187,110,195,105,210,97,220,93,235,88,249,88,257,89,273,90,294,90,315,90,325,90,
+        326,96,318,103,312,110,308,118,290,123,275,127,265,135,258,141,251,128,251,120,255,110,246,103,235,
+        101,225,101,215,106,219,116,224,126,219,131,218,139,218,148,221,156,222,162,222,169,216,173,201,182,
+        182,190,162,206,151,217,143,228,143,235,130,229,120,227,108,227,102,238,102,246,111,253,119,247,122,
+        252,123,264,130,268,135,272,135,281,126,281,109,271,99,265,75,248,71,237,65,225,54,216,51,198,59,182,
+        67,169,67,151,60,143
+        ];
+
+        function drawPolygon(coords) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.beginPath();
+            ctx.moveTo(coords[0], coords[1]);
+
+            for (let i = 2; i < coords.length; i += 2) {
+                ctx.lineTo(coords[i], coords[i + 1]);
+            }
+            ctx.closePath();
+            ctx.strokeStyle = '#000'; // Set the border color
+            ctx.lineWidth = 5; // Set the border width
+            ctx.stroke();
+        }
+        drawPolygon(polygonCoords);
+
+        hoverBlock.style.display = 'none';
+        // Event listener for mouse move on the image
+        mapImage.addEventListener('mousemove', function(event) {
+        // Get mouse position relative to the image
+        const mouseX = event.offsetX;
+        const mouseY = event.offsetY;
+        // Update the position and size of the hover block
+        hoverBlock.style.left = 0 + 'px';
+        hoverBlock.style.top = 0 + 'px';
+        });
+
+        // Event listener for mouse enter/leave on each area
+        const areas = document.querySelectorAll('map[name="worldmap"] area');
+        areas.forEach(area => {
+        area.addEventListener('mouseenter', function() {
+            hoverBlock.style.width = this.getAttribute('coords').split(',')[6] + 'px';
+            hoverBlock.style.height = this.getAttribute('coords').split(',')[7] + 'px';
+            hoverBlock.style.display = 'block';
+        });
+
+        area.addEventListener('mouseleave', function() {
+            hoverBlock.style.display = 'none';
+        });
+        });
+  </script>
 
     <section id="destination" class="destination-section">
         <h2 class="section_title">Discover the most <br> attractive places</h2>

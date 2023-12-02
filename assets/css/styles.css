@@ -221,6 +221,8 @@ header{
 }
   
 #world-map img {
+    width: 800px;
+    height: 533px;
     padding: 0;
     border: 5px solid white;
     border-radius: 10px;
@@ -228,6 +230,15 @@ header{
     display: block; /* Treat the image as a block-level element */
 }
   
+.polygon{
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+}
+#myCanvas{
+    width: 800px;
+    height: 533px;
+}
   
 /* destinations */
 
