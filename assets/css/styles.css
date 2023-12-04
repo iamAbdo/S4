@@ -107,6 +107,9 @@ header{
     transform: translateY(-10%);
 }
 
+.header.scrolled .nav-links a:hover {
+    border-bottom: 2px solid black;
+}
 .account{
     display: flex;
 }
@@ -198,6 +201,9 @@ header{
       display: block;
     }
     .nav-links{
+        display: none;
+    }
+    .nav-links.show{
         display: none;
     }
     .mobile-header.show {
