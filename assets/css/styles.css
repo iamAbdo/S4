@@ -217,6 +217,7 @@ header{
 .company-description {
     position: absolute;
     top: 5%;
+    padding: 0 5vw;
 }
 
 .company-description h2 {
@@ -266,8 +267,7 @@ header{
 
 @media screen and (max-width: 800px) {
     .company-description{
-        top: 50%;
-        transform: translateY(-100%);
+        top: 20%;
     }
     .company-description h2 {
         color: #fff;
@@ -294,8 +294,7 @@ header{
 
 @media screen and (max-width: 400px) {
     .company-description{
-        top: 50%;
-        transform: translateY(-100%);
+        top: 20%;
     }
     .company-description h2 {
         color: #fff;
