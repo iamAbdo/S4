@@ -232,29 +232,7 @@ header{
     font-size: 24px;
 }
 
-@media screen and (max-width: 800px) {
-    .company-description h2 {
-        color: #fff;
-        font-size: 30px;
-        margin-bottom: 15px;
-        text-shadow: 2px 2px 4px rgba(244, 244, 244, 0.3); 
-    }
-    
-    .company-description p {
-        color:  #919191;
-        color: #f2f2f2;
-        font-size: 18px;
-    }
-    .icon {
-        cursor: pointer;
-        margin: 15px;
-        transition: transform 0.2s ease-in-out;
-    }
-    
-    .icon:hover {
-        transform: scale(1.2);
-    }
-}
+
 
 .service-icons {
     position: absolute;
@@ -286,7 +264,39 @@ header{
     color: #f4f4f4;
 }
 
+@media screen and (max-width: 800px) {
+    .company-description{
+        top: 50%;
+        transform: translateY(-100%);
+    }
+    .company-description h2 {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(244, 244, 244, 0.3); 
+    }
+    
+    .company-description p {
+        color:  #919191;
+        color: #f2f2f2;
+        font-size: 18px;
+    }
+    .icon {
+        cursor: pointer;
+        margin: 15px;
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .icon:hover {
+        transform: scale(1.2);
+    }
+}
+
 @media screen and (max-width: 400px) {
+    .company-description{
+        top: 50%;
+        transform: translateY(-100%);
+    }
     .company-description h2 {
         color: #fff;
         font-size: 20px;
