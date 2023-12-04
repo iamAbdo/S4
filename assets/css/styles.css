@@ -14,7 +14,7 @@ body{
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-width: .60rem;
+    width: .60rem;
     background-color: hsl(190, 12%, 48%);
 }
   
@@ -26,17 +26,6 @@ width: .60rem;
     background-color: hsl(190, 8%, 60%);
 }
 
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../Images/background.png'); /* Add your image URL here */
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
 
 /*=============== Main header ===============*/
 
@@ -47,7 +36,8 @@ header{
     display: flex;
     justify-content: space-between;
     height: 10vh;
-    width: 100%;
+    width: 98vw;
+    padding: 0 1vw;
     align-items: center;
     min-height: 50px;
     transition: 0.5s ease;
@@ -65,11 +55,6 @@ header{
 
 .header.scrolled a{
     color: #000;
-}
-
-.header.scrolled .account a{
-    color: #FFF;
-    background-color: #000;
 }
 
 .left-side {
@@ -90,9 +75,6 @@ header{
     width: auto;
     transition: 0.3s;
 }
-.logo img:hover {
-    transform: rotate(180);
-}
 
 .logo_name a{
     display: flex;
@@ -112,27 +94,107 @@ header{
 }
 
 .nav-links a {
-    border: 2px solid transparent;
-    border-radius: 10px;
-    transition: 0.3s;
+    /*border: 2px solid transparent;
+    border-radius: 10px;*/
+    transition: transform 0.3s;
 }
 
 .nav-links a:hover {
-    border: 2px solid #000;
-    border-radius: 10px;
+    /*border: 2px solid #000;
+    border-radius: 10px;*/
+    border-bottom: 2px solid white;
+    transform: translateY(-10%);
+}
+
+.account{
+    display: flex;
+}
+.right-side{
+    display: flex;
 }
 
 .account a{
-    color: #000;
-    background-color: #fff;
+    color: white;
+    border: 2px solid white;
     border-radius: 10px;
     padding: 0.5vw;
     margin-right: 10px;
+    transition: 0.3s ease;
 }
 
+.header.scrolled .account a{
+    color: #000;
+    border: 2px solid #000;
+}
+
+.account a:hover{
+    color: #000;
+    background-color: #fff;
+}
+.header.scrolled .account a:hover{
+    color: #FFF;
+    background-color: #000;
+}
+
+.menu-icon{
+    display: none;
+    margin-right: .50rem;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ;
+}
+
+.menu-icon:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+.header.scrolled .menu-icon:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.menu-icon circle,
+.menu-icon rect{
+    fill: white;
+    transition: fill 0.3s;
+}
+.header.scrolled circle,
+.header.scrolled rect {
+  fill: black;
+}
+
+@media screen and (max-width: 800px) {
+    .menu-icon {
+      display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .menu-icon {
+      display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+    .account{
+        display: none;
+    }
+}
 /*=============== Main page ===============*/
 
-/* Main-containt */
+/* Main-containt image+overlay */
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/background.png'); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -142,16 +204,19 @@ header{
     background: rgba(0, 0, 0, 0.4); /* Adjust the overlay color and transparency */
     z-index: -1;
 }
-/* Main Content Styling */
+
+/* Main Content paragraph */
 .main-content {
+    position: relative;
     max-width: 800px;
-    height: 100%;
+    height: 70%;
     margin: 15vh auto;
     text-align: center;
 }
 
 .company-description {
-    margin-bottom: 20px;
+    position: absolute;
+    top: 5%;
 }
 
 .company-description h2 {
@@ -167,15 +232,43 @@ header{
     font-size: 24px;
 }
 
+@media screen and (max-width: 800px) {
+    .company-description h2 {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(244, 244, 244, 0.3); 
+    }
+    
+    .company-description p {
+        color:  #919191;
+        color: #f2f2f2;
+        font-size: 18px;
+    }
+    .icon {
+        cursor: pointer;
+        margin: 15px;
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .icon:hover {
+        transform: scale(1.2);
+    }
+}
+
 .service-icons {
+    position: absolute;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%; 
 }
 
 .icon {
     cursor: pointer;
-    margin: 10px;
+    margin: 25px;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -193,10 +286,33 @@ header{
     color: #f4f4f4;
 }
 
-/* Additional Content Styling */
-.additional-content {
-    margin-top: 20px;
-    /* Add additional styling as needed */
+@media screen and (max-width: 400px) {
+    .company-description h2 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(244, 244, 244, 0.3); 
+    }
+    
+    .company-description p {
+        color:  #919191;
+        color: #f2f2f2;
+        font-size: 12px;
+    }
+    .icon {
+        cursor: pointer;
+        margin: 10px;
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .icon:hover {
+        transform: scale(1.2);
+    }
+    
+    .icon img {
+        width: 24px; /* Adjust the size based on your design */
+        height: 24px;
+    }
 }
 
 
