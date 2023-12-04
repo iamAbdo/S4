@@ -110,10 +110,10 @@
         <canvas id="myCanvas" width="800" height="533"></canvas>
     </div>
     
-
     <script>
         const hoverBlock = document.getElementById('hover-block');
         const mapImage = document.getElementById('map-image');
+        var audio = new Audio('assets/audio/Mouseover_hard_whoosh.mp3');
 
         const canvas = document.getElementById('myCanvas');
         const ctx = canvas.getContext('2d');
@@ -147,12 +147,12 @@
         hoverBlock.style.display = 'none';
         // Event listener for mouse move on the image
         mapImage.addEventListener('mousemove', function(event) {
-        // Get mouse position relative to the image
-        const mouseX = event.offsetX;
-        const mouseY = event.offsetY;
-        // Update the position and size of the hover block
-        hoverBlock.style.left = 50 + '%';
-        hoverBlock.style.top = 50 + '%';
+            // Get mouse position relative to the image
+            const mouseX = event.offsetX;
+            const mouseY = event.offsetY;
+            // Update the position and size of the hover block
+            hoverBlock.style.left = 50 + '%';
+            hoverBlock.style.top = 50 + '%';
         });
 
         // Event listener for mouse enter/leave on each area
@@ -162,15 +162,17 @@
             hoverBlock.style.width = this.getAttribute('coords').split(',')[6] + 'px';
             hoverBlock.style.height = this.getAttribute('coords').split(',')[7] + 'px';
             hoverBlock.style.display = 'block';
+            audio.play();
         });
 
         area.addEventListener('mouseleave', function() {
             hoverBlock.style.display = 'none';
+            audio.play();
         });
         });
   </script>
 
-    <section id="destination" class="destination-section">
+    <section id="destination" class="destination-section section">
         <h2 class="section_title">Discover the most <br> attractive places</h2>
         <section class="destinations">
             <div class="wrapper">
@@ -186,7 +188,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                             <span>4.7/5</span>
                         </div>
                         <div class="tags">
@@ -274,107 +276,33 @@
         </section>
     </section>
 
-    <section id="destination" class="destination-section">
+    <section id="Hotels" class="hotel-section section">
         <h2 class="section_title">Stay in the <br> Best Hotels</h2>
-        <section class="destinations">
-            <div class="wrapper">
-                <div class="card">
-                    <div class="poster">
-                        <img src="./assets/Images/destination/dubai.jpg" alt="">Dubaï
-                    </div>
-                    <div class="details">
-                        <h1>Dubaï</h1>
-                        <h2>Burj Khalifa • Dubai Mall • Dubai Miracle Garden</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span>4.7/5</span>
-                        </div>
-                        <div class="tags">
-                            <span class="tag">Tourism</span>
-                            <span class="tag">Business</span>
-                            <span class="tag">Quality of Life</span>
-                        </div>
-                        <p class="desc">
-                            Dubai: Desert metropolis, home to the Burj Khalifa, luxury shopping, and a global fusion of cultures.
-                        </p>
-                        <div class="cast">
-                            <h3>Nos Hotel</h3>
-                            <ul>
-                                <li><img src="./assets/Images/destination/burj-al-arab.jpg" alt="burj-al-arab" title="Hotel"></li>
-                                <li><img src="./assets/Images/destination/Atlantis, The Palm.jpg" alt="Atlantis" title="Hotel"></li>
-                                <li><img src="./assets/Images/destination/armani.jpg" alt="Armani" title="Hotel"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="poster"><img src="./assets/Images/destination/London.jpg" alt="London"></div>
-                    <div class="details">
-                        <h1>London</h1>
-                        <h2>The Savoy • Claridge's • The Ritz</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span>4/5</span>
-                        </div>
-                        <div class="tags">
-                            <span class="tag">Tourism</span>
-                            <span class="tag">Business</span>
-                            <span class="tag">Quality of Life</span>
-                        </div>
-                        <p class="desc">
-                            London: Historic meets modern on the Thames, blending iconic landmarks with cultural dynamism.
-                        </p>
-                        <div class="cast">
-                            <h3>Nos Hotel</h3>
-                            <ul>
-                                <li><img src="./assets/Images/destination/The Savoy.jpg" alt="The Savoy" title="hotel"></li>
-                                <li><img src="./assets/Images/destination/Claridge's.jpg" alt="claridge" title="hotel"></li>
-                                <li><img src="./assets/Images/destination/The Ritz London.jpg" alt="The Ritz" title="hotel"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="poster"><img src="./assets/Images/destination/paris.jpg" alt="Location Unknown"></div>
-                    <div class="details">
-                        <h1>Paris</h1>
-                        <h2>Ritz Paris • Plaza Athénée • Le Bristol Paris</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>4.7/5</span>
-                        </div>
-                        <div class="tags">
-                            <span class="tag yellow">Tourism</span>
-                            <span class="tag">Business</span>
-                            <span class="tag blue">Quality of Life</span>
-                        </div>
-                        <p class="desc">
-                            Paris, the epitome of elegance, boasts iconic landmarks, charming streets, and a rich cultural tapestry.
-                        </p>
-                        <div class="cast">
-                            <h3>Nos Hotel</h3>
-                            <ul>
-                                <li><img src="./assets/Images/destination/Ritz Paris.jpg" alt="Ritz Paris" title="hotel"></li>
-                                <li><img src="./assets/Images/destination/Hôtel Plaza Athénée.jpg" alt="Plaza Athénée" title="hotel"></li>
-                                <li><img src="./assets/Images/destination/Le Bristol Paris.jpg" alt="Le Bristol" title="hotel"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-            
+        <section class="hotels">
+            <div class="card">
+                <img src="assets/Images/Hotels/Home/1.jpg" alt="">
+                <h2 class="title">Mountain View</h2>
+                <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+                <button class="btn">View Trips</button>
+            </div>
+            <div class="card">
+                <img src="assets/Images/Hotels/Home/2.jpg" alt="">
+                <h2 class="title">To The Beach</h2>
+                <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+                <button class="btn">View Trips</button>
+            </div>
+            <div class="card">
+                <img src="assets/Images/Hotels/Home/3.jpg" alt="">
+                <h2 class="title">Desert Destinations</h2>
+                <p class="copy">It's the desert you've always dreamed of</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="card">
+                <img src="assets/Images/Hotels/Home/4.jpg" alt="">
+                <h2 class="title">Explore The Galaxy</h2>
+                <p class="copy">Seriously, straight up, just blast off into outer space today</p>
+                <button class="btn">Book Now</button>
+            </div>
         </section>
     </section>
     <!-- 
