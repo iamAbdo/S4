@@ -1,7 +1,8 @@
 * {
     align-items: center;
+    box-sizing: border-box;
+    max-width: 100vw;
 }
-
 body{
     font-family: 'Rubik', sans-serif;
     min-height: 100vh;
@@ -36,7 +37,7 @@ header{
     display: flex;
     justify-content: space-between;
     height: 10vh;
-    width: 98vw;
+    width: 100vw;
     padding: 0 1vw;
     align-items: center;
     min-height: 50px;
@@ -136,7 +137,7 @@ header{
     background-color: #000;
 }
 
-.menu-icon{
+#menu-icon{
     display: none;
     margin-right: .50rem;
     padding: 5px;
@@ -144,37 +145,90 @@ header{
     transition: all 0.3s ;
 }
 
-.menu-icon:hover{
+#menu-icon:hover{
     background-color: rgba(0,0,0,0.4);
+    cursor: pointer;
 }
-.header.scrolled .menu-icon:hover{
+.header.scrolled #menu-icon:hover{
     background-color: rgba(0,0,0,0.1);
 }
 
-.menu-icon circle,
-.menu-icon rect{
+#menu-icon circle,
+#menu-icon rect{
     fill: white;
     transition: fill 0.3s;
 }
-.header.scrolled circle,
-.header.scrolled rect {
+.header.scrolled #menu-icon circle,
+.header.scrolled #menu-icon rect {
   fill: black;
 }
 
+.mobile-header {
+    display: none;
+}
 @media screen and (max-width: 800px) {
-    .menu-icon {
+    #menu-icon {
       display: block;
+      
     }
     .nav-links{
         display: none;
+    }
+    .nav-links.show * {
+        display: flex; /* Show links on smaller screens (max-width: 800px) */
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduce gap between links */
+        margin-left: 0; /* Remove margin from left side */
+        right: 0%;
+        top: max(10vh, 50px);
+        position: fixed;
+        background-color: transparent;
+        border: 2px solid #000;
+        border-radius: 0 0 0 10%;
+        padding: 10px;
+        align-items: start;
+    }
+    .header.scrolled .nav-links {
+        background-color: white;
     }
 }
 @media screen and (max-width: 400px) {
-    .menu-icon {
+    #menu-icon {
       display: block;
     }
     .nav-links{
         display: none;
+    }
+    .mobile-header.show {
+        display: block;
+        right: 0;
+        top: max(10vh, 50px);
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 2px solid #fff;
+        border-radius: 0 0 0 10%;
+        padding: 10px;
+        transition: 0.3s ease;
+    }
+    .header.scrolled .mobile-header.show{
+        background-color: white;
+        border: 2px solid #000;
+    }
+    .mobile-header .mobile-nav-links{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .mobile-header .mobile-account a{
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 3px;
+        margin-right: 10px;
+    }
+    .header.scrolled .mobile-account a{
+        border: 2px solid #000;
     }
     .account{
         display: none;

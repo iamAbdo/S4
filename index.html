@@ -21,7 +21,6 @@
                     <a href="index.html">Travel <div>Agent</div></a>
                 </div>
             </div>
-
             <div class="nav-links">
                 <a href="https://www.messenger.com/" target="_blank">Main</a>
                 <a href="https://www.youtube.com/" target="_blank">Hotels</a>
@@ -37,7 +36,9 @@
                     <a href="./register.html">Register</a>
                     <a href="./sign in.html">Sign in</a>
                 </div>
-                <div class="menu-icon">
+
+                
+                <div id="menu-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="4" cy="4" r="2" fill="#fff" />
                         <circle cx="4" cy="12" r="2" fill="#fff" />
@@ -47,9 +48,32 @@
                         <rect x="8" y="10" width="16" height="4" rx="2" fill="#fff" />
                         <rect x="8" y="18" width="16" height="4" rx="2" fill="#fff" />
                     </svg>
-                </div>    
+                </div>   
+            </div>
+            <div class="mobile-header">
+                <div class="mobile-nav-links">
+                    <a href="https://www.messenger.com/" target="_blank">Main</a>
+                    <a href="https://www.youtube.com/" target="_blank">Hotels</a>
+                    <a onclick="scrollToSection('destination')" >Destination</a>
+                    <a href="./settings.html">Settings</a>
+                </div>
+                <div class="mobile-account">
+                    <a href="./register.html">Register</a>
+                    <a href="./sign in.html">Sign in</a>
+                </div>
             </div>
     </header>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navlinks = document.querySelector('.nav-links');
+        const mobileHeader = document.querySelector('.mobile-header');
+        menuIcon.addEventListener('click', () => {
+            navlinks.classList.toggle('show');
+            mobileHeader.classList.toggle('show');
+        });
+    </script> 
+
+
 
     <!-- background 100% height ta3 description -->
     <div class="background-image"></div>
