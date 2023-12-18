@@ -11,6 +11,7 @@ body{
     z-index: -3;
     background-color: #154d52;
     background: linear-gradient(to bottom, #154d52 ,#177b8b);
+    
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -52,6 +53,7 @@ header{
 .header a {
     text-decoration: none;
     color: #FFF;
+    cursor: pointer;
 }
 
 .header.scrolled a{
