@@ -1,0 +1,12 @@
+.container{
+    border: 2px solid white;
+    min-height: 100vh;
+    display: flex;
+}
+#cat{
+    border: 2px solid orange;
+    display: flex;
+    height: 100%;
+    width: 30%;
+    flex-direction: column;
+}
