@@ -4,14 +4,13 @@
     box-sizing: border-box;
     color: white;
 }
-body{
-    background: black;
-}
+
 
 .header{
-    background-color: transparent;
+    background: rgba(26, 14, 14,0.7);
     position: fixed;
     top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     height: 10vh;
