@@ -534,6 +534,7 @@ footer div{
 footer .rights {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 footer a{
