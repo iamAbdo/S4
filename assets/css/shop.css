@@ -1,5 +1,5 @@
 body{
-    background-image: url('/assets/Images/background.png');
+    background-image: url('../Images/background.png');
     background-size: cover;
 }
 #space{
@@ -55,7 +55,7 @@ body{
 .hotel-img{
     width: 200px;
     height: 200px;
-    background-image: url('/assets/Images/Dubai.jpg');
+    background-image: url('../Images/Dubai.jpg');
     background-size: cover;
 }
 
