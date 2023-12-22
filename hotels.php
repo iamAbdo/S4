@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="assets/css/shop.css">
     <title>Document</title>
 </head>
+
 <?php
 require 'assets/db/connect.php';
 ?>
+
 <body>
 
 
