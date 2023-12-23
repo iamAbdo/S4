@@ -1,6 +1,6 @@
 // JavaScript for changing header background on scroll
 window.addEventListener('scroll', function () {
-    const header = document.querySelector('.Header');
+    const header = document.querySelector('.header');
     const scrollPosition = window.scrollY;
 
     // Adjust this value based on when you want the background to change

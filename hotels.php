@@ -113,5 +113,8 @@ require 'assets/db/connect.php';
         </div>
         
     </div>
+
+    <script src="./assets/js/scroll_effect.js"></script>
+    
 </body>
 </html>
