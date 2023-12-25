@@ -2,7 +2,6 @@
 *{
     align-items: center;
     box-sizing: border-box;
-    color: white;
 }
 
 
@@ -143,6 +142,10 @@
 .header.scrolled #menu-icon circle,
 .header.scrolled #menu-icon rect {
   fill: black;
+}
+
+#space{
+    height: 10vh;
 }
 
 .mobile-header {

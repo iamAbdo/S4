@@ -2,9 +2,6 @@ body{
     background-image: url('../Images/background.png');
     background-size: cover;
 }
-#space{
-    height: 10vh;
-}
 .container{
     min-height: 100vh;
     margin: 5vh 1vw;
