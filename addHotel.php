@@ -24,28 +24,73 @@ require 'assets/db/connect.php';
                 echo 'Id: <input type="number" name="id"><br>';
             }
             ?>
-            Name: <input type="text" name="name"><br>
-            LocationID: <input type="number" name="locationId"><br>
-            Description: <input type="text" name="description"><br>
-            Price: <input type="text" name="price"><br>
-            Rating: <input type="text" name="rating"><br>
-            ImageURLs: <input type="text" name="imageURLs"><br>
-            <input type="submit" name='submit'><br>
+           
 
-        </form>
+
+            </form>
+        
+    </div>
+    <div class="background-image"></div>
+
+  <header class="Header">
+    <div class="left-side">
+
+    <div class="logo">
+        <img src="./assets/Images/logo-removebg-preview.png" alt="logo" class="logo_img">
+        <div class="logo_name">
+            <a href="index.html">Travel <div>Agent</div></a>
+        </div>
     </div>
 
+    </div>
 
-    <?php
+    <div class="right-side">
 
-    $query = "INSERT INTO hotels (HotelID, Name, LocationID, Description, Price, Rating, ImageURLs) VALUES 
-        ($HotelID, '$name', '$LocationID', '$Description', '$Price', '$Rating', '$ImageURLs')";
-    if (isset($_GET['submit'])) {
-        if (!mysqli_query($conn, $query)) {
-            echo "erreur";
-        }
-    }
-    ?>
+    </div>
+</header>
+
+
+
+<div class="box">
+  <div class="form">
+    <h2>add hotel</h2>
+    <div class="inputBox">
+      <input type="text" required="required" />
+      <span>name</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" />
+      <span>LocationID</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" />
+      <span>Description</span>
+      <i></i>
+    </div><div class="inputBox">
+      <input type="text" required="required" />
+      <span>Price</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" />
+      <span>Rating</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="text" required="required" />
+      <span>ImageURLs</span>
+      <i></i>
+    </div>
+    
+     
+    <input type="submit" value="ADD" />
+  </div>
+</div>
+
+
 </body>
+
 
 </html>
