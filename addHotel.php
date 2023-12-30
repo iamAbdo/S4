@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="assets/css/addHotel.css">
 </head>
 
+<?php
+require 'assets/db/connect.php';
+?>
+
 <body>
 
     <div class="container">
         <form action="addHotel.php" method="GET">
             <?php
             if (isset($_GET['id'])) {
-                $id = $_GET['id'];
-                echo "<div class='section-title'>Editing Hotel $id</div>";
+                $HotelID = $_GET['id'];
+                echo "<div class='section-title'>Editing Hotel $HotelID</div>";
             } else {
                 echo 'Id: <input type="number" name="id"><br>';
             }
@@ -26,10 +30,22 @@
             Price: <input type="text" name="price"><br>
             Rating: <input type="text" name="rating"><br>
             ImageURLs: <input type="text" name="imageURLs"><br>
-            <input type="submit"><br>
+            <input type="submit" name='submit'><br>
 
         </form>
     </div>
+
+
+    <?php
+
+    $query = "INSERT INTO hotels (HotelID, Name, LocationID, Description, Price, Rating, ImageURLs) VALUES 
+        ($HotelID, '$name', '$LocationID', '$Description', '$Price', '$Rating', '$ImageURLs')";
+    if (isset($_GET['submit'])) {
+        if (!mysqli_query($conn, $query)) {
+            echo "erreur";
+        }
+    }
+    ?>
 </body>
 
 </html>
