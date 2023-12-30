@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="assets/css/addHotel.css">
 </head>
 
+<?php
+require 'assets/db/connect.php';
+?>
+
 <body>
 
     <div class="container">
         <form action="addHotel.php" method="GET">
             <?php
             if (isset($_GET['id'])) {
-                $id = $_GET['id'];
-                echo "<div class='section-title'>Editing Hotel $id</div>";
+                $HotelID = $_GET['id'];
+                echo "<div class='section-title'>Editing Hotel $HotelID</div>";
             } else {
                 echo 'Id: <input type="number" name="id"><br>';
             }
