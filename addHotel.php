@@ -14,20 +14,7 @@ require 'assets/db/connect.php';
 
 <body>
 
-    <div class="container">
-        <form action="addHotel.php" method="GET">
-            <?php
-            if (isset($_GET['id'])) {
-                $HotelID = $_GET['id'];
-                echo "<div class='section-title'>Editing Hotel $HotelID</div>";
-            } else {
-                echo 'Id: <input type="number" name="id"><br>';
-            }
-            ?>
-           
-
-
-            </form>
+    
         
     </div>
     <div class="background-image"></div>
@@ -84,9 +71,24 @@ require 'assets/db/connect.php';
       <i></i>
     </div>
     
-     
+    <div class="container">
+        <form action="addHotel.php" method="GET">
+            <?php
+            if (isset($_GET['id'])) {
+                $HotelID = $_GET['id'];
+                echo "<div class='section-title'>Editing Hotel $HotelID</div>";
+            } else {
+                echo 'Id: <input type="number" name="id"><br>';
+            }
+            ?>
+           
+
+
+            </form>
+    
+    
     <input type="submit" value="ADD" />
-  </div>
+    </div>
 </div>
 
 

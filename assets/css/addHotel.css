@@ -87,6 +87,11 @@ transform: translateY(5px);
     transform: rotate(360deg);
   }
 }
+.section-title{
+  color: #ffffff;
+  padding: 20px 0px 10px;
+  box-sizing: border-box;
+}
 .form {
   position: absolute;
   inset: 2px;
@@ -179,6 +184,8 @@ input[type="submit"] {
   font-weight: 600;
   cursor: pointer;
   transition: all .3s ease;
+  position: relative;
+  left: 7em;
 }
 input[type="submit"]:hover{
 background: #ffffff;
