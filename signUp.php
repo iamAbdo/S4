@@ -16,6 +16,11 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
+    // check if email is already used:
+    $sqlQuery = "SELECT Email FROM users WHERE Email='$email'";
+    mysqli_query($conn, $sqlQuery);
+
+    // insert new user:
     $sqlQuery = "INSERT INTO users (Username, Password, Email) VALUES 
     ('$username', '$password', '$email')";
     if (mysqli_query($conn, $sqlQuery)) {
@@ -23,6 +28,8 @@
     } else {
         echo "erreur";
     }
+
+    // create cookie: (user id):
     ?>
 </body>
 
