@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   justify-content: center;
   align-items: center;
@@ -76,17 +77,9 @@ transform: translateY(5px);
     border-radius: 8px;
     overflow: hidden;
     opacity: 0.60;
-    margin: 50px auto; /* Centrez le formulaire sur la page */
+    margin: 0px auto; /* Centrez le formulaire sur la page */
 }
 
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .form {
   position: absolute;
   inset: 2px;
