@@ -1,9 +1,8 @@
 /* Add your general styling for the body and container */
 body {
     font-family: 'Arial', sans-serif;
-    color: #000;
+    color: black;
 }
-
 .container {
     margin: 20px;
     padding: 20px;
