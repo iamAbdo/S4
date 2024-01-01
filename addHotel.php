@@ -36,69 +36,93 @@ require 'assets/db/connect.php';
     </div>
   </header>
 
-  <div class="container">
-    <form action="addHotel.php" method="GET">
-
-
-
-
-    </form>
-
-
-
-  </div>
 
   <div class="box">
     <div class="form">
-      <h2>add hotel</h2>
-      <?php
-      if (isset($_GET['id'])) {
-        $HotelID = $_GET['id'];
-        echo "<div class='section-title'>Editing Hotel $HotelID</div>";
-      } else {
-        echo '<div class="inputBox">
-        <input type="text" required="required" />
-        <span>id</span>
-        <i></i>
-        </div>';
-      }
-      ?>
-      <div class="inputBox">
-        <input type="text" required="required" />
-        <span>name</span>
-        <i></i>
-      </div>
-      <div class="inputBox">
-        <input type="text" required="required" />
-        <span>LocationID</span>
-        <i></i>
-      </div>
-      <div class="inputBox">
-        <input type="text" required="required" />
-        <span>Description</span>
-        <i></i>
-      </div>
-      <div class="inputBox">
-        <input type="text" required="required" />
-        <span>Price</span>
-        <i></i>
-      </div>
-      <div class="inputBox">
-        <input type="text" required="required" />
-        <span>Rating</span>
-        <i></i>
-      </div>
-      <div class="inputBox">
-        <input type="text" required="required" />
-        <span>ImageURLs</span>
-        <i></i>
-      </div>
+      <form action="addHotel.php" method="POST" enctype="multipart/form-data">
+        <h2>add hotel</h2>
+        <div class="inputBox">
+          <input type="text" required="required" />
+          <span>id</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required" />
+          <span>name</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required" />
+          <span>LocationID</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required" />
+          <span>Description</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required" />
+          <span>Price</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required" />
+          <span>Rating</span>
+          <i></i>
+        </div>
+        <div class="inputBox">
+          <input type="file" name="image" required="required" />
+          <span>Images</span>
+          <i></i>
+        </div>
 
 
-      <input type="submit" value="ADD" />
+        <input type="submit" value="ADD" name="submit" />
+      </form>
     </div>
+  </div>
+  <?php
+  echo "<script>alert('inside php')</script>";
+  $target_dir = "uploads/";
+  $target_file = $target_dir . basename($_FILES["image"]["name"]);
+  $uploadOk = 1;
+  $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
+  // Work in progress (handle image upload):
+  if ($_FILES["image"]["size"] > 5000000) { // this is 5MB
+    echo "Sorry, your file is too large.";
+    echo "<script>alert('too large')</script>";
+    $uploadOk = 0;
+  }
+  // Limit File Type JPG, JPEG, PNG
+  if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+    echo "Sorry, only JPG, JPEG & PNG files are allowed.";
+    echo "<script>alert('only jpg jpeg and png')</script>";
+    $uploadOk = 0;
+  }
 
+  if (isset($_POST['submit'])) {
+    // not ok to upload case
+    if ($uploadOk == 0) {
+      echo "Sorry, your file was not uploaded.";
+      echo "<script>alert('not uploaded')</script>";
+      // if everything is ok, try to upload file
+    } else {
+
+      if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+        echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+        echo "<script>alert('uploaded')</script>";
+      } else {
+        // case where uploading didnt work (server error)
+        echo "Sorry, there was an error uploading your file.";
+        echo "<script>alert('server error')</script>";
+      }
+    }
+
+  }
+
+  ?>
 </body>
 
 
