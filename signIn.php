@@ -21,6 +21,8 @@ if ($result->num_rows > 0) {
         setcookie('token', $token, time() + 3600, '/'); // Cookie expires in 1 hour
 
         echo "correct";
+    } else {
+        echo "incorrect Password";
     }
 } else {
     echo "you dont have an account";
