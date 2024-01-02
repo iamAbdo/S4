@@ -15,7 +15,8 @@
     <?php
     if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])) {
         $username = $_POST['username'];
-        $password = $_POST['password'];
+        //$password = $_POST['password'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $email = $_POST['email'];
         // check if email is already used:
         $sqlQuery = "SELECT Email FROM users WHERE Email='$email'";
@@ -27,7 +28,12 @@
             $sqlQuery = "INSERT INTO users (Username, Password, Email) VALUES 
                         ('$username', '$password', '$email')";
             if (mysqli_query($conn, $sqlQuery)) {
-                echo "votre compte est cree";
+                echo "votre compte est cree ";
+                $token = bin2hex(random_bytes(128));
+                $sql = "UPDATE users SET cookie = '$token' WHERE Email = '$email'";
+                $conn->query($sql);
+                echo "cookie = $token";
+                setcookie('token', $token, time() + 3600, '/');
             } else {
                 echo "erreur";
             }
