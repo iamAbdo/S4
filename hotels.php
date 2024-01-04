@@ -10,10 +10,6 @@
     <title>Document</title>
 </head>
 
-<?php
-require 'assets/db/connect.php';
-?>
-
 <body>
 
     <?php
@@ -36,6 +32,8 @@ require 'assets/db/connect.php';
         </div>
         <div id="Hotel-cards">
             <?php
+            require 'assets/db/connect.php';
+
             $sqlQuery = "SELECT HotelID, Name, Description, ImageURLs FROM Hotels LIMIT 30";
             $result = mysqli_query($conn, $sqlQuery);
 
@@ -49,11 +47,11 @@ require 'assets/db/connect.php';
                     $imageURLs = json_decode($row['ImageURLs']);
                     $firstImageURL = './assets/Images/Hotels/hotel-' . $hotelID . '/' . $imageURLs[0] . '';
                     // Display the hotel card HTML structure
-                    echo '<div class="Hotel-card">';
+                    echo "<a href='hotel.php?hotel=$hotelID'><div class='Hotel-card'>";
                     echo '<div class="hotel-img" style="background-image: url(' . $firstImageURL . ');"></div>';
                     echo '<div class="hotel-name">' . $hotelName . '</div>';
                     echo '<div class="hotel-desc">' . $hotelDescription . '</div>';
-                    echo '</div>';
+                    echo '</div></a>';
                 }
                 // Free result set
                 mysqli_free_result($result);
@@ -62,7 +60,9 @@ require 'assets/db/connect.php';
                 // Handle the case where the query fails
                 echo "Error: " . mysqli_error($yourDbConnection);
             }
+            $conn->close();
             ?>
+
         </div>
 
     </div>
