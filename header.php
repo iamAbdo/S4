@@ -20,8 +20,32 @@
     <div class="right-side">
 
         <div class="account">
-            <a href="./register.html">Register</a>
-            <a href="./sign in.html">Sign in</a>
+            <?php
+            // Check if the 'token' cookie is present
+            if (isset($_COOKIE['token'])) {
+                require 'assets/db/connect.php';
+
+                // making the token anti sql injection
+                $token = $conn->real_escape_string($_COOKIE['token']);
+
+                $sql = "SELECT username FROM users WHERE cookie = '$token'";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $username = $row['username'];
+                    echo "<a href='account.php'>Welcome $username!</a>";
+                } else {
+                    // delete the cooke because why do you have it in the first place
+                    setcookie("token", "", time() - 3600, "/");
+                }
+
+                $conn->close();
+            } else {
+                echo '<a href="./register.html">Register</a>
+                      <a href="./sign in.html">Sign in</a>';
+            }
+            ?>
         </div>
 
 
@@ -52,3 +76,4 @@
 </header>
 
 <div id="space"></div>
+<script src="./assets/js/scroll_effect.js"></script>
