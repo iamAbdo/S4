@@ -10,8 +10,12 @@
 <body>
     <?php
     include 'header.php';
+    if (isset($_GET['hotel'])) {
+        $hotelID = $_GET['hotel'];
+    } else {
+        header("Location: hotels.php");
+    }
 
-    $hotelID = $_GET['hotel'];
 
     require 'assets/db/connect.php';
 

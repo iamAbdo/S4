@@ -69,7 +69,7 @@
             <a href="./settings.html">Settings</a>
         </div>
         <div class="mobile-account">
-            <a href="./register.html">Register</a>
+            <a href="./sign up.html">Register</a>
             <a href="./sign in.html">Sign in</a>
         </div>
     </div>

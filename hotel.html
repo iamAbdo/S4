@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/hotel.css">
+    <title>Document</title>
+</head>
+<body style="background-color: pink;">
+    
+    <header class="header">
+            
+        <div class="left-side">
+            <div class="logo">
+                <img src="./assets/Images/logo-removebg-preview.png" alt="logo" class="logo_img">
+                <div class="logo_name">
+                    <a href="index.html">Travel <div>Agent</div></a>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a onclick="scrollToSection('logo_img')">Main</a>
+                <a onclick="scrollToSection('Hotels')">Hotels</a>
+                <a onclick="scrollToSection('destination')" >Destination</a>
+                <a href="./settings.html">Settings</a>
+            </div>
+
+        </div>
+
+        <div class="right-side">
+
+            <div class="account">
+                <a href="./sign up.html">Register</a>
+                <a href="./sign in.html">Sign in</a>
+            </div>
+
+            
+            <div id="menu-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4" cy="4" r="2" fill="#fff" />
+                    <circle cx="4" cy="12" r="2" fill="#fff" />
+                    <circle cx="4" cy="20" r="2" fill="#fff" />
+                  
+                    <rect x="8" y="2" width="16" height="4" rx="2" fill="#fff" />
+                    <rect x="8" y="10" width="16" height="4" rx="2" fill="#fff" />
+                    <rect x="8" y="18" width="16" height="4" rx="2" fill="#fff" />
+                </svg>
+            </div>   
+        </div>
+        <div class="mobile-header">
+            <div class="mobile-nav-links">
+                <a href="https://www.messenger.com/" target="_blank">Main</a>
+                <a href="https://www.youtube.com/" target="_blank">Hotels</a>
+                <a onclick="scrollToSection('destination')" >Destination</a>
+                <a href="./settings.html">Settings</a>
+            </div>
+            <div class="mobile-account">
+                <a href="./register.html">Register</a>
+                <a href="./sign in.html">Sign in</a>
+            </div>
+        </div>
+    </header>
+
+<div id="space"></div>
+<script src="./assets/js/scroll_effect.js"></script>
+
+<div class="info-card">
+    <div class="images">
+        <div class="main-img">test</div>
+        <div class="s-images">
+            <div class="small-img">l-arrow</div>
+            <div class="small-img">img1</div>
+            <div class="small-img">img2</div>
+            <div class="small-img">img3</div>
+            <div class="small-img">img4</div>
+            <div class="small-img">r-arrow</div>
+        </div>
+    </div>
+    <div class="detail">
+        <h1 class="title">Jianguo Hotel Qianmen</h1>
+        <div class="stars">4.7/5 stars</div>
+        <div class="description">
+            <u>Hotel Description:</u><br>
+            The Jianguo Hotel Qianmen is located near Tiantan Park, 
+            just a 10-minute walk from the National Center for the 
+            Performing Arts and Tian'anmen Square. Built in 1956 it 
+            has old school charm and many rooms still feature high, 
+            crown-molded ceilings. A 2012 renovation brought all rooms 
+            and services up to modern day scratch and guestrooms come 
+            equipped with free Wi-Fi and all the usual amenities 
+            required for a comfortable stay.
+        </div>
+        <div class="services-dhotel">
+            City view
+            Garden
+            Pets allowed
+            Free WiFi
+            Balcony
+            Bath
+            Air conditioning
+            24-hour front desk
+            Key card access
+            Daily housekeeping
+        </div>
+        <div class="reserve-option">
+            2beds-1room 1bed 3beds-2rooms 2beds-2rooms
+        </div>
+        <a href="reservation.php">
+            <div class="reserve-button">Reserve Now</div>
+        </a>
+    </div>
+</div>
+
+
+</body>
+</html>
