@@ -66,14 +66,29 @@
 
 <div class="info-card">
     <div class="images">
-        <div class="main-img">test</div>
+        <div class="main-imgs">
+            <img src="https://picsum.photos/id/154/2000/2000" class="slide" alt="">
+            <img src="https://picsum.photos/id/151/2000/2000" class="slide" alt="">
+            <img src="https://picsum.photos/id/152/2000/2000" class="slide" alt="">
+            <img src="https://picsum.photos/id/153/2000/2000" class="slide" alt="">
+        </div>
         <div class="s-images">
-            <div class="small-img">l-arrow</div>
-            <div class="small-img">img1</div>
-            <div class="small-img">img2</div>
-            <div class="small-img">img3</div>
-            <div class="small-img">img4</div>
-            <div class="small-img">r-arrow</div>
+            <button onclick="imgBefore()" class="small-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
+                    <path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z"/>
+                </svg>
+            </button>
+            <div class="small-img" onclick="setCounterAndSlide(0)"><img src="https://picsum.photos/id/154/500/500" alt=""></div>
+            <div class="small-img" onclick="setCounterAndSlide(1)"><img src="https://picsum.photos/id/151/50/50" alt=""></div>
+            <div class="small-img" onclick="setCounterAndSlide(2)"><img src="https://picsum.photos/id/152/50/50" alt=""></div>
+            <div class="small-img" onclick="setCounterAndSlide(3)"><img src="https://picsum.photos/id/153/50/50" alt=""></div>
+            <button onclick="imgAfter()" class="small-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
+                    <path d="M9.293 8.707 12.586 12l-3.293 3.293 1.414 1.414L15.414 12l-4.707-4.707-1.414 1.414z"/>
+                </svg>
+            </button>
         </div>
     </div>
     <div class="detail">
@@ -111,6 +126,7 @@
     </div>
 </div>
 
+<script src="./assets/js/hotel-slider.js"></script>
 
 </body>
 </html>
