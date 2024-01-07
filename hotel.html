@@ -1,132 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/hotel.css">
     <title>Document</title>
 </head>
-<body style="background-color: pink;">
-    
-    <header class="header">
-            
-        <div class="left-side">
-            <div class="logo">
-                <img src="./assets/Images/logo-removebg-preview.png" alt="logo" class="logo_img">
-                <div class="logo_name">
-                    <a href="index.html">Travel <div>Agent</div></a>
-                </div>
-            </div>
-            <div class="nav-links">
-                <a onclick="scrollToSection('logo_img')">Main</a>
-                <a onclick="scrollToSection('Hotels')">Hotels</a>
-                <a onclick="scrollToSection('destination')" >Destination</a>
-                <a href="./settings.html">Settings</a>
-            </div>
+<body>
 
-        </div>
+    <link rel="stylesheet" href="assets/css/header.css">
+<header class="header">
 
-        <div class="right-side">
-
-            <div class="account">
-                <a href="./sign up.html">Register</a>
-                <a href="./sign in.html">Sign in</a>
-            </div>
-
-            
-            <div id="menu-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="4" cy="4" r="2" fill="#fff" />
-                    <circle cx="4" cy="12" r="2" fill="#fff" />
-                    <circle cx="4" cy="20" r="2" fill="#fff" />
-                  
-                    <rect x="8" y="2" width="16" height="4" rx="2" fill="#fff" />
-                    <rect x="8" y="10" width="16" height="4" rx="2" fill="#fff" />
-                    <rect x="8" y="18" width="16" height="4" rx="2" fill="#fff" />
-                </svg>
-            </div>   
-        </div>
-        <div class="mobile-header">
-            <div class="mobile-nav-links">
-                <a href="https://www.messenger.com/" target="_blank">Main</a>
-                <a href="https://www.youtube.com/" target="_blank">Hotels</a>
-                <a onclick="scrollToSection('destination')" >Destination</a>
-                <a href="./settings.html">Settings</a>
-            </div>
-            <div class="mobile-account">
-                <a href="./register.html">Register</a>
-                <a href="./sign in.html">Sign in</a>
+    <div class="left-side">
+        <div class="logo">
+            <img src="./assets/Images/logo-removebg-preview.png" alt="logo" class="logo_img">
+            <div class="logo_name">
+                <a href="index.html">Travel <div>Agent</div></a>
             </div>
         </div>
-    </header>
+        <div class="nav-links">
+            <a href="index.html">Main</a>
+            <a href="#">Hotels</a>
+            <a href="#">Destination</a>
+            <a href="./settings.html">Settings</a>
+        </div>
+
+    </div>
+
+    <div class="right-side">
+
+        <div class="account">
+            <a href="./register.html">Register</a>
+                      <a href="./sign in.html">Sign in</a>        </div>
+
+
+        <div id="menu-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="4" cy="4" r="2" fill="#fff"></circle>
+                <circle cx="4" cy="12" r="2" fill="#fff"></circle>
+                <circle cx="4" cy="20" r="2" fill="#fff"></circle>
+
+                <rect x="8" y="2" width="16" height="4" rx="2" fill="#fff"></rect>
+                <rect x="8" y="10" width="16" height="4" rx="2" fill="#fff"></rect>
+                <rect x="8" y="18" width="16" height="4" rx="2" fill="#fff"></rect>
+            </svg>
+        </div>
+    </div>
+    <div class="mobile-header">
+        <div class="mobile-nav-links">
+            <a href="https://www.messenger.com/" target="_blank">Main</a>
+            <a href="https://www.youtube.com/" target="_blank">Hotels</a>
+            <a onclick="scrollToSection('destination')">Destination</a>
+            <a href="./settings.html">Settings</a>
+        </div>
+        <div class="mobile-account">
+            <a href="./sign up.html">Register</a>
+            <a href="./sign in.html">Sign in</a>
+        </div>
+    </div>
+</header>
 
 <div id="space"></div>
 <script src="./assets/js/scroll_effect.js"></script>
-
-<div class="info-card">
-    <div class="images">
-        <div class="main-imgs">
-            <img src="https://picsum.photos/id/154/2000/2000" class="slide" alt="">
-            <img src="https://picsum.photos/id/151/2000/2000" class="slide" alt="">
-            <img src="https://picsum.photos/id/152/2000/2000" class="slide" alt="">
-            <img src="https://picsum.photos/id/153/2000/2000" class="slide" alt="">
+    <div class="info-card">
+        <div class="images">
+            <div class="main-imgs">
+                <img src="./assets/Images/Hotels/hotel-4/img1.webp" alt="./assets/Images/Hotels/hotel-4/img1.webp" class="slide" style="left: 0%;">            </div>
+            <div class="s-images">
+                <button onclick="imgBefore()" class="small-img" style="width: 10%">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"></path>
+                        <path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z"></path>
+                    </svg>
+                </button>
+                <div class="small-img" onclick="setCounterAndSlide(0)" >
+                                <img src="./assets/Images/Hotels/hotel-4/img1.webp" alt="./assets/Images/Hotels/hotel-4/img1.webp"></div>                <button onclick="imgAfter()" class="small-img" style="width: 10%">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"></path>
+                        <path d="M9.293 8.707 12.586 12l-3.293 3.293 1.414 1.414L15.414 12l-4.707-4.707-1.414 1.414z"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div class="s-images">
-            <button onclick="imgBefore()" class="small-img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
-                    <path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z"/>
-                </svg>
-            </button>
-            <div class="small-img" onclick="setCounterAndSlide(0)"><img src="https://picsum.photos/id/154/500/500" alt=""></div>
-            <div class="small-img" onclick="setCounterAndSlide(1)"><img src="https://picsum.photos/id/151/50/50" alt=""></div>
-            <div class="small-img" onclick="setCounterAndSlide(2)"><img src="https://picsum.photos/id/152/50/50" alt=""></div>
-            <div class="small-img" onclick="setCounterAndSlide(3)"><img src="https://picsum.photos/id/153/50/50" alt=""></div>
-            <button onclick="imgAfter()" class="small-img">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/>
-                    <path d="M9.293 8.707 12.586 12l-3.293 3.293 1.414 1.414L15.414 12l-4.707-4.707-1.414 1.414z"/>
-                </svg>
-            </button>
+        <div class="detail">
+            <h1 class="title">
+                Hotel snoupi            </h1>
+            <div class="stars">
+                5.00/5 stars
+            </div>
+            <div class="description">
+                Paris<br>
+                <u>Hotel Description:</u><br>
+                hotel chabab mamay            </div>
+            <div class="services-dhotel">
+                City view<br>
+                Garden<br>
+                Pets allowed<br>
+                Free WiFi<br>
+                Balcony<br>
+                Bath<br>
+                Air conditioning<br>
+                24-hour front desk<br>
+                Key card access<br>
+                Daily housekeeping<br>
+            </div>
+            <div class="reserve-option">
+                2beds-1room 1bed 3beds-2rooms 2beds-2rooms
+            </div>
+            <a href="reservation.php">
+                <div class="reserve-button">
+                    Reserve Now
+                    99.99$                </div>
+            </a>
         </div>
     </div>
-    <div class="detail">
-        <h1 class="title">Jianguo Hotel Qianmen</h1>
-        <div class="stars">4.7/5 stars</div>
-        <div class="description">
-            <u>Hotel Description:</u><br>
-            The Jianguo Hotel Qianmen is located near Tiantan Park, 
-            just a 10-minute walk from the National Center for the 
-            Performing Arts and Tian'anmen Square. Built in 1956 it 
-            has old school charm and many rooms still feature high, 
-            crown-molded ceilings. A 2012 renovation brought all rooms 
-            and services up to modern day scratch and guestrooms come 
-            equipped with free Wi-Fi and all the usual amenities 
-            required for a comfortable stay.
-        </div>
-        <div class="services-dhotel">
-            City view
-            Garden
-            Pets allowed
-            Free WiFi
-            Balcony
-            Bath
-            Air conditioning
-            24-hour front desk
-            Key card access
-            Daily housekeeping
-        </div>
-        <div class="reserve-option">
-            2beds-1room 1bed 3beds-2rooms 2beds-2rooms
-        </div>
-        <a href="reservation.php">
-            <div class="reserve-button">Reserve Now</div>
-        </a>
-    </div>
-</div>
 
-<script src="./assets/js/hotel-slider.js"></script>
+    <script src="./assets/js/hotel-slider.js"></script>
+
+
 
 </body>
-</html>

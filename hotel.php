@@ -21,14 +21,20 @@
 
 
     require 'assets/db/connect.php';
-    //"HotelID Name LocationID Description Price Rating ImageURLs";
-    $sqlQuery = "SELECT Name, Description, ImageURLs FROM Hotels WHERE HotelID = $hotelID";
+    //"SELECT Hotels.Name AS Name,locations.Name AS location, hotels.Description, Price, ImageURLs, Rating 
+    // FROM Hotels INNER JOIN locations ON hotels.LocationID = locations.LocationID WHERE HotelID = 1";
+    $sqlQuery = "SELECT Hotels.Name AS Name,locations.Name AS location, hotels.Description AS Description, Price, ImageURLs, Rating 
+                    FROM Hotels INNER JOIN locations ON hotels.LocationID = locations.LocationID 
+                    WHERE HotelID = $hotelID LIMIT 1";
     $result = mysqli_query($conn, $sqlQuery);
 
     if ($result) {
         $row = mysqli_fetch_assoc($result);
         $hotelName = $row['Name'];
         $hotelDescription = $row['Description'];
+        $hotelprice = $row['Price'];
+        $rating = $row['Rating'];
+        $location = $row['location'];
         $imageURLs = json_decode($row['ImageURLs']);
 
     } else {
@@ -40,7 +46,6 @@
     <div class="info-card">
         <div class="images">
             <div class="main-imgs">
-                <img src="https://picsum.photos/id/154/2000/2000" class="slide" alt="">
                 <?php
                 if ($imageURLs && is_array($imageURLs)) {
                     foreach ($imageURLs as $imageURL) {
@@ -53,7 +58,7 @@
                 ?>
             </div>
             <div class="s-images">
-                <button onclick="imgBefore()" class="small-img">
+                <button onclick="imgBefore()" class="small-img" style='width: 10%'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                         <path
                             d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z" />
@@ -61,11 +66,16 @@
                     </svg>
                 </button>
                 <?php
+
                 if ($imageURLs && is_array($imageURLs)) {
                     $cpt = 0;
+                    $imageSize = count($imageURLs);
+                    $totalWidth = 75;
+                    $smallImageWidth = 75 / $imageSize . "%";
                     foreach ($imageURLs as $imageURL) {
                         $fullImageURL = "./assets/Images/Hotels/hotel-$hotelID/$imageURL";
-                        echo "<div class='small-img' onclick='setCounterAndSlide($cpt)'>
+                        //style='width: $smallImageWidth'
+                        echo "<div class='small-img' onclick='setCounterAndSlide($cpt)' >
                                 <img src='$fullImageURL' alt='$fullImageURL'></div>";
                         $cpt++;
                     }
@@ -73,7 +83,7 @@
                     echo "No images";
                 }
                 ?>
-                <button onclick="imgAfter()" class="small-img">
+                <button onclick="imgAfter()" class="small-img" style='width: 10%'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                         <path
                             d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z" />
@@ -83,36 +93,37 @@
             </div>
         </div>
         <div class="detail">
-            <h1 class="title">Jianguo Hotel Qianmen</h1>
-            <div class="stars">4.7/5 stars</div>
+            <h1 class="title">
+                <?php echo $hotelName ?>
+            </h1>
+            <div class="stars">
+                <?php echo $rating ?>/5 stars
+            </div>
             <div class="description">
+                <?php echo $location ?><br>
                 <u>Hotel Description:</u><br>
-                The Jianguo Hotel Qianmen is located near Tiantan Park,
-                just a 10-minute walk from the National Center for the
-                Performing Arts and Tian'anmen Square. Built in 1956 it
-                has old school charm and many rooms still feature high,
-                crown-molded ceilings. A 2012 renovation brought all rooms
-                and services up to modern day scratch and guestrooms come
-                equipped with free Wi-Fi and all the usual amenities
-                required for a comfortable stay.
+                <?php echo $hotelDescription ?>
             </div>
             <div class="services-dhotel">
-                City view
-                Garden
-                Pets allowed
-                Free WiFi
-                Balcony
-                Bath
-                Air conditioning
-                24-hour front desk
-                Key card access
-                Daily housekeeping
+                City view<br>
+                Garden<br>
+                Pets allowed<br>
+                Free WiFi<br>
+                Balcony<br>
+                Bath<br>
+                Air conditioning<br>
+                24-hour front desk<br>
+                Key card access<br>
+                Daily housekeeping<br>
             </div>
             <div class="reserve-option">
                 2beds-1room 1bed 3beds-2rooms 2beds-2rooms
             </div>
             <a href="reservation.php">
-                <div class="reserve-button">Reserve Now</div>
+                <div class="reserve-button">
+                    Reserve Now
+                    <?php echo $hotelprice . "$" ?>
+                </div>
             </a>
         </div>
     </div>
