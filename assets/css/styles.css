@@ -78,6 +78,11 @@ header{
     width: auto;
     transition: 0.3s;
 }
+.log{
+    width: 250px;
+    height: 250px;
+    margin-bottom: -130px;
+}
 
 .logo_name a{
     display: flex;
