@@ -5,7 +5,7 @@
         <div class="logo">
             <img src="./assets/Images/logo-removebg-preview.png" alt="logo" class="logo_img">
             <div class="logo_name">
-                <a href="index.html">Travel <div>Agent</div></a>
+                <a href="index.html"><img src="./assets/Images/NL.png" alt="logo" class="logo_img"></a>
             </div>
         </div>
         <div class="nav-links">
