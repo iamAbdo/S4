@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/des.css">
-    <title>Document</title>
+    <title>hmed</title>
 </head>
 
 <body>
