@@ -78,16 +78,15 @@ body {
 
 .details {
     position: absolute;
-    bottom: -110%;
+    bottom: -100%;
     left: 0;
-    width: calc(100% - 48px);
+    width: calc(120% - 48px);
     height: auto;
     padding: 1.5em 1.5em 2em;
     background: #000a;
     backdrop-filter: blur(16px) saturate(120%);
     transition: .3s;
     color: #fff;
-    transform: scale(0.7);
     z-index: 2;
 }
 

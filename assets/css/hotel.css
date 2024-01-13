@@ -13,21 +13,28 @@ button{
 }
 
 .images {
-    height: 100%;
+    height: 90%;
+    max-height: 90%;
     width: 50%;
     min-width: 30%;
-    margin: 30px;
-    border: 3px solid orange;
+    margin: 0 30px;
+    align-self: self-start  ;
 }
 
 .main-imgs{
     width: 70%;
-    height: 70%;
-    margin: 30px auto;
+    height: 60%;
+    max-height: 60%;
+    margin: 3% auto;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
-
+.main-imgs img{
+    border: 5px solid transparent;
+    border-radius: 30px;
+}
 .slide{
     position: absolute;
     transition: 1s;
@@ -35,19 +42,23 @@ button{
 }
 
 .s-images {
-    border: 3px solid salmon;
+    height: 30%;
+    width: 70%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: auto;
     gap: 10px;
+    border-radius: 5%;
 }
 
 .small-img{
     border: 3px solid aqua;
     background: transparent;
     border-radius: 10%;
-    width: 20%;
+    max-height: 90%;
     aspect-ratio: 1 / 1;
+    overflow: hidden;
 }
 
 .small-img img {

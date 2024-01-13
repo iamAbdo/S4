@@ -8,7 +8,7 @@ body{
     min-height: 100vh;
     padding: 0px;
     margin: 0px;
-    z-index: -3;
+    z-index: -3;logo
     background-color: #154d52;
     background: linear-gradient(to bottom, #154d52 ,#177b8b);
     
@@ -37,7 +37,7 @@ header{
     top: 0;
     display: flex;
     justify-content: space-between;
-    height: 10vh;
+    height: 12vh;
     width: 100vw;
     padding: 0 1vw;
     align-items: center;
@@ -74,9 +74,16 @@ header{
 
 .logo img {
     height: 10vh;
-    min-height: 30px;
+    min-height: 3px;
     width: auto;
+    height: 150px;
     transition: 0.3s;
+    margin-bottom: -35px;
+}
+.log{
+    width: 250px;
+    height: 250px;
+    margin-bottom: -130px;
 }
 
 .logo_name a{
