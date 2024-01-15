@@ -514,16 +514,15 @@ button {
 /*=============== Main footer ===============*/
 footer{
     position: relative;
-    background-color: rgba(0, 0, 0, 0.6);
     min-height: 300px;
-    display: flex;
+    
     flex-direction: column;
     justify-content: space-between;
     color: #FFF;
 }
 
 footer div{
-    margin: 10px 30px;
+   
 }
 
 .footer-background {
