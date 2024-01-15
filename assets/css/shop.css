@@ -32,6 +32,15 @@ body{
     background-color: #3498db;
     color: white;
 }
+#cat .selected {
+    background-color: #3498db;
+    color: white;
+}
+#cat .unselect-link{
+    margin: 8px auto;
+    background-color: #db3434;
+    color: white;
+}
 #Hotel-cards{
     margin-left: 5%;
     width: 80%;
@@ -39,6 +48,7 @@ body{
     flex-wrap: wrap;
     gap: 50px;
 }
+
 .Hotel-card{
     width: 200px;
     height: 300px;
@@ -66,6 +76,5 @@ body{
 
 .hotel-desc {
     font-size: 14px;
-
     margin-top: 5px; 
 }

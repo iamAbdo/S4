@@ -21,20 +21,40 @@
     </center>
     <div class="container">
         <div id="cat">
-            <a href="#Algeria">Algeria</a>
-            <a href="#Morocco">Morocco</a>
-            <a href="#Tunisia">Tunisia</a>
-            <a href="#Egypt">Egypt</a>
-            <a href="#Jordan">Jordan</a>
-            <a href="#Lebanon">Lebanon</a>
-            <a href="#Turkey">Turkey</a>
-            <a href="#Greece">Greece</a>
+            <?PHP
+            $GETLocationID = isset($_GET['LocationID']) ? $_GET['LocationID'] : null;
+
+            require 'assets/db/connect.php';
+            $sqlQuery = "SELECT LocationID,Name FROM locations";
+            $result = mysqli_query($conn, $sqlQuery);
+
+            if ($GETLocationID !== null) {
+                echo " <a href='?' class='unselect-link'>Unselect</a>";
+            }
+
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $LocationName = $row['Name'];
+                    $LocationID = $row['LocationID'];
+                    echo "<a href='?LocationID=$LocationID'";
+                    if ($GETLocationID == $LocationID) {
+                        echo " class='selected' ";
+                    }
+                    echo ">$LocationName</a>";
+                }
+            }
+
+
+
+            ?>
         </div>
         <div id="Hotel-cards">
             <?php
-            require 'assets/db/connect.php';
 
-            $sqlQuery = "SELECT HotelID, Name, Description, ImageURLs FROM Hotels LIMIT 30";
+            $sqlQuery = ($GETLocationID == null) ?
+                'SELECT HotelID, Name, Description, ImageURLs FROM Hotels LIMIT 30' :
+                "SELECT HotelID, Name, Description, ImageURLs FROM Hotels WHERE LocationID=$GETLocationID LIMIT 30";
+
             $result = mysqli_query($conn, $sqlQuery);
 
             if ($result) {
