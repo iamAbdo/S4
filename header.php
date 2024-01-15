@@ -3,7 +3,7 @@
 
     <div class="left-side">
         <div class="logo">
-            <img src="./assets/Images/logo-removebg-preview.png" alt="logo" class="logo_img">
+            <img src="./assets/Images/sahlaa-removebg-preview (1).png" alt="logo" class="logo_img">
             <div class="logo_name">
                 <a href="index.html"><img src="./assets/Images/NL.png" alt="logo" class="logo_img"></a>
             </div>
