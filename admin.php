@@ -11,7 +11,7 @@
 <body>
 <div class="background-image"></div>
     <?php
-    include 'header.php';
+    include 'haeder.php';
     //check if user is admin or redirect; mazal
     require 'assets/db/connect.php';
     ?>
