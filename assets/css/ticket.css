@@ -1,0 +1,39 @@
+*{
+    font-family: 'Montserrat', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pass{
+    position:relative;
+    font-size:2vw;
+    font-weight: bolder;
+    text-wrap: nowrap;
+    width: 100%;
+}
+.pass img{
+    width: 100%;
+    height: auto;
+}
+#name{
+    position: absolute;
+    top: 42%;
+    left: 19%;
+}
+#fligth{
+    position: absolute;
+    top: 34%;
+    left: 15%;
+}
+#destination{
+    position: absolute;
+    top: 34%;
+    left: 30%;
+    word-spacing: 12vw;
+}
+#date{
+    position: absolute;
+    top:50%;
+    left: 12%;
+    word-spacing: 8vw;
+}
