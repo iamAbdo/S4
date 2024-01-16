@@ -57,9 +57,8 @@ header{
     height: 10vh;
     min-height: 30px;
     width: auto;
-    height: 150px;
+    height: 10vh;
     transition: 0.3s;
-    margin-bottom: -35px;
 }
 
 .logo_name a{
