@@ -8,7 +8,7 @@ body{
     min-height: 100vh;
     padding: 0px;
     margin: 0px;
-    z-index: -3;logo
+    z-index: -3;
     background-color: #154d52;
     background: linear-gradient(to bottom, #154d52 ,#177b8b);
     
@@ -74,7 +74,7 @@ header{
 
 .logo img {
     height: 10vh;
-    min-height: 3px;
+    min-height: 30px;
     width: auto;
     height: 150px;
     transition: 0.3s;
@@ -625,9 +625,6 @@ footer{
     color: #FFF;
 }
 
-footer div{
-   
-}
 
 .footer-background {
     position: absolute;

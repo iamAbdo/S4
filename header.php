@@ -5,14 +5,14 @@
         <div class="logo">
             <img src="./assets/Images/sahlaa-removebg-preview (1).png" alt="logo" class="logo_img">
             <div class="logo_name">
-                <a href="index.html"><img src="./assets/Images/NL.png" alt="logo" class="logo_img"></a>
+                <a href="index.php"><img src="./assets/Images/NL.png" alt="logo" class="logo_img"></a>
             </div>
         </div>
         <div class="nav-links">
-            <a href="index.html">Main</a>
-            <a href="#">Hotels</a>
-            <a href="#">Destination</a>
-            <a href="./settings.html">Settings</a>
+            <a href="index.php">Main</a>
+            <a href="hotels.php">Hotels</a>
+            <a href="destinations.php">Destination</a>
+            <a href="vols.php">Vols</a>
         </div>
 
     </div>
@@ -42,7 +42,7 @@
 
                 $conn->close();
             } else {
-                echo '<a href="./register.html">Register</a>
+                echo '<a href="./sign up.html">Register</a>
                       <a href="./sign in.html">Sign in</a>';
             }
             ?>
@@ -63,10 +63,10 @@
     </div>
     <div class="mobile-header">
         <div class="mobile-nav-links">
-            <a href="https://www.messenger.com/" target="_blank">Main</a>
-            <a href="https://www.youtube.com/" target="_blank">Hotels</a>
-            <a onclick="scrollToSection('destination')">Destination</a>
-            <a href="./settings.html">Settings</a>
+            <a href="index.php" target="_blank">Main</a>
+            <a href="hotels.php" target="_blank">Hotels</a>
+            <a href="destinations.php">Destination</a>
+            <a href="vols.php">Vols</a>
         </div>
         <div class="mobile-account">
             <a href="./sign up.html">Register</a>
