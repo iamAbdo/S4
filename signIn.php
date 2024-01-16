@@ -20,7 +20,9 @@ if ($result->num_rows > 0) {
 
         setcookie('token', $token, time() + 3600, '/'); // Cookie expires in 1 hour
 
-        echo "correct";
+        echo "<br>correct";
+
+        header("Location: account.php");
     } else {
         echo "incorrect Password";
     }
