@@ -45,7 +45,7 @@
     <div class="main-content">
 
         <div class="company-description">
-            <h2>Welcome to Travel-Agent</h2>
+            <h2>Welcome to<img src="./assets/Images/NL.png" alt="logo" class="log"></h2>
             <p>Find your next stay. Search low prices on hotels, homes, and more. Your journey begins here.</p>
         </div>
 
@@ -60,15 +60,17 @@
                 <p>Vacation Travel</p>
             </div>
 
-            <div class="icon" onclick="location.href='hotels.php'">
+            <div class="icon" onclick="location.href='hotels.html'">
                 <img src="./assets/Images/icons/Hotel_White.png" alt="Hotels Icon">
                 <p>Hotels</p>
             </div>
 
-            <div class="icon" onclick="location.href='hajj-omra.html'">
-                <img src="./assets/Images/icons/Mecca_White.png" alt="Hajj and Omra Icon">
-                <p>Hajj & Omra</p>
-            </div>
+            <a href="hadj et omra.html">
+                <div class="icon" onclick="location.href='hajj-omra.html'">
+                    <img src="./assets/Images/icons/Mecca_White.png" alt="Hajj and Omra Icon">
+                    <p>Hajj & Omra</p>
+                </div>
+            </a>
         </div>
 
     </div>

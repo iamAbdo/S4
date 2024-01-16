@@ -55,7 +55,7 @@ header{
 
 .logo img {
     height: 10vh;
-    min-height: 3px;
+    min-height: 30px;
     width: auto;
     height: 150px;
     transition: 0.3s;
