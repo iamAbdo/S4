@@ -91,96 +91,68 @@ if (isset($_COOKIE['token'])) {
         Les Commentaires
         #################### 
     -->
-    <?php
-    require "assets/db/connect.php";
 
-    $sql = "SELECT ReviewID,reviews.Rating,Comment,Date,Name,ImageURLs FROM reviews INNER JOIN hotels ON reviews.HotelID= hotels.HotelID";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $HotelName = $row['Name'];
-        $reviews = $row['reviews'];
-        $reviews = $row['Comment'];
-        $HotelImg = $row[''];
-    } else {
-        header('Location: login.php');
-        exit;
-    }
-
-    // Close the database connection
-    $conn->close();
-    ?>
     <div class="comments-container">
         <h1>Your comments</h1>
 
         <ul id="comments-list" class="comments-list">
-            <li>
-                <div class="comment-avatar">
-                    <img src="Hotel-image" alt="Hotel-image">
-                </div>
-                <div class="comment-box">
-                    <div class="comment-head">
-                        <h6 class="comment-name"><a href="">To Hotel Name</a></h6>
-                        <span>il y a 10minutes</span>
-                        <div class="starts">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+            <?php
+            require "assets/db/connect.php";
+
+            $sql = "SELECT ReviewID,reviews.Rating,Comment,Date,Name,ImageURLs,hotels.HotelID FROM reviews INNER JOIN hotels ON reviews.HotelID= hotels.HotelID";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $hotelID = $row['HotelID'];
+                    $HotelName = $row['Name'];
+                    $Rating = $row['Rating'];
+                    $Comment = $row['Comment'];
+                    $Date = $row['Date'];
+                    $imageURLs = json_decode($row['ImageURLs']);
+                    $HotelImg = './assets/Images/Hotels/hotel-' . $hotelID . '/' . $imageURLs[0] . '';
+
+                    $filledStars = min(5, $Rating); // Limit to a maximum of 5 stars
+                    $emptyStars = 5 - $filledStars;
+
+                    echo '<li>
+                        <div class="comment-avatar">
+                            <img src="' . $HotelImg . '" alt="Hotel-image">
                         </div>
-                    </div>
-                    <div class="comment-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium
-                        vitae, praesentium optio, sapiente distinctio illo?
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="comment-avatar">
-                    <img src="Hotel-image" alt="Hotel-image">
-                </div>
-                <div class="comment-box">
-                    <div class="comment-head">
-                        <h6 class="comment-name"><a href="">To Hotel Name</a></h6>
-                        <span>il y a 10minutes</span>
-                        <div class="starts">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="comment-box">
+                            <div class="comment-head">
+                                <h6 class="comment-name"><a href="">To
+                                       ' . $HotelName . '
+                                    </a></h6>
+                                <span>
+                                    ' . $Date . '
+                                </span>
+                                <div class="starts">';
+                    for ($i = 1; $i <= $emptyStars; $i++) {
+                        echo '<i class="far fa-star"></i>';
+                    }
+                    for ($i = 1; $i <= $filledStars; $i++) {
+                        echo '<i class="fas fa-star"></i>';
+                    }
+
+                    echo '</div>
+                            </div>
+                            <div class="comment-content">
+                                ' . $Comment . '
+                            </div>
                         </div>
-                    </div>
-                    <div class="comment-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium
-                        vitae, praesentium optio, sapiente distinctio illo?
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="comment-avatar">
-                    <img src="Hotel-image" alt="Hotel-image">
-                </div>
-                <div class="comment-box">
-                    <div class="comment-head">
-                        <h6 class="comment-name"><a href="">To Hotel Name</a></h6>
-                        <span>il y a 10minutes</span>
-                        <div class="starts">
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="comment-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium
-                        vitae, praesentium optio, sapiente distinctio illo?
-                    </div>
-                </div>
-            </li>
+                    </li>';
+
+                }
+            } else {
+                header('Location: login.php');
+                exit;
+            }
+
+            // Close the database connection
+            $conn->close();
+            ?>
         </ul>
     </div>
 
