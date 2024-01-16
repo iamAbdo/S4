@@ -81,8 +81,8 @@ header{
 }
 .log{
     width: 250px;
-    height: 250px;
-    margin-bottom: -130px;
+    height: auto;
+    margin-bottom: -20px;
 }
 
 .logo_name a{
