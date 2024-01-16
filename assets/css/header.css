@@ -11,14 +11,13 @@ a{
     text-decoration: none;
 }
 
-.header{
-    background: rgba(26, 14, 14,0.7);
+header{
+    background-color: rgba(26, 14, 14,0.7);
     position: fixed;
     top: 0;
-    left: 0;
     display: flex;
     justify-content: space-between;
-    height: 10vh;
+    height: 12vh;
     width: 100vw;
     padding: 0 1vw;
     align-items: center;
@@ -56,9 +55,11 @@ a{
 
 .logo img {
     height: 10vh;
-    min-height: 30px;
+    min-height: 3px;
     width: auto;
+    height: 150px;
     transition: 0.3s;
+    margin-bottom: -35px;
 }
 
 .logo_name a{
