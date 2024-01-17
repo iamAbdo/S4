@@ -1,7 +1,61 @@
 *{
     box-sizing: border-box;
 }
-
+header{
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    width: 100vw;
+    padding: 0 1vw;
+    align-items: center;
+    min-height: 50px;
+    transition: 0.5s ease;
+    z-index: 1000;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/background.jpg'); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.thumbnails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .thumbnail-container {
+    display: flex;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.1);
+  }
+  
+  .arrow {
+    font-size: 2em;
+    cursor: pointer;
+  }
 button{
     cursor: pointer;
 }
@@ -10,6 +64,7 @@ button{
     height: 80vh;
     border: 1px solid black;
     display: flex;
+    background-color: #fff;
 }
 
 .images {
@@ -43,7 +98,7 @@ button{
 
 .s-images {
     height: 30%;
-    width: 70%;
+    width: 58%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -84,6 +139,7 @@ button{
 .stars {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    margin-top: 20%;
 }
 
 .description {
