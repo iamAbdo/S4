@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation</title>
+</head>
+<body>
+
+    <h2>Informations de réservation :</h2>
+
+    <script>
+        // Récupérer le formulaire par son ID
+        const myForm = document.getElementById('myForm');
+
+        // Ajouter un écouteur d'événements pour la soumission du formulaire
+        myForm.addEventListener('submit', function(event) {
+            // Annuler le comportement par défaut du formulaire pour éviter le rechargement de la page
+            event.preventDefault();
+
+            // Récupérer les valeurs des champs du formulaire
+            const arrivalDate = myForm.elements['arrival-date'].value;
+            const departureDate = myForm.elements['departure-date'].value;
+            const numPeople = myForm.elements['num-people'].value;
+            const numRooms = myForm.elements['num-rooms'].value;
+
+            // Afficher les informations sur la page
+            document.write("<p>Arrivée: " + arrivalDate + "</p>");
+            document.write("<p>Départ: " + departureDate + "</p>");
+            document.write("<p>Nombre de personnes: " + numPeople + "</p>");
+            document.write("<p>Nombre de chambres: " + numRooms + "</p>");
+        });
+    </script>
+
+</body>
+</html>
