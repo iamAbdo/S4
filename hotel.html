@@ -123,12 +123,38 @@ menuIcon.addEventListener('click', () => {
                 Daily housekeeping<br>
             </div>
             <div class="reserve-option">
-                2beds-1room 1bed 3beds-2rooms 2beds-2rooms
+                <label for="arrival-date">Arrivée:</label>
+                <input type="date" id="arrival-date" name="arrival-date" required>
+            
+                <label for="departure-date">Départ:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+            
+                <label for="num-people">Nombre de personnes:</label>
+                <select id="num-people" name="num-people" required>
+                    <option value="1">1 personne</option>
+                    <option value="2">2 personnes</option>
+                    <option value="3">3 personnes</option>
+                    <!-- Ajoutez plus d'options au besoin -->
+                </select>
+            
+                <label for="num-rooms">Nombre de chambres:</label>
+                <select id="num-rooms" name="num-rooms" required>
+                    <option value="1">1 chambre</option>
+                    <option value="2">2 chambres</option>
+                    <option value="3">3 chambres</option>
+                    <!-- Ajoutez plus d'options au besoin -->
+                </select>
             </div>
+            
             <a href="reservation.php">
-                <div class="reserve-button">
-                    Reserve Now
-                    99.99$                </div>
+                <button class="btn">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                  <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"></path>
+                </svg>
+                    </span>
+                    <span class="text">RESERVER</span>
+                </button>
             </a>
         </div>
     </div>
