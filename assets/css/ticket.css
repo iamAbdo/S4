@@ -6,11 +6,10 @@
 
 .pass{
     position:relative;
-    font-size:0.8vw;
+    font-size:2vw;
     font-weight: bolder;
     text-wrap: nowrap;
-    width: 40%;
-    margin: auto;
+    width: 100%;
 }
 .pass img{
     width: 100%;
@@ -30,11 +29,11 @@
     position: absolute;
     top: 34%;
     left: 30%;
-    word-spacing: 5vw;
+    word-spacing: 12vw;
 }
 #date{
     position: absolute;
     top:50%;
-    left: 11.2%;
-    word-spacing: 3.2vw;
+    left: 12%;
+    word-spacing: 8vw;
 }
