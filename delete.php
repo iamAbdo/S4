@@ -22,8 +22,17 @@ switch ($type) {
     case 'Location':
         $sqlQuery = "DELETE FROM locations WHERE LocationID = $id";
         break;
+    case 'Review':
+        $sqlQuery = "DELETE FROM reviews WHERE ReviewID = $id";
+        break;
+    case 'Booking':
+        $sqlQuery = "DELETE FROM bookings WHERE BookingID = $id";
+        break;
+    case 'Flight':
+        $sqlQuery = "DELETE FROM flights WHERE FlightID = $id";
+        break;
     default:
-        echo "Type does not exist";
+        header("Location: admin.php");
         break;
 }
 try {
