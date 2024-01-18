@@ -293,20 +293,21 @@ body {
   }
   .card {
     position: relative;
-    width: 600px;
-    height: 16rem;
+    width: 850px;
+    height: 18rem;
     display: flex;
     grid-gap: 1.25rem;
     gap: 1.25rem;
     border-radius: 1rem;
     background-color: rgb(255, 255, 255);
     padding: 1.5rem;
-    margin-left: 7.5%
+    margin-left: 1%;
+    top: 2rem;
   }
   .card1 {
     position: relative;
-    width: 600px;
-    height: 16rem;
+    width: 850px;
+    height: 18rem;
     display: flex;
     grid-gap: 1.25rem;
     gap: 1.25rem;
@@ -318,20 +319,21 @@ body {
   }
   .card11 {
     position: relative;
-    width: 600px;
-    height: 16rem;
+    width: 850px;
+    height: 18rem;
     display: flex;
     grid-gap: 1.25rem;
     gap: 1.25rem;
     border-radius: 1rem;
     background-color: rgb(255, 255, 255);
     padding: 1.5rem;
-    margin-left: 7.5%
+    margin-left: 1%;
+    top: 2rem;
   }
   .card111 {
     position: relative;
-    width: 600px;
-    height: 16rem;
+    width: 850px;
+    height: 18rem;
     display: flex;
     grid-gap: 1.25rem;
     gap: 1.25rem;
@@ -365,13 +367,14 @@ body {
     position: relative;
     margin-right: 10%;
     height: 3.5rem;
-    
     border-radius: 1rem;
     background-color: var(--gray);
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) alternate-reverse infinite;
   }
   
   .card-3 {
+    position: relative;
+    bottom: 2rem;
     height: 3rem;
     margin-right: 5%;
     border-radius: 1rem;
@@ -397,6 +400,9 @@ body {
     animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) alternate-reverse infinite;
   }
   .btn {
+    position: relative;
+    right: 2rem;
+    bottom: 2rem;
     width: 180px;
     height: 50px;
     border-radius: 5px;
