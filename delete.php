@@ -23,7 +23,7 @@ switch ($type) {
         $sqlQuery = "DELETE FROM locations WHERE LocationID = $id";
         break;
     default:
-        header("Location: admin.php");
+        echo "Type does not exist";
         break;
 }
 try {
