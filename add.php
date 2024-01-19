@@ -14,7 +14,6 @@
 
     // Vérifier si l'utilisateur est un administrateur
     checkUserRoleAndRedirect();
-
     if (isset($_GET['type'])) {
         $type = $_GET['type'];
         switch ($type) {
@@ -55,16 +54,16 @@
                 <form>
                     <h2>Formulaire Location</h2>
 
-                        <label for="name">Nom:</label>
-                        <input type="text" id="name" name="name" required>
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" required>
 
-                        <label for="description">Description:</label>
-                        <textarea id="description" name="description" rows="4" required></textarea>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
 
-                        <label for="images">Images:</label>
-                        <input type="file" id="images" name="images" accept="image/*" multiple required>
+                    <label for="images">Images:</label>
+                    <input type="file" id="images" name="images" accept="image/*" multiple required>
 
-                        <input type="submit" value="Soumettre">
+                    <input type="submit" value="Soumettre">
                 </form>
 
 
@@ -73,7 +72,7 @@
                 break;
             case 'flight':
                 ?>
-                <form>
+                <form method="POST" action="addVol.php">
                     <h2>Formulaire Vol</h2>
 
                     <label for="departure-location">Location de départ:</label>
@@ -93,10 +92,10 @@
                     </select>
 
                     <label for="departure-date">Date de départ:</label>
-                    <input type="date" id="departure-date" name="departure-date" required>
+                    <input type="datetime-local" id="departure-date" name="departure-date" required>
 
                     <label for="arrival-date">Date d'arrivée:</label>
-                    <input type="date" id="arrival-date" name="arrival-date" required>
+                    <input type="datetime-local" id="arrival-date" name="arrival-date" required>
 
                     <label for="price">Prix:</label>
                     <input type="text" id="price" name="price" required>

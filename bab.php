@@ -14,6 +14,7 @@
         <h1>Nos hotels</h1>
     </center>
     <div class="container">
+
         <div id="cat">
             <?PHP
             $GETLocationID = isset($_GET['LocationID']) ? $_GET['LocationID'] : null;
@@ -37,68 +38,67 @@
                     echo ">$LocationName</a>";
                 }
             }
-
-
-
             ?>
-
-    <div class="container">
-        <div class="info-card">
-            <div class="images">
-                <!-- ... Vos images ... -->
-            </div>
-            <div class="detail">
-                <h1 class="title">nom de lhotel</h1>
-                <div class="stars">/5 stars</div>
-                <div class="description">
-                    PARIS<br>
-                    <u>Hotel Description:</u><br>
-                    
-                </div>
-                <div class="services-dhotel">
-                    <!-- ... Vos services ... -->
-                </div>
-                <div class="reserve-option">
-                    <!-- ... Vos options de réservation ... -->
-                </div>
-                <a href="reservation.php" class="reserve-button">
-                    Reserve Now 
-                </a>
-            </div>
-        </div><br>
-        <div class="info-card">
-            <div class="images">
-                <!-- ... Vos images ... -->
-            </div>
-            <div class="detail">
-                <h1 class="title">nom de lhotel</h1>
-                <div class="stars">/5 stars</div>
-                <div class="description">
-                    PARIS<br>
-                    <u>Hotel Description:</u><br>
-                    
-                </div>
-                <div class="services-dhotel">
-                    <!-- ... Vos services ... -->
-                </div>
-                <div class="reserve-option">
-                    <!-- ... Vos options de réservation ... -->
-                </div>
-                <a href="reservation.php" class="reserve-button">
-                    Reserve Now 
-                </a>
-            </div>
         </div>
 
+        <div class="container">
+            <div class="info-card">
+                <div class="images">
+                    <!-- ... Vos images ... -->
+                </div>
+                <div class="detail">
+                    <h1 class="title">nom de lhotel</h1>
+                    <div class="stars">/5 stars</div>
+                    <div class="description">
+                        PARIS<br>
+                        <u>Hotel Description:</u><br>
 
-        <div class="thumbnails">
-            <div class="thumbnail-container">
-                <!-- ... Vos miniatures ... -->
+                    </div>
+                    <div class="services-dhotel">
+                        <!-- ... Vos services ... -->
+                    </div>
+                    <div class="reserve-option">
+                        <!-- ... Vos options de réservation ... -->
+                    </div>
+                    <a href="reservation.php" class="reserve-button">
+                        Reserve Now
+                    </a>
+                </div>
+            </div><br>
+            <div class="info-card">
+                <div class="images">
+                    <!-- ... Vos images ... -->
+                </div>
+                <div class="detail">
+                    <h1 class="title">nom de lhotel</h1>
+                    <div class="stars">/5 stars</div>
+                    <div class="description">
+                        PARIS<br>
+                        <u>Hotel Description:</u><br>
+
+                    </div>
+                    <div class="services-dhotel">
+                        <!-- ... Vos services ... -->
+                    </div>
+                    <div class="reserve-option">
+                        <!-- ... Vos options de réservation ... -->
+                    </div>
+                    <a href="reservation.php" class="reserve-button">
+                        Reserve Now
+                    </a>
+                </div>
             </div>
-            <div class="arrow">➡️</div>
+
+
+            <div class="thumbnails">
+                <div class="thumbnail-container">
+                    <!-- ... Vos miniatures ... -->
+                </div>
+                <div class="arrow">➡️</div>
+            </div>
+
         </div>
     </div>
-
     <script src="./assets/js/hotel-slider.js"></script>
 
 </body>

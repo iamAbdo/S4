@@ -1,188 +1,192 @@
 /* Styles généraux */
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+* {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* En-tête */
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }
 
 h1 {
-    margin: 0;
+  margin: 0;
 }
 
 /* Navigation */
 
 #cat {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-    padding: 20px;
-    justify-content: space-around;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  justify-content: space-around;
 }
 
 #cat a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 #cat a:hover {
-
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
 #cat .selected {
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
 #cat .unselect-link {
-    background-color: #db3434;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
+  background-color: #db3434;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.info-hotel {
+  border-radius: 50px;
+  background: #d1d1d1;
+  box-shadow: 20px 20px 60px #b2b2b2, -20px -20px 60px #f0f0f0;
 }
 
 /* Cartes d'hôtel */
 
 .Hotel-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .Hotel-card {
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .hotel-img {
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    border-bottom: 2px solid #eee;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  border-bottom: 2px solid #eee;
 }
 
 .detail {
-    position: relative;
-    left: 25rem;
-    padding: 20px;
-    box-sizing: border-box;
+  position: relative;
+  left: 25rem;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .title {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .stars {
-    color: #f39c12;
-    font-size: 18px;
-    margin-bottom: 20px;
+  color: #f39c12;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .description {
-    margin-bottom: 20px;
-    color: #555;
+  margin-bottom: 20px;
+  color: #555;
 }
 
 .reserve-button {
-    width: 65%;
-    background-color: #1877f2;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 65%;
+  background-color: #1877f2;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .reserve-button:hover {
-    background-color: #1558c7;
+  background-color: #1558c7;
 }
 
 /* Miniatures */
 
 .thumbnails {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .thumbnail-container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .thumbnail {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    cursor: pointer;
-    border: 2px solid #ddd;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
 }
 
 .thumbnail:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .arrow {
-    position: relative;
-    left:35rem;
-    top: 20rem;
-    font-size: 2em;
-    cursor: pointer;
+  position: relative;
+  left: 35rem;
+  top: 20rem;
+  font-size: 2em;
+  cursor: pointer;
 }
 
 /* Fond de page et conteneur global */
 
 body {
-    background-image: url('../Images/background.png');
-    background-size: cover;
-    color: #333;
+  background-image: url("../Images/background.png");
+  background-size: cover;
+  color: #333;
 }
 
 .container {
-    min-height: 100vh;
-    margin: 5vh 1vw;
-    align-items: flex-start;
-    position: relative;
+  min-height: 100vh;
+  margin: 5vh 1vw;
+  align-items: flex-start;
+  position: relative;
 }
