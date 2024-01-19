@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,228 +10,257 @@
 </head>
 
 <style>
-.color {
-            color:red;
-        }    
+    .color {
+        color: red;
+    }
 </style>
-    
-    
-    
+
+
+
 
 <body>
- <!-- Header -->
- <header class="Header">
-            
-    <div class="left-side">
-    <div class="logo">
-        <img src="./assets/Images/sahlaa-removebg-preview (1).png" alt="logo" class="logo_img">
-        <div class="logo_name">
-            <a href="index.html"><img src="./assets/Images/NL.png" alt="logo" id="SahlaIMG" class="logo_img"></a>
-        </div>
-    </div>
-    <div class="nav-links">
-        <a onclick="scrollToSection('logo_img')">Main</a>
-        <a onclick="scrollToSection('Hotels')">Hotels</a>
-        <a onclick="scrollToSection('destination')" >Destination</a>
-        <a href="./settings.html">Settings</a>
-    </div>
+    <!-- Header -->
+    <header class="Header">
 
-    </div>
-
-    <div class="right-side">
-
-        <div class="account">
-            <a href="./sign up.html">Register</a>
-            <a href="./sign in.html">Sign in</a>
-        </div>
-
-        
-        <div id="menu-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="4" cy="4" r="2" fill="#fff" />
-                <circle cx="4" cy="12" r="2" fill="#fff" />
-                <circle cx="4" cy="20" r="2" fill="#fff" />
-              
-                <rect x="8" y="2" width="16" height="4" rx="2" fill="#fff" />
-                <rect x="8" y="10" width="16" height="4" rx="2" fill="#fff" />
-                <rect x="8" y="18" width="16" height="4" rx="2" fill="#fff" />
-            </svg>
-        </div>   
-    </div>
-    <div class="mobile-header">
-        <div class="mobile-nav-links">
-            <a href="https://www.messenger.com/" target="_blank">Main</a>
-            <a href="https://www.youtube.com/" target="_blank">Hotels</a>
-            <a onclick="scrollToSection('destination')" >Destination</a>
-            <a href="./settings.html">Settings</a>
-        </div>
-        <div class="mobile-account">
-            <a href="./register.html">Register</a>
-            <a href="./sign in.html">Sign in</a>
-        </div>
-    </div>
-</header>
-<script>
-const menuIcon = document.getElementById('menu-icon');
-const navlinks = document.querySelector('.nav-links');
-const mobileHeader = document.querySelector('.mobile-header');
-
-menuIcon.addEventListener('click', () => {
-    navlinks.classList.toggle('show');
-    mobileHeader.classList.toggle('show');
-});
-</script> 
-
-
-<div class="overlay"></div>
-<div id="tabs">
-    <div id="hadj-tab" class="tab">Hadj</div>
-    <div id="omra-tab" class="tab">Omra</div>
-</div>
-
-<div id="hadj-content" class="content">
-    <div class="cardhadj">
-    <p>Chers fidèles,</p>
-   
-
-    <p>Nous espérons que ce message vous trouve en bonne santé et en paix. Nous tenons à vous informer que, malheureusement, les places pour le pèlerinage du Hadj ne sont actuellement pas disponibles.</p>
-    
-        <p>En raison de la forte demande et des contraintes logistiques, toutes les places pour le Hadj de cette année ont été attribuées. Nous comprenons la déception que cela peut entraîner, et nous sommes conscients de l'importance de ce voyage sacré pour nos fidèles.</p>
-    
-            <p> Nous tenons à vous assurer que nous faisons tout notre possible pour faciliter ce voyage spirituel pour autant de croyants que possible. Les inscriptions pour le Hadj de l'année suivante seront ouvertes à partir du <span class="color"><g><i>[1 mai jusqu'au 4 juin]</i></g></span>, offrant ainsi une nouvelle opportunité à ceux qui aspirent à accomplir ce pilier fondamental de l'islam.</p>
-    
-                <p> Nous vous encourageons à rester en contact avec notre organisation et à surveiller les annonces officielles pour les détails spécifiques sur la procédure d'inscription et les critères de sélection. Nous sommes reconnaissants de votre compréhension et de votre patience pendant cette période.</p>
-    
-                    <p>Que la paix et la bénédiction soient avec vous.</p>
-    
-                        <p> Cordialement,</p>
-    
-                            <p>[Votre nom]</p>
-                                <p> [Votre titre/position]</p>
-                                    <p>[Nom de l'organisation]</p>
-                                </div>
-</div>
-
-
-<div id="omra-content" class="content">
-<div class="card">
-    <div class="card-1">
-        <img src="assets/Images/b.jpg" alt="">
-    </div>
-    <div class="right">
-            <div class="card-2">
-                Makkah Clock Royal Tower, A Fairmont Hotel
-            </div>
-            <div class="card-3">
-                ⭐⭐⭐<br><br>
-                <p> Makkah Clock Royal Tower, A Fairmont Hotel se situe à seulement 100 mètres de la Masjid al-Haram.</p>
-            </div>
-           
-            <div class="bottom">
-        
-                <div class="card-4"> <button class="btn">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                  <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"></path>
-                </svg>
-                    </span>
-                    <span class="text">Go Now</span>
-                </button> 
+        <div class="left-side">
+            <div class="logo">
+                <img src="./assets/Images/sahlaa-removebg-preview (1).png" alt="logo" class="logo_img">
+                <div class="logo_name">
+                    <a href="index.html"><img src="./assets/Images/NL.png" alt="logo" id="SahlaIMG"
+                            class="logo_img"></a>
                 </div>
             </div>
-    </div>
-</div>
+            <div class="nav-links">
+                <a onclick="scrollToSection('logo_img')">Main</a>
+                <a onclick="scrollToSection('Hotels')">Hotels</a>
+                <a onclick="scrollToSection('destination')">Destination</a>
+                <a href="./settings.html">Settings</a>
+            </div>
+
+        </div>
+
+        <div class="right-side">
+
+            <div class="account">
+                <a href="./sign up.html">Register</a>
+                <a href="./sign in.html">Sign in</a>
+            </div>
 
 
-<div class="card1">
-    <div class="card-1">
-        <img src="assets/Images/b.jpg" alt="">
-    </div>
-    <div class="right">
-            <div class="card-2">
-                Swissotel Makkah
-            </div>
-            <div class="card-3">
-                ⭐⭐⭐⭐⭐<br><br>
-                <p>Appartenant au prestigieux complexe Abraj Al Bait, le luxueux Swissôtel Makkah est un hôtel cinq étoiles contemporain situé à seulement 100 mètres de la mosquée Masjid Al Haraam et qui offre une vue...</p>
-            </div>
-           
-            
-            <div class="bottom">
-        
-                <div class="card-4"> <button class="btn">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                  <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"></path>
+            <div id="menu-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4" cy="4" r="2" fill="#fff" />
+                    <circle cx="4" cy="12" r="2" fill="#fff" />
+                    <circle cx="4" cy="20" r="2" fill="#fff" />
+
+                    <rect x="8" y="2" width="16" height="4" rx="2" fill="#fff" />
+                    <rect x="8" y="10" width="16" height="4" rx="2" fill="#fff" />
+                    <rect x="8" y="18" width="16" height="4" rx="2" fill="#fff" />
                 </svg>
-                    </span>
-                    <span class="text">Go Now</span>
-                </button> 
+            </div>
+        </div>
+        <div class="mobile-header">
+            <div class="mobile-nav-links">
+                <a href="https://www.messenger.com/" target="_blank">Main</a>
+                <a href="https://www.youtube.com/" target="_blank">Hotels</a>
+                <a onclick="scrollToSection('destination')">Destination</a>
+                <a href="./settings.html">Settings</a>
+            </div>
+            <div class="mobile-account">
+                <a href="./register.html">Register</a>
+                <a href="./sign in.html">Sign in</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navlinks = document.querySelector('.nav-links');
+        const mobileHeader = document.querySelector('.mobile-header');
+
+        menuIcon.addEventListener('click', () => {
+            navlinks.classList.toggle('show');
+            mobileHeader.classList.toggle('show');
+        });
+    </script>
+
+
+    <div class="overlay"></div>
+    <div id="tabs">
+        <div id="hadj-tab" class="tab">Hadj</div>
+        <div id="omra-tab" class="tab">Omra</div>
+    </div>
+
+    <div id="hadj-content" class="content">
+        <div class="cardhadj">
+            <p>Chers fidèles,</p>
+
+
+            <p>Nous espérons que ce message vous trouve en bonne santé et en paix. Nous tenons à vous informer que,
+                malheureusement, les places pour le pèlerinage du Hadj ne sont actuellement pas disponibles.</p>
+
+            <p>En raison de la forte demande et des contraintes logistiques, toutes les places pour le Hadj de cette
+                année ont été attribuées. Nous comprenons la déception que cela peut entraîner, et nous sommes
+                conscients de l'importance de ce voyage sacré pour nos fidèles.</p>
+
+            <p> Nous tenons à vous assurer que nous faisons tout notre possible pour faciliter ce voyage spirituel pour
+                autant de croyants que possible. Les inscriptions pour le Hadj de l'année suivante seront ouvertes à
+                partir du <span class="color">
+                    <g><i>[1 mai jusqu'au 4 juin]</i></g>
+                </span>, offrant ainsi une nouvelle opportunité à ceux qui aspirent à accomplir ce pilier fondamental de
+                l'islam.</p>
+
+            <p> Nous vous encourageons à rester en contact avec notre organisation et à surveiller les annonces
+                officielles pour les détails spécifiques sur la procédure d'inscription et les critères de sélection.
+                Nous sommes reconnaissants de votre compréhension et de votre patience pendant cette période.</p>
+
+            <p>Que la paix et la bénédiction soient avec vous.</p>
+
+            <p> Cordialement,</p>
+
+            <p>[Votre nom]</p>
+            <p> [Votre titre/position]</p>
+            <p>[Nom de l'organisation]</p>
+        </div>
+    </div>
+
+
+    <div id="omra-content" class="content">
+        <div class="card">
+            <div class="card-1">
+                <img src="assets/Images/b.jpg" alt="">
+            </div>
+            <div class="right">
+                <div class="card-2">
+                    Makkah Clock Royal Tower, A Fairmont Hotel
+                </div>
+                <div class="card-3">
+                    ⭐⭐⭐<br><br>
+                    <p> Makkah Clock Royal Tower, A Fairmont Hotel se situe à seulement 100 mètres de la Masjid
+                        al-Haram.</p>
+                </div>
+
+                <div class="bottom">
+
+                    <div class="card-4"> <button class="btn">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor"
+                                    class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="text">Go Now</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-    </div>
-</div>
+        </div>
 
 
-<div class="card11">
-    <div class="card-1">
-        <img src="assets/Images/b.jpg" alt="">
-    </div>
-    <div class="right">
-            <div class="card-2">
-                Swissotel Al Maqam Makkah
+        <div class="card1">
+            <div class="card-1">
+                <img src="assets/Images/b.jpg" alt="">
             </div>
-            <div class="card-3">
-                ⭐⭐⭐⭐⭐<br><br>
-                <p>Surplombant la ville sainte, le Swissotel Al Maqam Makkah se dresse fièrement en plein cœur du monde musulman. Dans le cadre du célèbre complexe Abraj Al Bait, l'hôtel fait face à la sainte Kaaba.</p>
-            </div>
-            
-            
-            <div class="bottom">
-        
-                <div class="card-4"> <button class="btn">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-                  <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"></path>
-                </svg>
-                    </span>
-                    <span class="text">Go Now</span>
-                </button> 
+            <div class="right">
+                <div class="card-2">
+                    Swissotel Makkah
+                </div>
+                <div class="card-3">
+                    ⭐⭐⭐⭐⭐<br><br>
+                    <p>Appartenant au prestigieux complexe Abraj Al Bait, le luxueux Swissôtel Makkah est un hôtel cinq
+                        étoiles contemporain situé à seulement 100 mètres de la mosquée Masjid Al Haraam et qui offre
+                        une vue...</p>
+                </div>
+
+
+                <div class="bottom">
+
+                    <div class="card-4"> <button class="btn">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor"
+                                    class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="text">Go Now</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-    </div>
-</div>
+        </div>
 
 
-<div class="card111">
-    <div class="card-1">
-        <img src="assets/Images/b.jpg" alt="">
-    </div>
-    <div class="right">
-            <div class="card-2">
-                Al Kiswah Towers Hotel 
+        <div class="card11">
+            <div class="card-1">
+                <img src="assets/Images/b.jpg" alt="">
             </div>
-            <div class="card-3">
-                ⭐⭐⭐⭐<br><br>
-                <p>Doté d'une connexion Wi-Fi gratuite, l'Al Kiswah Towers Hotel est situé à La Mecque, à 1 km de l'Abraj Al Bait et à 900 mètres de la mosquée Masjid Al Haram.</p>
+            <div class="right">
+                <div class="card-2">
+                    Swissotel Al Maqam Makkah
+                </div>
+                <div class="card-3">
+                    ⭐⭐⭐⭐⭐<br><br>
+                    <p>Surplombant la ville sainte, le Swissotel Al Maqam Makkah se dresse fièrement en plein cœur du
+                        monde musulman. Dans le cadre du célèbre complexe Abraj Al Bait, l'hôtel fait face à la sainte
+                        Kaaba.</p>
+                </div>
+
+
+                <div class="bottom">
+
+                    <div class="card-4"> <button class="btn">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor"
+                                    class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="text">Go Now</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            
-        <div class="bottom">
-        
-            <div class="card-4"> <button class="btn">
-                <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
-              <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"></path>
-            </svg>
-                </span>
-                <span class="text">Go Now</span>
-            </button> 
+        </div>
+
+
+        <div class="card111">
+            <div class="card-1">
+                <img src="assets/Images/b.jpg" alt="">
+            </div>
+            <div class="right">
+                <div class="card-2">
+                    Al Kiswah Towers Hotel
+                </div>
+                <div class="card-3">
+                    ⭐⭐⭐⭐<br><br>
+                    <p>Doté d'une connexion Wi-Fi gratuite, l'Al Kiswah Towers Hotel est situé à La Mecque, à 1 km de
+                        l'Abraj Al Bait et à 900 mètres de la mosquée Masjid Al Haram.</p>
+                </div>
+
+                <div class="bottom">
+
+                    <div class="card-4"> <button class="btn">
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor"
+                                    class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="text">Go Now</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-<link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/include/footer.css">
     <footer class="footer">
         <div class="footer__container container grid">
             <div class="footer__content grid">
@@ -423,8 +453,10 @@ menuIcon.addEventListener('click', () => {
     </footer>
 
 
-<script src="assets/js/hadjetomra.js"></script>
+    <script src="assets/js/hadjetomra.js"></script>
 </body>
+
 </html>
 </body>
+
 </html>

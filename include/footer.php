@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/include/footer.css">
 <?php
 if (isset($_COOKIE['token'])) {
     // Establish a MySQL database connection (replace with your database details)
