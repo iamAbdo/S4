@@ -11,7 +11,6 @@ body {
     min-height: 100vh;
     background-color: #fafafa;
     color: #262626;
-    padding-bottom: 3rem;
 }
 
 img {
@@ -43,28 +42,27 @@ img {
 
 .profile {
     padding: 5rem 0;
+	display: grid;
+    grid-template-columns: 1fr 2fr;
+	align-items: start;
 }
 
-.profile::after {
-    content: "";
-    display: block;
-    clear: both;
-}
+
 
 .profile-image {
+	justify-self: right; 
+	align-items: start;
     float: left;
     width: calc(33.333% - 1rem);
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-right: 3rem;
 }
 
 .profile-image img {
     border-radius: 50%;
     border: 3px solid black;
-    width:250;
-    height:250;
+    width:100%;
 }
 
 .profile-user-settings,

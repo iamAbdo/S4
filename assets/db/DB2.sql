@@ -6,8 +6,10 @@ CREATE TABLE Users (
     Email VARCHAR(255) NOT NULL,
     FirstName VARCHAR(255),
     LastName VARCHAR(255),
-    Role ENUM('user', 'admin') DEFAULT 'user'
+    Role ENUM('user', 'admin') DEFAULT 'user',
+    Cookie varchar(128) DEFAULT NULL
 );
+
 
 -- Create Locations table
 CREATE TABLE Locations (

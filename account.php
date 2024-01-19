@@ -45,42 +45,44 @@ if (isset($_COOKIE['token'])) {
                 <img src="assets/Images/UserIcon.png" alt="UserIcon.png">
 
             </div>
+            <div class="profile-info">
+                <div class="profile-user-settings">
 
-            <div class="profile-user-settings">
-
-                <h1 class="profile-user-name">
-                    <?php echo $username ?>
-                </h1>
-
-                <button class="btn profile-edit-btn">Edit Profile</button>
-
-                <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog"
-                        aria-hidden="true"></i></button>
-
-            </div>
-
-            <div class="profile-stats">
-
-                <ul>
-                    <li><span class="profile-stat-count">12</span> Reservations</li>
-                    <li><span class="profile-stat-count">188</span> Comments</li>
-                </ul>
-
-            </div>
-
-            <div class="profile-bio">
-
-                <p>
-                    Welcome
-                    <span class="profile-real-name">
+                    <h1 class="profile-user-name">
                         <?php echo $username ?>
-                    </span>
-                    you Email is :
-                    <?php echo $email ?>,
-                    We hope you the Best Memories 📷✈️🏕️
-                </p>
+                    </h1>
 
+                    <button class="btn profile-edit-btn">Edit Profile</button>
+
+                    <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog"
+                            aria-hidden="true"></i></button>
+
+                </div>
+
+                <div class="profile-stats">
+
+                    <ul>
+                        <li><span class="profile-stat-count">12</span> Reservations</li>
+                        <li><span class="profile-stat-count">188</span> Comments</li>
+                    </ul>
+
+                </div>
+
+                <div class="profile-bio">
+
+                    <p>
+                        <span class="profile-real-name">
+                            <?php echo "Personal Information:<br>" ?>
+                        </span>
+                        Your Email is :
+                        <?php echo $email ?>,
+                        <br>Date of Birth: 23-08-2002
+                        <br>We hope you the Best Memories 📷✈️🏕️
+                    </p>
+
+                </div>
             </div>
+
         </div>
         <!-- End of profile section -->
     </div>
