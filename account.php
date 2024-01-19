@@ -1,40 +1,66 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-<?php
-include "header.php";
-// Check if the 'token' cookie is present
-if (isset($_COOKIE['token'])) {
-    // Establish a MySQL database connection (replace with your database details)
-    $conn = new mysqli('localhost', 'root', '', 'agencedevoyage');
+<!DOCTYPE html>
+<html lang="en">
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Retrieve user information from the database
-    $token = $conn->real_escape_string($_COOKIE['token']);
-    $sql = "SELECT username,email FROM users WHERE cookie = '$token'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $username = $row['username'];
-        $email = $row['email'];
-    } else {
-        header('Location: login.php');
-        exit;
-    }
-
-    // Close the database connection
-    $conn->close();
-} else {
-    header('Location: sign In.html');
-    exit;
-}
-?>
-<link rel="stylesheet" href="assets/css/account.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/account.css">
+</head>
 
 <body>
+
+    <?php
+    include "header.php";
+
+    // Check if the 'token' cookie is present
+    if (isset($_COOKIE['token'])) {
+        // Establish a MySQL database connection (replace with your database details)
+        $conn = new mysqli('localhost', 'root', '', 'agencedevoyage');
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Retrieve user information from the database
+        $token = $conn->real_escape_string($_COOKIE['token']);
+        $sql = "SELECT username,email,Role FROM users WHERE cookie = '$token'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
+            $username = $row['username'];
+            $email = $row['email'];
+            $role = $row['Role'];
+        } else {
+            header('Location: login.php');
+            exit;
+        }
+
+        // Close the database connection
+        $conn->close();
+    } else {
+        header('Location: sign In.html');
+        exit;
+    }
+    ?>
+
+    <?php
+    if (isset($_GET["message"])) {
+        $ErrorMessage = $_GET["message"];
+        switch ($ErrorMessage) {
+            case 'noperms':
+                echo "<script>alert('Only an Admin can acces this page!')</script>";
+                break;
+
+            default:
+                echo "<scrpit>$ErrorMessage</script>";
+                break;
+        }
+    }
+    ?>
 
     <div class="container">
 
@@ -52,10 +78,14 @@ if (isset($_COOKIE['token'])) {
                         <?php echo $username ?>
                     </h1>
 
-                    <button class="btn profile-edit-btn">Edit Profile</button>
-
-                    <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog"
-                            aria-hidden="true"></i></button>
+                    <a href="editProfile.php">
+                        <button class="btn profile-edit-btn">Edit Profile</button>
+                    </a>
+                    <?php if ($role == "admin") { ?>
+                        <a href="admin.php">
+                            <button class="btn profile-edit-btn">Page Admin</button>
+                        </a>
+                    <?php } ?>
 
                 </div>
 
@@ -161,4 +191,7 @@ if (isset($_COOKIE['token'])) {
     <?php
     include 'footer.php';
     ?>
+
 </body>
+
+</html>
