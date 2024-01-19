@@ -230,3 +230,6 @@ if (isset($_COOKIE['token'])) {
         </div>
     </div>
 </footer>
+<?php
+include "PopOps.php";
+?>
