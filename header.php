@@ -1,4 +1,17 @@
 <link rel="stylesheet" href="assets/css/header.css">
+<script>
+    function LogoutPopOp() {
+        var confirmLogout = window.confirm("Are you sure you want to log out?");
+
+        if (confirmLogout) {
+            // User clicked "Yes," redirect to logout.php
+            window.location.href = "logout.php";
+        } else {
+            // User clicked "No" or closed the popup
+            // You can optionally add some handling here
+        }
+    }
+</script>
 <header class="header">
 
     <div class="left-side">
@@ -34,7 +47,15 @@
                 if ($result->num_rows > 0) {
                     $row = $result->fetch_assoc();
                     $username = $row['username'];
-                    echo "<a href='account.php'>Welcome $username!</a>";
+                    echo "<a href='account.php'>Welcome $username!</a>"; ?>
+                    <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14 7.63636L14 4.5C14 4.22386 13.7761 4 13.5 4L4.5 4C4.22386 4 4 4.22386 4 4.5L4 19.5C4 19.7761 4.22386 20 4.5 20L13.5 20C13.7761 20 14 19.7761 14 19.5L14 16.3636"
+                            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M10 12L21 12M21 12L18.0004 8.5M21 12L18 15.5" stroke="#000000" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <?php
                 } else {
                     // delete the cooke because why do you have it in the first place
                     setcookie("token", "", time() - 3600, "/");

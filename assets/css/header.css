@@ -97,6 +97,20 @@ header{
 .account{
     display: flex;
 }
+
+.account svg *{
+    stroke: white;
+}
+
+.account svg{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.header.scrolled svg *{
+    stroke: black;
+}
+
 .right-side{
     display: flex;
 }

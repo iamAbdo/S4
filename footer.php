@@ -1,4 +1,30 @@
 <link rel="stylesheet" href="assets/css/footer.css">
+<?php
+if (isset($_COOKIE['token'])) {
+    // Establish a MySQL database connection (replace with your database details)
+    $conn = new mysqli('localhost', 'root', '', 'agencedevoyage');
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Retrieve user information from the database
+    $token = $conn->real_escape_string($_COOKIE['token']);
+    $sql = "SELECT username,email,Role FROM users WHERE cookie = '$token'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        $role = $row['Role'];
+        $LoggedIn = true;
+    }
+
+    $conn->close();
+} else {
+    $LoggedIn = false;
+}
+?>
 <footer class="footer">
     <div class="footer__container container grid">
         <div class="footer__content grid">
@@ -27,17 +53,32 @@
 
             <div class="footer__data">
                 <h3 class="footer__subtitle">Your Account</h3>
-                <ul>
-                    <li class="footer__item">
-                        <a href="account.php" class="footer__link">My Profile</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="reservation.html" class="footer__link">My Reservations</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="admin.php" class="footer__link">Admin Page</a>
-                    </li>
-                </ul>
+                <?php if ($LoggedIn) { ?>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="account.php" class="footer__link">My Profile</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="reservation.html" class="footer__link">My Reservations</a>
+                        </li>
+                        <?php if ($role == "admin") { ?>
+                            <li class="footer__item">
+                                <a href="admin.php" class="footer__link">Admin Page</a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                    <?php
+                } else { ?>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="sign in.html" class="footer__link">Sign In</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="sign up.html" class="footer__link">Sign Up</a>
+                        </li>
+                    </ul>
+                <?php } ?>
+
             </div>
 
             <div class="footer__data">
