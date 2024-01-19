@@ -8,15 +8,6 @@
 </head>
 
 <body>
-    <!--
-    =========================================
-            IMPORTANT NOTICE
-    =========================================
-    This is a prominent HTML comment to convey
-    important information or instructions.
-
-    =========================================
-    -->
     <?php
 
     require "include/fonctions.php";
