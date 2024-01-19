@@ -20,11 +20,13 @@
         <h1>Nos hotels</h1>
     </center>
     <div class="container">
+
         <div id="cat">
             <?PHP
             $GETLocationID = isset($_GET['LocationID']) ? $_GET['LocationID'] : null;
 
             require 'assets/db/connect.php';
+
             $sqlQuery = "SELECT LocationID,Name FROM locations";
             $result = mysqli_query($conn, $sqlQuery);
 
@@ -43,17 +45,30 @@
                     echo ">$LocationName</a>";
                 }
             }
-
-
-
             ?>
         </div>
-        <div id="Hotel-cards">
-            <?php
 
+        <div class="container">
+            <?php
             $sqlQuery = ($GETLocationID == null) ?
-                'SELECT HotelID, Name, Description, ImageURLs FROM Hotels LIMIT 30' :
-                "SELECT HotelID, Name, Description, ImageURLs FROM Hotels WHERE LocationID=$GETLocationID LIMIT 30";
+                'SELECT
+                hotels.HotelID,
+                hotels.Name AS Name,
+                locations.LocationID,
+                locations.Name AS LocationName,
+                hotels.Description AS Description,
+                hotels.Rating,
+                hotels.ImageURLs
+                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID;' :
+                "SELECT
+                hotels.HotelID,
+                hotels.Name AS Name,
+                locations.LocationID,
+                locations.Name AS LocationName,
+                hotels.Description AS Description,
+                hotels.Rating,
+                hotels.ImageURLs
+                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID WHERE LocationID=$GETLocationID LIMIT 30";
 
             $result = mysqli_query($conn, $sqlQuery);
 
@@ -62,17 +77,47 @@
                 //data
                 while ($row = mysqli_fetch_assoc($result)) {
                     $hotelName = $row['Name'];
+                    $locationName = $row['LocationName'];
                     $hotelID = $row['HotelID'];
+                    $rating = $row['Rating'];
                     $hotelDescription = $row['Description'];
                     $imageURLs = json_decode($row['ImageURLs']);
                     $firstImageURL = './assets/Images/Hotels/hotel-' . $hotelID . '/' . $imageURLs[0] . '';
                     // Display the hotel card HTML structure
-                    echo "<a href='hotel.php?hotel=$hotelID'><div class='Hotel-card'>";
-                    echo '<div class="hotel-img" style="background-image: url(' . $firstImageURL . ');"></div>';
-                    echo '<div class="hotel-name">' . $hotelName . '</div>';
-                    echo '<div class="hotel-desc">' . $hotelDescription . '</div>';
-                    echo '</div></a>';
-                }
+            
+                    ?>
+                    <div class="info-card">
+
+                        <div class="images">
+                            <img class="hotel-image" src="<?= $firstImageURL ?>" alt="">
+                        </div>
+
+                        <div class="detail">
+                            <h1 class="title">
+                                <?= $hotelName ?>
+                            </h1>
+                            <div class="stars">
+                                <?= $rating ?>/5 stars
+                            </div>
+                            <div class="description">
+                                <?= $locationName ?><br>
+                                <u>Description:</u><br>
+                                <?= $hotelDescription ?>
+                            </div>
+                            <div class="services-dhotel">
+                                <!-- ... Vos services ... -->
+                            </div>
+                            <div class="reserve-option">
+                                <!-- ... Vos options de réservation ... -->
+                            </div>
+                            <a href="reservation.php" class="reserve-button">
+                                Reserve Now
+                            </a>
+                        </div>
+
+                    </div>
+                    <br>
+                <?php }
                 // Free result set
                 mysqli_free_result($result);
 
@@ -83,8 +128,15 @@
             $conn->close();
             ?>
 
-        </div>
 
+            <div class="thumbnails">
+                <div class="thumbnail-container">
+                    <!-- ... Vos miniatures ... -->
+                </div>
+                <div class="arrow">➡️</div>
+            </div>
+
+        </div>
     </div>
 
     <script src="./assets/js/scroll_effect.js"></script>

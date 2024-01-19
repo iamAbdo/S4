@@ -20,6 +20,7 @@
             $GETLocationID = isset($_GET['LocationID']) ? $_GET['LocationID'] : null;
 
             require 'assets/db/connect.php';
+
             $sqlQuery = "SELECT LocationID,Name FROM locations";
             $result = mysqli_query($conn, $sqlQuery);
 
@@ -42,52 +43,84 @@
         </div>
 
         <div class="container">
-            <div class="info-card">
-                <div class="images">
-                    <!-- ... Vos images ... -->
-                </div>
-                <div class="detail">
-                    <h1 class="title">nom de lhotel</h1>
-                    <div class="stars">/5 stars</div>
-                    <div class="description">
-                        PARIS<br>
-                        <u>Hotel Description:</u><br>
+            <?php
+            $sqlQuery = ($GETLocationID == null) ?
+                'SELECT
+                hotels.HotelID,
+                hotels.Name AS Name,
+                locations.LocationID,
+                locations.Name AS LocationName,
+                hotels.Description AS Description,
+                hotels.Rating,
+                hotels.ImageURLs
+                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID;' :
+                "SELECT
+                hotels.HotelID,
+                hotels.Name AS Name,
+                locations.LocationID,
+                locations.Name AS LocationName,
+                hotels.Description AS Description,
+                hotels.Rating,
+                hotels.ImageURLs
+                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID WHERE LocationID=$GETLocationID LIMIT 30";
+
+            $result = mysqli_query($conn, $sqlQuery);
+
+            if ($result) {
+
+                //data
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $hotelName = $row['Name'];
+                    $locationName = $row['LocationName'];
+                    $hotelID = $row['HotelID'];
+                    $rating = $row['Rating'];
+                    $hotelDescription = $row['Description'];
+                    $imageURLs = json_decode($row['ImageURLs']);
+                    $firstImageURL = './assets/Images/Hotels/hotel-' . $hotelID . '/' . $imageURLs[0] . '';
+                    // Display the hotel card HTML structure
+            
+                    ?>
+                    <div class="info-card">
+
+                        <div class="images">
+                            <img class="hotel-image" src="<?= $firstImageURL ?>" alt="">
+                        </div>
+
+                        <div class="detail">
+                            <h1 class="title">
+                                <?= $hotelName ?>
+                            </h1>
+                            <div class="stars">
+                                <?= $rating ?>/5 stars
+                            </div>
+                            <div class="description">
+                                <?= $locationName ?><br>
+                                <u>Description:</u><br>
+                                <?= $hotelDescription ?>
+                            </div>
+                            <div class="services-dhotel">
+                                <!-- ... Vos services ... -->
+                            </div>
+                            <div class="reserve-option">
+                                <!-- ... Vos options de réservation ... -->
+                            </div>
+                            <a href="reservation.php" class="reserve-button">
+                                Reserve Now
+                            </a>
+                        </div>
 
                     </div>
-                    <div class="services-dhotel">
-                        <!-- ... Vos services ... -->
-                    </div>
-                    <div class="reserve-option">
-                        <!-- ... Vos options de réservation ... -->
-                    </div>
-                    <a href="reservation.php" class="reserve-button">
-                        Reserve Now
-                    </a>
-                </div>
-            </div><br>
-            <div class="info-card">
-                <div class="images">
-                    <!-- ... Vos images ... -->
-                </div>
-                <div class="detail">
-                    <h1 class="title">nom de lhotel</h1>
-                    <div class="stars">/5 stars</div>
-                    <div class="description">
-                        PARIS<br>
-                        <u>Hotel Description:</u><br>
+                    <br>
+                <?php }
+                // Free result set
+                mysqli_free_result($result);
 
-                    </div>
-                    <div class="services-dhotel">
-                        <!-- ... Vos services ... -->
-                    </div>
-                    <div class="reserve-option">
-                        <!-- ... Vos options de réservation ... -->
-                    </div>
-                    <a href="reservation.php" class="reserve-button">
-                        Reserve Now
-                    </a>
-                </div>
-            </div>
+            } else {
+                // Handle the case where the query fails
+                echo "Error: " . mysqli_error($yourDbConnection);
+            }
+            $conn->close();
+            ?>
 
 
             <div class="thumbnails">
