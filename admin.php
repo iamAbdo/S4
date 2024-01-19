@@ -11,7 +11,7 @@
 
 <body>
     <?php
-    include 'header.php';
+    include 'include/header.php';
     ?>
 
     <?php
@@ -612,7 +612,7 @@
     </div>
 
     <?php
-    include 'footer.php';
+    include 'include/footer.php';
     ?>
 
     <script>

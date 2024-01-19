@@ -1,0 +1,238 @@
+<<<<<<< HEAD:assets/css/bab.css
+/* Ajoutez ces styles à votre fichier hotel.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.info-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.images {
+    width: 50%;
+}
+
+.detail {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #f39c12;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.services-dhotel {
+    margin-bottom: 20px;
+}
+
+.reserve-option {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.reserve-option label,
+.reserve-option select,
+.reserve-option input {
+    margin-bottom: 10px;
+}
+
+.reserve-option input,
+.reserve-option select {
+    width: calc(50% - 10px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.reserve-button {
+    background-color: #1877f2;
+    color: #fff;
+    padding: 15px;
+=======
+#PopOp {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    border: 5px solid #000;
+    border-radius: 10%;
+    background-color: beige;
+}
+
+#PopOp-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#PopOp h1 {
+    font-weight: bold;
+}
+
+#PopOp button {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+>>>>>>> 86068ee1e329b2144d018ff231df23f87fdfc5c4:assets/css/include/popOps.css
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thumbnails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.arrow {
+    font-size: 2em;
+    cursor: pointer;
+}
+body{
+    background-image: url('../Images/background.png');
+    background-size: cover;
+}
+.container{
+    min-height: 100vh;
+    margin: 5vh 1vw;
+    display: flex;
+    align-items: flex-start;
+}
+#cat{
+    background: rgba(26, 14, 14,0.7);
+    border-radius: 10%;
+    padding: 30px 0;
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    box-shadow: 8px 8px 16px #1d1b1b;
+}
+#cat a {
+    margin-left: 30px;
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#cat a:hover {
+    background-color: #3498db;
+    color: white;
+}
+#cat .selected {
+    background-color: #3498db;
+    color: white;
+}
+#cat .unselect-link{
+    margin: 8px auto;
+    background-color: #db3434;
+    color: white;
+}
+#Hotel-cards{
+    margin-left: 5%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.Hotel-card{
+    width: 200px;
+    height: 300px;
+    background-color: rgba(26, 14, 14,0.7);
+    border: 5px solid rgba(26, 14, 14,0.7);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 8px 8px 16px #2d1d1d;
+}
+.hotel-img{
+    width: 200px;
+    height: 200px;
+    background-image: url('../Images/Dubai.jpg');
+    background-size: cover;
+}
+
+.hotel-name {
+    font-size: 18px;
+    font-weight: 550;
+    margin-top: 10px;
+}
+
+.hotel-desc {
+    font-size: 14px;
+    margin-top: 5px; 
+}

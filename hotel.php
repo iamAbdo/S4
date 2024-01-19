@@ -11,7 +11,7 @@
 <body>
 
     <?php
-    include 'header.php';
+    include 'include/header.php';
 
     if (isset($_GET['hotel'])) {
         $hotelID = $_GET['hotel'];
