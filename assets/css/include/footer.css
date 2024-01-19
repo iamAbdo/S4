@@ -22,7 +22,7 @@ footer {
     color: hsl(190, 24%, 35%); /* Color for white background */
     color: hsl(190, 8%, 75%); /* Color for a dark background */
     padding: 4.5rem 0 2.5rem;
-    background-image: url('../Images/background.jpg');
+    background-image: url('../../Images/background.jpg');
     background-size: cover;
 }
 
