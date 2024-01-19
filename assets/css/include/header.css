@@ -98,18 +98,6 @@ header{
     display: flex;
 }
 
-.account svg *{
-    stroke: white;
-}
-
-.account svg{
-    background-color: white;
-    border-radius: 10px;
-}
-
-.header.scrolled svg *{
-    stroke: black;
-}
 
 .right-side{
     display: flex;
@@ -137,6 +125,46 @@ header{
     color: #FFF;
     background-color: #000;
 }
+/* this stupid door svg took forever */
+
+
+#theDoor{
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.account svg *{
+    stroke: white;
+}
+
+#theDoor:hover{
+    background-color: #fff;
+}
+
+.account #theDoor:hover svg *{
+    stroke: black;
+}
+
+.header.scrolled #theDoor {
+    border: 2px solid #000;
+}
+.header.scrolled svg *{
+    stroke: black;
+}
+
+.header.scrolled #theDoor:hover {
+    border: 2px solid transparent;
+    background-color: #000;
+}
+
+.header.scrolled #theDoor:hover svg *{
+    stroke: white;
+}
+
+/* end of door svg */
+
 
 #menu-icon{
     display: none;
