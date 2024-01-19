@@ -98,3 +98,7 @@
 
 <div id="space"></div>
 <script src="./assets/js/scroll_effect.js"></script>
+
+<?php
+include "PopOps.php";
+?>

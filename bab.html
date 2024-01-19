@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bab.css">
+    <link rel="stylesheet" href="assets/css/popOps.css">
     <title>Confirmation de sortie</title>
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="content">
+    <button onclick="LogoutPopOp()">Logout</button>
+
+    <div id="PopOp">
+        <div id="PopOp-content">
             <h1>Voulez-vous vraiment sortir du compte ?</h1>
-            <button id="oui">Oui</button>
-            <button id="non">Non</button>
+            <button id="oui" onclick="confirmLogout()">Oui</button>
+            <button id="non" onclick="cancelLogout()">Non</button>
         </div>
     </div>
 
 </body>
+
+<script>
+    function LogoutPopOp() {
+        var modal = document.getElementById("PopOp");
+        modal.style.display = "block";
+    }
+
+    function confirmLogout() {
+        window.location.href = "logout.php";
+    }
+
+    function cancelLogout() {
+        var modal = document.getElementById("PopOp");
+        modal.style.display = "none";
+    }
+
+</script>
+
 </html>

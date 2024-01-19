@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/popOps.css">
+<link rel="stylesheet" href="assets/css/include/popOps.css">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <button onclick="LogoutPopOp()">Logout</button>
+
 
     <!-- Modal -->
     <div id="logoutModal" class="modal">

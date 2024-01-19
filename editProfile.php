@@ -9,13 +9,13 @@
 
 <body>
     <?php
-    include "header.php";
+    include "include/header.php";
     ?>
     <div style="height:100vh">
         <h1>Work in Progress</h1>
     </div>
     <?php
-    include "footer.php";
+    include "include/footer.php";
     ?>
 </body>
 

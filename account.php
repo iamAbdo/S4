@@ -12,7 +12,7 @@
 <body>
 
     <?php
-    include "header.php";
+    include "include/header.php";
 
     // Check if the 'token' cookie is present
     if (isset($_COOKIE['token'])) {
@@ -189,7 +189,7 @@
     </div>
 
     <?php
-    include 'footer.php';
+    include 'include/footer.php';
     ?>
 
 </body>

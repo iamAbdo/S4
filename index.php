@@ -16,7 +16,7 @@
 
     <!-- Header -->
     <?php
-    include 'header.php';
+    include 'include/header.php';
     ?>
 
 
@@ -299,7 +299,7 @@
     -->
 
     <?php
-    include 'footer.php';
+    include 'include/footer.php';
     ?>
 
 
