@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,71 +10,73 @@
     <link rel="stylesheet" href="assets/css/RS.css">
     <title>Document</title>
 </head>
+
 <body>
 
-    
+
     <!-- Header -->
     <header class="Header">
-            
-            <div class="left-side">
+
+        <div class="left-side">
             <div class="logo">
                 <img src="./assets/Images/sahlaa-removebg-preview (1).png" alt="logo" class="logo_img">
                 <div class="logo_name">
-                    <a href="index.html"><img src="./assets/Images/NL.png" alt="logo" id="SahlaIMG" class="logo_img"></a>
+                    <a href="index.html"><img src="./assets/Images/NL.png" alt="logo" id="SahlaIMG"
+                            class="logo_img"></a>
                 </div>
             </div>
             <div class="nav-links">
                 <a onclick="scrollToSection('logo_img')">Main</a>
                 <a onclick="scrollToSection('Hotels')">Hotels</a>
-                <a onclick="scrollToSection('destination')" >Destination</a>
+                <a onclick="scrollToSection('destination')">Destination</a>
                 <a href="./settings.html">Settings</a>
             </div>
 
+        </div>
+
+        <div class="right-side">
+
+            <div class="account">
+                <a href="./sign up.html">Register</a>
+                <a href="./sign in.html">Sign in</a>
             </div>
 
-            <div class="right-side">
 
-                <div class="account">
-                    <a href="./sign up.html">Register</a>
-                    <a href="./sign in.html">Sign in</a>
-                </div>
+            <div id="menu-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4" cy="4" r="2" fill="#fff" />
+                    <circle cx="4" cy="12" r="2" fill="#fff" />
+                    <circle cx="4" cy="20" r="2" fill="#fff" />
 
-                
-                <div id="menu-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="2" fill="#fff" />
-                        <circle cx="4" cy="12" r="2" fill="#fff" />
-                        <circle cx="4" cy="20" r="2" fill="#fff" />
-                      
-                        <rect x="8" y="2" width="16" height="4" rx="2" fill="#fff" />
-                        <rect x="8" y="10" width="16" height="4" rx="2" fill="#fff" />
-                        <rect x="8" y="18" width="16" height="4" rx="2" fill="#fff" />
-                    </svg>
-                </div>   
+                    <rect x="8" y="2" width="16" height="4" rx="2" fill="#fff" />
+                    <rect x="8" y="10" width="16" height="4" rx="2" fill="#fff" />
+                    <rect x="8" y="18" width="16" height="4" rx="2" fill="#fff" />
+                </svg>
             </div>
-            <div class="mobile-header">
-                <div class="mobile-nav-links">
-                    <a href="https://www.messenger.com/" target="_blank">Main</a>
-                    <a href="https://www.youtube.com/" target="_blank">Hotels</a>
-                    <a onclick="scrollToSection('destination')" >Destination</a>
-                    <a href="./settings.html">Settings</a>
-                </div>
-                <div class="mobile-account">
-                    <a href="./register.html">Register</a>
-                    <a href="./sign in.html">Sign in</a>
-                </div>
+        </div>
+        <div class="mobile-header">
+            <div class="mobile-nav-links">
+                <a href="https://www.messenger.com/" target="_blank">Main</a>
+                <a href="https://www.youtube.com/" target="_blank">Hotels</a>
+                <a onclick="scrollToSection('destination')">Destination</a>
+                <a href="./settings.html">Settings</a>
             </div>
+            <div class="mobile-account">
+                <a href="./register.html">Register</a>
+                <a href="./sign in.html">Sign in</a>
+            </div>
+        </div>
     </header>
     <script>
         const menuIcon = document.getElementById('menu-icon');
         const navlinks = document.querySelector('.nav-links');
         const mobileHeader = document.querySelector('.mobile-header');
-        
+
         menuIcon.addEventListener('click', () => {
             navlinks.classList.toggle('show');
             mobileHeader.classList.toggle('show');
         });
-    </script> 
+    </script>
 
 
 
@@ -82,8 +85,8 @@
     <div class="overlay"></div>
 
     <!-- Main front page text -->
-    
-    
+
+
 
     <!-- Main Content -->
     <div class="main-content">
@@ -108,17 +111,19 @@
                 <img src="./assets/Images/icons/Hotel_White.png" alt="Hotels Icon">
                 <p>Hotels</p>
             </div>
-            
-            <a href="hadj et omra.html"><div class="icon" onclick="location.href='hajj-omra.html'">
-                <img src="./assets/Images/icons/Mecca_White.png" alt="Hajj and Omra Icon">
-                <p>Hajj & Omra</p>
-            </div></a>
+
+            <a href="hadj et omra.html">
+                <div class="icon" onclick="location.href='hajj-omra.html'">
+                    <img src="./assets/Images/icons/Mecca_White.png" alt="Hajj and Omra Icon">
+                    <p>Hajj & Omra</p>
+                </div>
+            </a>
         </div>
 
     </div>
 
-
-    <!-- above map text -->
+    <!-- Stupid Map 
+    <!-- above map text 
     <div id="map-selector">
         <div id="overlay-text">
             <div id="prephrase"></div>
@@ -127,25 +132,39 @@
         <div id="world-map">
             <img src="./assets/Images/World map.jpg" alt="World Map" usemap="#worldmap" id="map-image">
             <map name="worldmap">
-                <!-- Define the coordinates for each country -->
-                <area target="" data-country="North America" alt="NorthAmerica" title="NorthAmerica" href="#NorthAmerica" coords="41,141,22,147,3,151,15,139,25,129,35,121,61,114,84,112,96,115,117,117,134,119,128,112,144,106,154,111,163,115,172,117,187,110,195,105,210,97,220,93,235,88,249,88,257,89,273,90,294,90,315,90,325,90,326,96,318,103,312,110,308,118,290,123,275,127,265,135,258,141,251,128,251,120,255,110,246,103,235,101,225,101,215,106,219,116,224,126,219,131,218,139,218,148,221,156,222,162,222,169,216,173,201,182,182,190,162,206,151,217,143,228,143,235,130,229,120,227,108,227,102,238,102,246,111,253,119,247,122,252,123,264,130,268,135,272,135,281,126,281,109,271,99,265,75,248,71,237,65,225,54,216,51,198,59,182,67,169,67,151,60,143" shape="poly">
-                <area target="" data-country="South America" alt="SouthAmerica" title="SouthAmerica" href="#SouthAmerica" coords="142,284,143,295,135,310,135,317,143,343,155,353,165,373,166,383,169,403,171,424,174,437,185,454,200,459,197,442,196,422,208,413,221,387,239,373,247,339,254,325,225,312,212,297,195,285,181,279,164,277,152,276" shape="poly">
-                <area target="" data-country="Europe" alt="Europe" title="Europe" href="#Europe" coords="401,197,412,196,412,187,416,178,425,182,432,176,432,184,441,183,448,186,459,193,454,183,462,176,458,166,468,168,469,157,465,127,472,128,469,120,459,118,468,103,454,105,446,111,449,116,453,122,442,120,433,122,414,119,399,115,395,97,369,97,378,105,386,105,385,117,376,121,368,131,360,135,358,144,363,146,371,146,375,151,382,146,385,139,391,130,391,139,396,143,390,149,388,156,377,158,364,158,351,158,341,154,345,130,336,115,330,130,329,144,330,154,324,157,324,164,334,163,333,168,343,167,350,168,336,173,339,179,341,186,329,186,323,191,332,194,345,194,352,185,356,196,366,204,376,200,387,194,393,202,399,207" shape="poly">
-                <area target="" data-country="Africa" alt="Africa" title="Africa" href="#Africa" coords="323,216,318,222,310,232,303,240,299,252,299,265,298,274,307,289,321,296,332,298,347,293,365,296,370,319,375,340,374,367,387,404,406,409,423,395,433,367,446,348,456,356,450,368,458,383,465,370,468,348,441,341,465,302,472,277,456,280,443,269,435,251,426,232,419,223,402,222,393,218,389,234,365,208,350,208,342,207,329,208,337,206" shape="poly">
-                <area target="" data-country="Asia" alt="Asia" title="Asia" href="#Asia" coords="406,197,410,206,422,208,432,208,427,218,424,225,432,234,442,253,451,265,457,272,478,265,490,250,485,237,493,238,506,238,518,246,527,258,539,290,548,274,551,258,563,251,576,249,584,266,592,280,600,294,588,294,597,305,605,321,615,323,612,330,635,333,664,333,658,317,663,305,650,305,646,294,633,296,625,303,625,316,639,317,648,316,648,327,629,323,610,313,609,301,598,276,615,287,623,275,614,258,613,245,621,250,638,243,644,229,639,216,635,204,646,205,654,212,663,220,680,209,667,206,651,199,648,188,659,184,662,172,650,159,641,156,644,143,663,143,672,139,676,146,688,163,695,159,687,148,700,138,712,130,696,123,662,119,634,115,598,109,567,108,544,108,518,98,500,98,515,105,502,108,489,113,476,111,471,119,472,129,467,141,468,168,457,166,460,175,467,184,469,204,459,197,449,185,435,183,439,193,414,192" shape="poly">
-                <area target="" data-country="Australia" alt="Australia" title="Australia" href="#Australia" coords="698,323,704,318,716,323,724,332,728,340,706,335,707,343,717,367,723,382,722,395,707,408,698,417,689,429,681,415,677,403,654,402,633,406,623,407,628,377,645,365,662,352,681,339,689,344,693,356,697,342,695,330,697,337" shape="poly">
+                <!-- Define the coordinates for each country 
+                <area target="" data-country="North America" alt="NorthAmerica" title="NorthAmerica"
+                    href="#NorthAmerica"
+                    coords="41,141,22,147,3,151,15,139,25,129,35,121,61,114,84,112,96,115,117,117,134,119,128,112,144,106,154,111,163,115,172,117,187,110,195,105,210,97,220,93,235,88,249,88,257,89,273,90,294,90,315,90,325,90,326,96,318,103,312,110,308,118,290,123,275,127,265,135,258,141,251,128,251,120,255,110,246,103,235,101,225,101,215,106,219,116,224,126,219,131,218,139,218,148,221,156,222,162,222,169,216,173,201,182,182,190,162,206,151,217,143,228,143,235,130,229,120,227,108,227,102,238,102,246,111,253,119,247,122,252,123,264,130,268,135,272,135,281,126,281,109,271,99,265,75,248,71,237,65,225,54,216,51,198,59,182,67,169,67,151,60,143"
+                    shape="poly">
+                <area target="" data-country="South America" alt="SouthAmerica" title="SouthAmerica"
+                    href="#SouthAmerica"
+                    coords="142,284,143,295,135,310,135,317,143,343,155,353,165,373,166,383,169,403,171,424,174,437,185,454,200,459,197,442,196,422,208,413,221,387,239,373,247,339,254,325,225,312,212,297,195,285,181,279,164,277,152,276"
+                    shape="poly">
+                <area target="" data-country="Europe" alt="Europe" title="Europe" href="#Europe"
+                    coords="401,197,412,196,412,187,416,178,425,182,432,176,432,184,441,183,448,186,459,193,454,183,462,176,458,166,468,168,469,157,465,127,472,128,469,120,459,118,468,103,454,105,446,111,449,116,453,122,442,120,433,122,414,119,399,115,395,97,369,97,378,105,386,105,385,117,376,121,368,131,360,135,358,144,363,146,371,146,375,151,382,146,385,139,391,130,391,139,396,143,390,149,388,156,377,158,364,158,351,158,341,154,345,130,336,115,330,130,329,144,330,154,324,157,324,164,334,163,333,168,343,167,350,168,336,173,339,179,341,186,329,186,323,191,332,194,345,194,352,185,356,196,366,204,376,200,387,194,393,202,399,207"
+                    shape="poly">
+                <area target="" data-country="Africa" alt="Africa" title="Africa" href="#Africa"
+                    coords="323,216,318,222,310,232,303,240,299,252,299,265,298,274,307,289,321,296,332,298,347,293,365,296,370,319,375,340,374,367,387,404,406,409,423,395,433,367,446,348,456,356,450,368,458,383,465,370,468,348,441,341,465,302,472,277,456,280,443,269,435,251,426,232,419,223,402,222,393,218,389,234,365,208,350,208,342,207,329,208,337,206"
+                    shape="poly">
+                <area target="" data-country="Asia" alt="Asia" title="Asia" href="#Asia"
+                    coords="406,197,410,206,422,208,432,208,427,218,424,225,432,234,442,253,451,265,457,272,478,265,490,250,485,237,493,238,506,238,518,246,527,258,539,290,548,274,551,258,563,251,576,249,584,266,592,280,600,294,588,294,597,305,605,321,615,323,612,330,635,333,664,333,658,317,663,305,650,305,646,294,633,296,625,303,625,316,639,317,648,316,648,327,629,323,610,313,609,301,598,276,615,287,623,275,614,258,613,245,621,250,638,243,644,229,639,216,635,204,646,205,654,212,663,220,680,209,667,206,651,199,648,188,659,184,662,172,650,159,641,156,644,143,663,143,672,139,676,146,688,163,695,159,687,148,700,138,712,130,696,123,662,119,634,115,598,109,567,108,544,108,518,98,500,98,515,105,502,108,489,113,476,111,471,119,472,129,467,141,468,168,457,166,460,175,467,184,469,204,459,197,449,185,435,183,439,193,414,192"
+                    shape="poly">
+                <area target="" data-country="Australia" alt="Australia" title="Australia" href="#Australia"
+                    coords="698,323,704,318,716,323,724,332,728,340,706,335,707,343,717,367,723,382,722,395,707,408,698,417,689,429,681,415,677,403,654,402,633,406,623,407,628,377,645,365,662,352,681,339,689,344,693,356,697,342,695,330,697,337"
+                    shape="poly">
             </map>
         </div>
-        <div class="polygon" id="hover-block" >
+        <div class="polygon" id="hover-block">
             <canvas id="myCanvas" width="800" height="533"></canvas>
         </div>
     </div>
     <br>
 
-    
 
-    
-    
+
+
+
     <script>
         const hoverBlock = document.getElementById('hover-block');
         const mapImage = document.getElementById('map-image');
@@ -155,13 +174,13 @@
         const ctx = canvas.getContext('2d');
 
         const polygonCoords = [
-        41,141,22,147,3,151,15,139,25,129,35,121,61,114,84,112,96,115,117,117,134,119,128,112,144,106,154,
-        111,163,115,172,117,187,110,195,105,210,97,220,93,235,88,249,88,257,89,273,90,294,90,315,90,325,90,
-        326,96,318,103,312,110,308,118,290,123,275,127,265,135,258,141,251,128,251,120,255,110,246,103,235,
-        101,225,101,215,106,219,116,224,126,219,131,218,139,218,148,221,156,222,162,222,169,216,173,201,182,
-        182,190,162,206,151,217,143,228,143,235,130,229,120,227,108,227,102,238,102,246,111,253,119,247,122,
-        252,123,264,130,268,135,272,135,281,126,281,109,271,99,265,75,248,71,237,65,225,54,216,51,198,59,182,
-        67,169,67,151,60,143
+            41, 141, 22, 147, 3, 151, 15, 139, 25, 129, 35, 121, 61, 114, 84, 112, 96, 115, 117, 117, 134, 119, 128, 112, 144, 106, 154,
+            111, 163, 115, 172, 117, 187, 110, 195, 105, 210, 97, 220, 93, 235, 88, 249, 88, 257, 89, 273, 90, 294, 90, 315, 90, 325, 90,
+            326, 96, 318, 103, 312, 110, 308, 118, 290, 123, 275, 127, 265, 135, 258, 141, 251, 128, 251, 120, 255, 110, 246, 103, 235,
+            101, 225, 101, 215, 106, 219, 116, 224, 126, 219, 131, 218, 139, 218, 148, 221, 156, 222, 162, 222, 169, 216, 173, 201, 182,
+            182, 190, 162, 206, 151, 217, 143, 228, 143, 235, 130, 229, 120, 227, 108, 227, 102, 238, 102, 246, 111, 253, 119, 247, 122,
+            252, 123, 264, 130, 268, 135, 272, 135, 281, 126, 281, 109, 271, 99, 265, 75, 248, 71, 237, 65, 225, 54, 216, 51, 198, 59, 182,
+            67, 169, 67, 151, 60, 143
         ];
 
         function drawPolygon(coords) {
@@ -182,7 +201,7 @@
 
         hoverBlock.style.display = 'none';
         // Event listener for mouse move on the image
-        mapImage.addEventListener('mousemove', function(event) {
+        mapImage.addEventListener('mousemove', function (event) {
             // Get mouse position relative to the image
             const mouseX = event.offsetX;
             const mouseY = event.offsetY;
@@ -194,162 +213,178 @@
         // Event listener for mouse enter/leave on each area
         const areas = document.querySelectorAll('map[name="worldmap"] area');
         areas.forEach(area => {
-        area.addEventListener('mouseenter', function() {
-            hoverBlock.style.width = this.getAttribute('coords').split(',')[6] + 'px';
-            hoverBlock.style.height = this.getAttribute('coords').split(',')[7] + 'px';
-            hoverBlock.style.display = 'block';
-            audio.play();
-        });
+            area.addEventListener('mouseenter', function () {
+                hoverBlock.style.width = this.getAttribute('coords').split(',')[6] + 'px';
+                hoverBlock.style.height = this.getAttribute('coords').split(',')[7] + 'px';
+                hoverBlock.style.display = 'block';
+                audio.play();
+            });
 
-        area.addEventListener('mouseleave', function() {
-            hoverBlock.style.display = 'none';
-            audio.play();
+            area.addEventListener('mouseleave', function () {
+                hoverBlock.style.display = 'none';
+                audio.play();
+            });
         });
-        });
-  </script>
-<div class="all">
-    <div class="cardd">
-    <section id="destination" class="destination-section section">
-        <h2 class="section_title">Discover the most <br> attractive places</h2>
-        <section class="destinations">
-            <div class="wrapper">
-                <div class="card">
-                    <div class="poster">
-                        <img src="./assets/Images/destination/dubai.jpg" alt="">Dubaï
+    </script>
+
+-->
+    <div class="all">
+        <div class="cardd">
+            <section id="destination" class="destination-section section">
+                <h2 class="section_title">Discover the most <br> attractive places</h2>
+                <section class="destinations">
+                    <div class="wrapper">
+                        <div class="card">
+                            <div class="poster">
+                                <img src="./assets/Images/destination/dubai.jpg" alt="">Dubaï
+                            </div>
+                            <div class="details">
+                                <h1>Dubaï</h1>
+                                <h2>Burj Khalifa • Dubai Mall • Dubai Miracle Garden</h2>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.7/5</span>
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Tourism</span>
+                                    <span class="tag">Business</span>
+                                    <span class="tag">Quality of Life</span>
+                                </div>
+                                <p class="desc">
+                                    Dubai: Desert metropolis, home to the Burj Khalifa, luxury shopping, and a global
+                                    fusion of cultures.
+                                </p>
+                                <div class="cast">
+                                    <h3>Nos Hotel</h3>
+                                    <ul>
+                                        <li><img src="./assets/Images/destination/burj-al-arab.jpg" alt="burj-al-arab"
+                                                title="Hotel"></li>
+                                        <li><img src="./assets/Images/destination/Atlantis, The Palm.jpg" alt="Atlantis"
+                                                title="Hotel"></li>
+                                        <li><img src="./assets/Images/destination/armani.jpg" alt="Armani"
+                                                title="Hotel"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="poster"><img src="./assets/Images/destination/London.jpg" alt="London"></div>
+                            <div class="details">
+                                <h1>London</h1>
+                                <h2>The Savoy • Claridge's • The Ritz</h2>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4/5</span>
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Tourism</span>
+                                    <span class="tag">Business</span>
+                                    <span class="tag">Quality of Life</span>
+                                </div>
+                                <p class="desc">
+                                    London: Historic meets modern on the Thames, blending iconic landmarks with cultural
+                                    dynamism.
+                                </p>
+                                <div class="cast">
+                                    <h3>Nos Hotel</h3>
+                                    <ul>
+                                        <li><img src="./assets/Images/destination/The Savoy.jpg" alt="The Savoy"
+                                                title="hotel"></li>
+                                        <li><img src="./assets/Images/destination/Claridge's.jpg" alt="claridge"
+                                                title="hotel"></li>
+                                        <li><img src="./assets/Images/destination/The Ritz London.jpg" alt="The Ritz"
+                                                title="hotel"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="poster"><img src="./assets/Images/destination/Paris.jpg" alt="Location Unknown">
+                            </div>
+                            <div class="details">
+                                <h1>Paris</h1>
+                                <h2>Ritz Paris • Plaza Athénée • Le Bristol Paris</h2>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.7/5</span>
+                                </div>
+                                <div class="tags">
+                                    <span class="tag yellow">Tourism</span>
+                                    <span class="tag">Business</span>
+                                    <span class="tag blue">Quality of Life</span>
+                                </div>
+                                <p class="desc">
+                                    Paris, the epitome of elegance, boasts iconic landmarks, charming streets, and a
+                                    rich cultural tapestry.
+                                </p>
+                                <div class="cast">
+                                    <h3>Nos Hotel</h3>
+                                    <ul>
+                                        <li><img src="./assets/Images/destination/Ritz Paris.jpg" alt="Ritz Paris"
+                                                title="hotel"></li>
+                                        <li><img src="./assets/Images/destination/Hôtel Plaza Athénée.jpg"
+                                                alt="Plaza Athénée" title="hotel"></li>
+                                        <li><img src="./assets/Images/destination/Le Bristol Paris.jpg" alt="Le Bristol"
+                                                title="hotel"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h1>Dubaï</h1>
-                        <h2>Burj Khalifa • Dubai Mall • Dubai Miracle Garden</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>4.7/5</span>
-                        </div>
-                        <div class="tags">
-                            <span class="tag">Tourism</span>
-                            <span class="tag">Business</span>
-                            <span class="tag">Quality of Life</span>
-                        </div>
-                        <p class="desc">
-                            Dubai: Desert metropolis, home to the Burj Khalifa, luxury shopping, and a global fusion of cultures.
-                        </p>
-                        <div class="cast">
-                            <h3>Nos Hotel</h3>
-                            <ul>
-                                <li><img src="./assets/Images/destination/burj-al-arab.jpg" alt="burj-al-arab" title="Hotel"></li>
-                                <li><img src="./assets/Images/destination/Atlantis, The Palm.jpg" alt="Atlantis" title="Hotel"></li>
-                                <li><img src="./assets/Images/destination/armani.jpg" alt="Armani" title="Hotel"></li>
-                            </ul>
+                    <button><a href="hotels.html">See More!</a></button>
+                </section>
+            </section>
+        </div>
+        <section id="food">
+            <h2>Nos Hotels</h2>
+            <div class="hotels-container container">
+                <div class="hotels-type hotels">
+                    <div class="img-container">
+                        <img src="./assets/Images/destination/Ritz Paris.jpg" alt="Ritz Paris" />
+                        <div class="img-content">
+                            <h3>Ritz Paris</h3>
+                            <a href="hotel.html" class="btn btn-primary" target="blank">learn
+                                more</a>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="poster"><img src="./assets/Images/destination/London.jpg" alt="London"></div>
-                    <div class="details">
-                        <h1>London</h1>
-                        <h2>The Savoy • Claridge's • The Ritz</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span>4/5</span>
-                        </div>
-                        <div class="tags">
-                            <span class="tag">Tourism</span>
-                            <span class="tag">Business</span>
-                            <span class="tag">Quality of Life</span>
-                        </div>
-                        <p class="desc">
-                            London: Historic meets modern on the Thames, blending iconic landmarks with cultural dynamism.
-                        </p>
-                        <div class="cast">
-                            <h3>Nos Hotel</h3>
-                            <ul>
-                                <li><img src="./assets/Images/destination/The Savoy.jpg" alt="The Savoy" title="hotel"></li>
-                                <li><img src="./assets/Images/destination/Claridge's.jpg" alt="claridge" title="hotel"></li>
-                                <li><img src="./assets/Images/destination/The Ritz London.jpg" alt="The Ritz" title="hotel"></li>
-                            </ul>
+                <div class="hotels-type hotells">
+                    <div class="img-container">
+                        <img src="./assets/Images/destination/Hôtel Plaza Athénée.jpg" alt="Plaza Athénée" />
+                        <div class="img-content">
+                            <h3>Plaza Athénée</h3>
+                            <a href="hotel.html" class="btn btn-primary" target="blank">learn
+                                more</a>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="poster"><img src="./assets/Images/destination/Paris.jpg" alt="Location Unknown"></div>
-                    <div class="details">
-                        <h1>Paris</h1>
-                        <h2>Ritz Paris • Plaza Athénée • Le Bristol Paris</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>4.7/5</span>
-                        </div>
-                        <div class="tags">
-                            <span class="tag yellow">Tourism</span>
-                            <span class="tag">Business</span>
-                            <span class="tag blue">Quality of Life</span>
-                        </div>
-                        <p class="desc">
-                            Paris, the epitome of elegance, boasts iconic landmarks, charming streets, and a rich cultural tapestry.
-                        </p>
-                        <div class="cast">
-                            <h3>Nos Hotel</h3>
-                            <ul>
-                                <li><img src="./assets/Images/destination/Ritz Paris.jpg" alt="Ritz Paris" title="hotel"></li>
-                                <li><img src="./assets/Images/destination/Hôtel Plaza Athénée.jpg" alt="Plaza Athénée" title="hotel"></li>
-                                <li><img src="./assets/Images/destination/Le Bristol Paris.jpg" alt="Le Bristol" title="hotel"></li>
-                            </ul>
+                <div class="hotels-type hotellls">
+                    <div class="img-container">
+                        <img src="./assets/Images/destination/Le Bristol Paris.jpg" alt="Le Bristol" />
+                        <div class="img-content">
+                            <h3>Le Bristol</h3>
+                            <a href="hotel.html" class="btn btn-primary" target="blank">learn
+                                more</a>
                         </div>
                     </div>
                 </div>
-            </div>  
-            <button><a href="hotels.html">See More!</a></button>
+            </div>
         </section>
-    </section>
-</div><section id="food">
-    <h2>Nos Hotels</h2>
-    <div class="hotels-container container">
-        <div class="hotels-type hotels">
-            <div class="img-container">
-                <img src="./assets/Images/destination/Ritz Paris.jpg" alt="Ritz Paris" />
-                <div class="img-content">
-                    <h3>Ritz Paris</h3>
-                    <a href="hotel.html" class="btn btn-primary" target="blank">learn
-                        more</a>
-                </div>
-            </div>
-        </div>
-        <div class="hotels-type hotells">
-            <div class="img-container">
-                <img src="./assets/Images/destination/Hôtel Plaza Athénée.jpg" alt="Plaza Athénée" />
-                <div class="img-content">
-                    <h3>Plaza Athénée</h3>
-                    <a href="hotel.html" class="btn btn-primary" target="blank">learn
-                        more</a>
-                </div>
-            </div>
-        </div>
-        <div class="hotels-type hotellls">
-            <div class="img-container">
-                <img src="./assets/Images/destination/Le Bristol Paris.jpg" alt="Le Bristol" />
-                <div class="img-content">
-                    <h3>Le Bristol</h3>
-                    <a href="hotel.html" class="btn btn-primary" target="blank">learn
-                        more</a>
-                </div>
-            </div>
-        </div>
     </div>
-</section>
-<!--
-</div>
-    <section id="Hotels" class="hotel-section section">
+
+    <!--<section id="Hotels" class="hotel-section section">
         <h2 class="section_title">Stay in the <br> Best Hotels</h2>
         <section class="hotels">
             <div class="card">
@@ -393,104 +428,227 @@
         3- social media
         4- 
     -->
-    
-    <footer>
-        <div class="footer-background"></div>
 
-        
-        <div class="main">
-            <div class="Rcard">
-              <svg class="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero"><g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z"></path></g></g></svg>
+
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title">Sahla Travel</h3>
+                    <p class="footer__description">With Sahla you choose the <br> destination,
+                        we offer you the <br> experience.
+                    </p>
+
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Our Pages</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="hotels.php" class="footer__link">Hotels</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="destinations.php" class="footer__link">Locations</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="Vols.php" class="footer__link">Next Fligths</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Your Account</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="account.php" class="footer__link">My Profile</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="reservation.html" class="footer__link">My Reservations</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="admin.php" class="footer__link">Admin Page</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Social Media</h3>
+                    <div class="social">
+                        <div class="Rcard">
+                            <svg class="instagram" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px"
+                                height="30px" fill-rule="nonzero">
+                                <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                    text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(8,8)">
+                                        <path
+                                            d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="Rcard">
+                            <svg class="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px"
+                                height="30px">
+                                <path
+                                    d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="Rcard">
+                            <svg class="dribble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="30px"
+                                height="30px">
+                                <path
+                                    d="M20,38.5C9.799,38.5,1.5,30.201,1.5,20S9.799,1.5,20,1.5S38.5,9.799,38.5,20S30.201,38.5,20,38.5z">
+                                </path>
+                                <path fill="#ea4c89"
+                                    d="M20,2c9.925,0,18,8.075,18,18s-8.075,18-18,18S2,29.925,2,20S10.075,2,20,2 M20,1 C9.507,1,1,9.507,1,20s8.507,19,19,19s19-8.507,19-19S30.493,1,20,1L20,1z">
+                                </path>
+                                <path fill="none" stroke="#ea4c89" stroke-miterlimit="10"
+                                    d="M28.352 36.914c0 0-3.032-21.087-15.63-34.292M1.269 17.848c0 0 24.2 2.117 32.075-11.102M7.804 34.152c0 0 8.624-19.807 31.058-12.194">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="Rcard">
+                            <svg class="codepen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px"
+                                height="30px">
+                                <path
+                                    d="M 25 4 L 4 17.34375 L 4 32.652344 L 25 46 L 46 32.65625 L 46 17.34375 Z M 25 29.183594 L 19.066406 25.070313 L 25 21.023438 L 30.933594 25.070313 Z M 27 17.605469 L 27 9.949219 L 40.429688 18.484375 L 34.410156 22.65625 Z M 23 17.605469 L 15.589844 22.65625 L 9.570313 18.484375 L 23 9.949219 Z M 12.09375 25.042969 L 8 27.832031 L 8 22.203125 Z M 15.570313 27.453125 L 23 32.605469 L 23 40.050781 L 9.589844 31.527344 Z M 27 32.605469 L 34.429688 27.453125 L 40.410156 31.527344 L 27 40.050781 Z M 37.90625 25.042969 L 42 22.203125 L 42 27.832031 Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="Rcard">
+                            <svg class="uiverse" width="23px" height="23px" viewBox="0 0 100 100"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M38.0481 4.82927C38.0481 2.16214 40.018 0 42.4481 0H51.2391C53.6692 0 55.6391 2.16214 55.6391 4.82927V40.1401C55.6391 48.8912 53.2343 55.6657 48.4248 60.4636C43.6153 65.2277 36.7304 67.6098 27.7701 67.6098C18.8099 67.6098 11.925 65.2953 7.11548 60.6663C2.37183 56.0036 3.8147e-06 49.2967 3.8147e-06 40.5456V4.82927C3.8147e-06 2.16213 1.96995 0 4.4 0H13.2405C15.6705 0 17.6405 2.16214 17.6405 4.82927V39.1265C17.6405 43.7892 18.4805 47.2018 20.1605 49.3642C21.8735 51.5267 24.4759 52.6079 27.9678 52.6079C31.4596 52.6079 34.0127 51.5436 35.6268 49.4149C37.241 47.2863 38.0481 43.8399 38.0481 39.0758V4.82927Z"
+                                    fill="url(#paint0_linear_501_142)"></path>
+                                <path
+                                    d="M86.9 61.8682C86.9 64.5353 84.9301 66.6975 82.5 66.6975H73.6595C71.2295 66.6975 69.2595 64.5353 69.2595 61.8682V4.82927C69.2595 2.16214 71.2295 0 73.6595 0H82.5C84.9301 0 86.9 2.16214 86.9 4.82927V61.8682Z"
+                                    fill="url(#paint1_linear_501_142)"></path>
+                                <path
+                                    d="M2.86102e-06 83.2195C2.86102e-06 80.5524 1.96995 78.3902 4.4 78.3902H83.6C86.0301 78.3902 88 80.5524 88 83.2195V89.1707C88 91.8379 86.0301 94 83.6 94H4.4C1.96995 94 0 91.8379 0 89.1707L2.86102e-06 83.2195Z"
+                                    fill="url(#paint2_linear_501_142)"></path>
+                                <defs>
+                                    <linearGradient id="paint0_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#BF66FF"></stop>
+                                        <stop offset="0.510417" stop-color="#6248FF"></stop>
+                                        <stop offset="1" stop-color="#00DDEB"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#BF66FF"></stop>
+                                        <stop offset="0.510417" stop-color="#6248FF"></stop>
+                                        <stop offset="1" stop-color="#00DDEB"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#BF66FF"></stop>
+                                        <stop offset="0.510417" stop-color="#6248FF"></stop>
+                                        <stop offset="1" stop-color="#00DDEB"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="Rcard">
+                            <svg class="discord" height="30px" width="30px" viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="Rcard">
+                            <svg class="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px"
+                                height="30px">
+                                <path
+                                    d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="Rcard">
+                            <svg class="telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px"
+                                height="30px">
+                                <path d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
+                                <path fill="#fff"
+                                    d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z">
+                                </path>
+                                <path fill="#b0bec5"
+                                    d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z">
+                                </path>
+                                <path fill="#cfd8dc"
+                                    d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="Rcard">
+                            <svg class="reddit" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30"
+                                viewBox="0 0 256 256" xml:space="preserve">
+                                <defs>
+                                </defs>
+                                <g style="stroke: none; border-radius:50%; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                    transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                    <circle cx="45" cy="45" r="45"
+                                        style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;"
+                                        transform="matrix(1 0 0 1 0 0)"></circle>
+                                    <path
+                                        d="M 75.011 45 c -0.134 -3.624 -3.177 -6.454 -6.812 -6.331 c -1.611 0.056 -3.143 0.716 -4.306 1.823 c -5.123 -3.49 -11.141 -5.403 -17.327 -5.537 l 2.919 -14.038 l 9.631 2.025 c 0.268 2.472 2.483 4.262 4.955 3.993 c 2.472 -0.268 4.262 -2.483 3.993 -4.955 s -2.483 -4.262 -4.955 -3.993 c -1.421 0.145 -2.696 0.973 -3.4 2.204 L 48.68 17.987 c -0.749 -0.168 -1.499 0.302 -1.667 1.063 c 0 0.011 0 0.011 0 0.022 l -3.322 15.615 c -6.264 0.101 -12.36 2.025 -17.55 5.537 c -2.64 -2.483 -6.801 -2.36 -9.284 0.291 c -2.483 2.64 -2.36 6.801 0.291 9.284 c 0.515 0.481 1.107 0.895 1.767 1.186 c -0.045 0.66 -0.045 1.32 0 1.98 c 0 10.078 11.745 18.277 26.23 18.277 c 14.485 0 26.23 -8.188 26.23 -18.277 c 0.045 -0.66 0.045 -1.32 0 -1.98 C 73.635 49.855 75.056 47.528 75.011 45 z M 30.011 49.508 c 0 -2.483 2.025 -4.508 4.508 -4.508 c 2.483 0 4.508 2.025 4.508 4.508 s -2.025 4.508 -4.508 4.508 C 32.025 53.993 30.011 51.991 30.011 49.508 z M 56.152 62.058 v -0.179 c -3.199 2.405 -7.114 3.635 -11.119 3.468 c -4.005 0.168 -7.919 -1.063 -11.119 -3.468 c -0.425 -0.515 -0.347 -1.286 0.168 -1.711 c 0.447 -0.369 1.085 -0.369 1.544 0 c 2.707 1.98 6.007 2.987 9.362 2.83 c 3.356 0.179 6.667 -0.783 9.407 -2.74 c 0.492 -0.481 1.297 -0.47 1.779 0.022 C 56.655 60.772 56.644 61.577 56.152 62.058 z M 55.537 54.34 c -0.078 0 -0.145 0 -0.224 0 l 0.034 -0.168 c -2.483 0 -4.508 -2.025 -4.508 -4.508 s 2.025 -4.508 4.508 -4.508 s 4.508 2.025 4.508 4.508 C 59.955 52.148 58.02 54.239 55.537 54.34 z"
+                                        style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;"
+                                        transform="matrix(1 0 0 1 0 0)" stroke-linecap="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="social_back">
+                            <p class="text">HOVER<br><br>FOR<br><br>SOCIAL</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="Rcard">
-              <svg class="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px"><path d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path></svg>
+
+            <div class="footer__rights">
+                <p class="footer__copy">&#169; 2024 Sahla. All rigths reserved.</p>
+                <div class="footer__terms">
+                    <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                </div>
             </div>
-            <div class="Rcard">
-              <svg class="dribble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="30px" height="30px"><path d="M20,38.5C9.799,38.5,1.5,30.201,1.5,20S9.799,1.5,20,1.5S38.5,9.799,38.5,20S30.201,38.5,20,38.5z"></path><path fill="#ea4c89" d="M20,2c9.925,0,18,8.075,18,18s-8.075,18-18,18S2,29.925,2,20S10.075,2,20,2 M20,1 C9.507,1,1,9.507,1,20s8.507,19,19,19s19-8.507,19-19S30.493,1,20,1L20,1z"></path><path fill="none" stroke="#ea4c89" stroke-miterlimit="10" d="M28.352 36.914c0 0-3.032-21.087-15.63-34.292M1.269 17.848c0 0 24.2 2.117 32.075-11.102M7.804 34.152c0 0 8.624-19.807 31.058-12.194"></path></svg>
-            </div>
-            <div class="Rcard">
-              <svg class="codepen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px"><path d="M 25 4 L 4 17.34375 L 4 32.652344 L 25 46 L 46 32.65625 L 46 17.34375 Z M 25 29.183594 L 19.066406 25.070313 L 25 21.023438 L 30.933594 25.070313 Z M 27 17.605469 L 27 9.949219 L 40.429688 18.484375 L 34.410156 22.65625 Z M 23 17.605469 L 15.589844 22.65625 L 9.570313 18.484375 L 23 9.949219 Z M 12.09375 25.042969 L 8 27.832031 L 8 22.203125 Z M 15.570313 27.453125 L 23 32.605469 L 23 40.050781 L 9.589844 31.527344 Z M 27 32.605469 L 34.429688 27.453125 L 40.410156 31.527344 L 27 40.050781 Z M 37.90625 25.042969 L 42 22.203125 L 42 27.832031 Z"></path></svg>
-            </div>
-            <div class="Rcard">
-              <svg class="uiverse" width="23px" height="23px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <path d="M38.0481 4.82927C38.0481 2.16214 40.018 0 42.4481 0H51.2391C53.6692 0 55.6391 2.16214 55.6391 4.82927V40.1401C55.6391 48.8912 53.2343 55.6657 48.4248 60.4636C43.6153 65.2277 36.7304 67.6098 27.7701 67.6098C18.8099 67.6098 11.925 65.2953 7.11548 60.6663C2.37183 56.0036 3.8147e-06 49.2967 3.8147e-06 40.5456V4.82927C3.8147e-06 2.16213 1.96995 0 4.4 0H13.2405C15.6705 0 17.6405 2.16214 17.6405 4.82927V39.1265C17.6405 43.7892 18.4805 47.2018 20.1605 49.3642C21.8735 51.5267 24.4759 52.6079 27.9678 52.6079C31.4596 52.6079 34.0127 51.5436 35.6268 49.4149C37.241 47.2863 38.0481 43.8399 38.0481 39.0758V4.82927Z" fill="url(#paint0_linear_501_142)"></path>
-              <path d="M86.9 61.8682C86.9 64.5353 84.9301 66.6975 82.5 66.6975H73.6595C71.2295 66.6975 69.2595 64.5353 69.2595 61.8682V4.82927C69.2595 2.16214 71.2295 0 73.6595 0H82.5C84.9301 0 86.9 2.16214 86.9 4.82927V61.8682Z" fill="url(#paint1_linear_501_142)"></path>
-              <path d="M2.86102e-06 83.2195C2.86102e-06 80.5524 1.96995 78.3902 4.4 78.3902H83.6C86.0301 78.3902 88 80.5524 88 83.2195V89.1707C88 91.8379 86.0301 94 83.6 94H4.4C1.96995 94 0 91.8379 0 89.1707L2.86102e-06 83.2195Z" fill="url(#paint2_linear_501_142)"></path>
-              <defs>
-              <linearGradient id="paint0_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#BF66FF"></stop>
-              <stop offset="0.510417" stop-color="#6248FF"></stop>
-              <stop offset="1" stop-color="#00DDEB"></stop>
-              </linearGradient>
-              <linearGradient id="paint1_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#BF66FF"></stop>
-              <stop offset="0.510417" stop-color="#6248FF"></stop>
-              <stop offset="1" stop-color="#00DDEB"></stop>
-              </linearGradient>
-              <linearGradient id="paint2_linear_501_142" x1="0" y1="0" x2="96.1684" y2="87.6201" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#BF66FF"></stop>
-              <stop offset="0.510417" stop-color="#6248FF"></stop>
-              <stop offset="1" stop-color="#00DDEB"></stop>
-              </linearGradient>
-              </defs>
-              </svg>
-            </div>
-            <div class="Rcard">
-              <svg class="discord" height="30px" width="30px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z"></path></svg>
-            </div>
-            <div class="Rcard">
-              <svg class="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px"><path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path></svg>
-            </div>
-            <div class="Rcard">
-              <svg class="telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px"><path d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path><path fill="#fff" d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"></path><path fill="#b0bec5" d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"></path><path fill="#cfd8dc" d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"></path></svg>
-            </div>
-            <div class="Rcard">
-              <svg class="reddit" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 256 256" xml:space="preserve">
-              <defs>
-              </defs>
-              <g style="stroke: none; border-radius:50%; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" transform="matrix(1 0 0 1 0 0)"></circle>
-                <path d="M 75.011 45 c -0.134 -3.624 -3.177 -6.454 -6.812 -6.331 c -1.611 0.056 -3.143 0.716 -4.306 1.823 c -5.123 -3.49 -11.141 -5.403 -17.327 -5.537 l 2.919 -14.038 l 9.631 2.025 c 0.268 2.472 2.483 4.262 4.955 3.993 c 2.472 -0.268 4.262 -2.483 3.993 -4.955 s -2.483 -4.262 -4.955 -3.993 c -1.421 0.145 -2.696 0.973 -3.4 2.204 L 48.68 17.987 c -0.749 -0.168 -1.499 0.302 -1.667 1.063 c 0 0.011 0 0.011 0 0.022 l -3.322 15.615 c -6.264 0.101 -12.36 2.025 -17.55 5.537 c -2.64 -2.483 -6.801 -2.36 -9.284 0.291 c -2.483 2.64 -2.36 6.801 0.291 9.284 c 0.515 0.481 1.107 0.895 1.767 1.186 c -0.045 0.66 -0.045 1.32 0 1.98 c 0 10.078 11.745 18.277 26.23 18.277 c 14.485 0 26.23 -8.188 26.23 -18.277 c 0.045 -0.66 0.045 -1.32 0 -1.98 C 73.635 49.855 75.056 47.528 75.011 45 z M 30.011 49.508 c 0 -2.483 2.025 -4.508 4.508 -4.508 c 2.483 0 4.508 2.025 4.508 4.508 s -2.025 4.508 -4.508 4.508 C 32.025 53.993 30.011 51.991 30.011 49.508 z M 56.152 62.058 v -0.179 c -3.199 2.405 -7.114 3.635 -11.119 3.468 c -4.005 0.168 -7.919 -1.063 -11.119 -3.468 c -0.425 -0.515 -0.347 -1.286 0.168 -1.711 c 0.447 -0.369 1.085 -0.369 1.544 0 c 2.707 1.98 6.007 2.987 9.362 2.83 c 3.356 0.179 6.667 -0.783 9.407 -2.74 c 0.492 -0.481 1.297 -0.47 1.779 0.022 C 56.655 60.772 56.644 61.577 56.152 62.058 z M 55.537 54.34 c -0.078 0 -0.145 0 -0.224 0 l 0.034 -0.168 c -2.483 0 -4.508 -2.025 -4.508 -4.508 s 2.025 -4.508 4.508 -4.508 s 4.508 2.025 4.508 4.508 C 59.955 52.148 58.02 54.239 55.537 54.34 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" transform="matrix(1 0 0 1 0 0)" stroke-linecap="round"></path>
-              </g>
-              </svg>
-            </div>
-            <p class="text">HOVER<br><br>FOR<br><br>SOCIAL</p>
-            <div class="main_back"></div>
-          </div>
-        <div class="rights fWidth">
-            <div class="copyright">© 2024 Sahla. All rigths reserved.</div>
-            <div class="terms">                        
-                <a href="#" class="footer__terms-link">Terms &amp; Agreements</a>
-                <a href="#" class="footer__terms-link">Privacy Policy</a>
-            </div></div>
         </div>
-
     </footer>
 
+    <!--=============== java Scripts ===============-->
+
     <script src="assets/js/clickOnMap.js"></script>
-      
+
     <script>
         function scrollToSection(sectionId) {
-          const section = document.getElementById(sectionId);
-          // Adding offset to count the header
-          const offset = 100; // Adjust this value to set the desired offset
-      
-          if (section) {
-            const offsetPosition = section.offsetTop - offset;
-      
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth"
-            });
-            
-          }
+            const section = document.getElementById(sectionId);
+            // Adding offset to count the header
+            const offset = 100; // Adjust this value to set the desired offset
+
+            if (section) {
+                const offsetPosition = section.offsetTop - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+
+            }
         }
     </script>
-    
+
     <!-- Effects that come with Scrolling:
             -changing the header background
     -->
     <script src="./assets/js/scroll_effect.js"></script>
 
 </body>
+
 </html>

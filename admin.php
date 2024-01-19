@@ -571,7 +571,31 @@
         </div>
     </div>
 
+    <?php
+    include 'footer.php';
+    ?>
+
     <script>
+        function OpenSection(sectionId, openIconId, closeIconId) {
+            const section = document.getElementById(sectionId);
+            const closedIcon = document.getElementById(openIconId);
+            const openIcon = document.getElementById(closeIconId);
+
+            section.style.display = 'block';
+            closedIcon.style.display = 'none';
+            openIcon.style.display = 'block';
+        }
+
+        function CloseSection(sectionId, openIconId, closeIconId) {
+            const section = document.getElementById(sectionId);
+            const closedIcon = document.getElementById(openIconId);
+            const openIcon = document.getElementById(closeIconId);
+
+            section.style.display = 'none';
+            closedIcon.style.display = 'block';
+            openIcon.style.display = 'none';
+        }
+
         function OpenHotel() {
             const hotelsection = document.getElementById("Hotel-data");
             const ClosedIcon = document.getElementById("HotelClosed");
