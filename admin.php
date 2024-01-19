@@ -135,9 +135,9 @@
                     ?>
                 </tbody>
             </table>
-
+            <br>
             <div class="ajouter">
-                <button><a href="addHotel.php">Ajouter +</a></button>
+                <button><a href="add.php?type=hotel">Ajouter +</a></button>
             </div>
         </div>
     </div>
@@ -249,10 +249,6 @@
                     ?>
                 </tbody>
             </table>
-
-            <div class="ajouter">
-                <button><a href="addHotel.php">Ajouter +</a></button>
-            </div>
         </div>
     </div>
 
@@ -333,6 +329,10 @@
                     ?>
                 </tbody>
             </table>
+            <br>
+            <div class="ajouter">
+                <button><a href="add.php?type=location">Ajouter +</a></button>
+            </div>
         </div>
     </div>
 
@@ -424,9 +424,9 @@
                     ?>
                 </tbody>
             </table>
-
+            <br>
             <div class="ajouter">
-                <button><a href="addHotel.php">Ajouter +</a></button>
+                <button><a href="add.php?type=flight">Ajouter +</a></button>
             </div>
         </div>
     </div>
@@ -604,10 +604,6 @@
                     ?>
                 </tbody>
             </table>
-
-            <div class="ajouter">
-                <button><a href="addHotel.php">Ajouter +</a></button>
-            </div>
         </div>
     </div>
 
