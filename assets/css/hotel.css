@@ -238,3 +238,40 @@ button{
 .reserve-button:hover {
     background-color: #006180;
 }
+/* Ajoutez ces styles à votre fichier hotel.css */
+
+.thumbnails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2%;
+  background-color: #f9f9f9;
+  padding: 10px; /* Ajout de la marge interne pour l'esthétique */
+  border-radius: 10px; /* Ajout d'une bordure arrondie */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre légère */
+}
+
+.thumbnail-container {
+  display: flex;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50%; /* Rend les miniatures circulaires */
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.arrow {
+  font-size: 2em;
+  cursor: pointer;
+}
+
