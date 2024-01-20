@@ -19,6 +19,23 @@
     if (isset($_POST['submit'])) {
         $Ajouter = ($_POST['submit']);
         switch ($Ajouter) {
+            case 'Ajouter un Vol':
+                $departureLocation = $_POST['departure-location'];
+                $arrivalLocation = $_POST['arrival-location'];
+                $departureDate = $_POST['departure-date'];
+                $arrivalDate = $_POST['arrival-date'];
+                $price = $_POST['price'];
+                $airline = $_POST['airline'];
+
+                // Insert data into the database
+                $insertQuery = "INSERT INTO flights (DepartureLocationID, ArrivalLocationID, DepartureDateTime, ArrivalDateTime, Price, Airline)
+                    VALUES (?, ?, ?, ?, ?, ?)";
+
+                $stmt = $conn->prepare($insertQuery);
+                $stmt->bind_param("iissds", $departureLocation, $arrivalLocation, $departureDate, $arrivalDate, $price, $airline);
+                $stmt->execute();
+                $stmt->close();
+                break;
             case 'Ajouter un Lieu':
                 // Retrieve form data
                 $name = $_POST['name'];
@@ -154,22 +171,38 @@
                 break;
             case 'flight':
                 ?>
-                <form method="POST" action="addVol.php">
+                <form method="POST" action="add.php">
                     <h2>Formulaire Vol</h2>
 
                     <label for="departure-location">Location de départ:</label>
                     <select id="departure-location" name="departure-location" required>
-                        <option value="paris">Paris</option>
-                        <option value="newyork">New York</option>
-                        <option value="tokyo">Tokyo</option>
+                        <?php
+                        // Fetch location data from the database
+                        $locationQuery = "SELECT LocationID, Name FROM locations";
+                        $locationResult = mysqli_query($conn, $locationQuery);
+
+                        if ($locationResult) {
+                            while ($row = mysqli_fetch_assoc($locationResult)) {
+                                echo '<option value="' . $row['LocationID'] . '">' . $row['Name'] . '</option>';
+                            }
+                        }
+                        ?>
                         <!-- zid ya bouzid -->
                     </select>
 
                     <label for="arrival-location">Location d'arrivée:</label>
                     <select id="arrival-location" name="arrival-location" required>
-                        <option value="paris">Paris</option>
-                        <option value="newyork">New York</option>
-                        <option value="tokyo">Tokyo</option>
+                        <?php
+                        // Fetch location data from the database
+                        $locationQuery = "SELECT LocationID, Name FROM locations";
+                        $locationResult = mysqli_query($conn, $locationQuery);
+
+                        if ($locationResult) {
+                            while ($row = mysqli_fetch_assoc($locationResult)) {
+                                echo '<option value="' . $row['LocationID'] . '">' . $row['Name'] . '</option>';
+                            }
+                        }
+                        ?>
                         <!-- zid ya bouzid -->
                     </select>
 
@@ -185,7 +218,7 @@
                     <label for="airline">Compagnie aérienne:</label>
                     <input type="text" id="airline" name="airline" required>
 
-                    <input type="submit" value="Soumettre">
+                    <input type="submit" name="submit" value="Ajouter un Vol">
                 </form>
                 <?php
                 break;
