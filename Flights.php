@@ -82,10 +82,10 @@
                             </div>
                             <div class="description">
                                 <b> Du </b>
-                                <?= $departureLocationName ?> <b>Vers</b>
-                                <?= $arrivalLocationName ?><br><br>
+                                <?= $departureLocationName ?> Vers
+                                <?= $arrivalLocationName ?>
                                 <u>Temps Du Depart:</u><br>
-                                <?= $departureDateTime ?><br>
+                                <?= $departureDateTime ?>
                                 <u>Temps Du Arrivée:</u><br>
                                 <?= $arrivalDateTime ?>
                             </div>

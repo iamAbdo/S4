@@ -13,6 +13,7 @@ a {
 
 header {
   background-color: rgba(26, 14, 14, 0.7);
+  background-color: transparent;
   position: fixed;
   top: 0;
   display: flex;
@@ -189,7 +190,9 @@ header {
 }
 
 #space {
-  height: 10vh;
+  content: "";
+  display: block;
+  height: 12vh;
 }
 
 .mobile-header {

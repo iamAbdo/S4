@@ -118,6 +118,7 @@
                                 <label for="departure-date<?= $hotelID ?>">Départ:</label>
                                 <input type="date" id="departure-date<?= $hotelID ?>" name="checkOutDate" required>
 
+                                <br><br>
                                 <button type="submit" name="submit" class="reserve-button">
                                     Reserve Now
                                 </button>

@@ -86,7 +86,7 @@
                         <?php echo $username ?>
                     </h1>
 
-                    <a href="editProfile.php">
+                    <a href="EditAccount.php">
                         <button class="btn profile-edit-btn">Edit Profile</button>
                     </a>
                     <?php if ($role == "admin") { ?>
@@ -97,14 +97,14 @@
 
                 </div>
 
-                <div class="profile-stats">
+                <!--<div class="profile-stats">
 
                     <ul>
                         <li><span class="profile-stat-count">12</span> Reservations</li>
                         <li><span class="profile-stat-count">188</span> Comments</li>
                     </ul>
 
-                </div>
+                </div>-->
 
                 <div class="profile-bio">
 
