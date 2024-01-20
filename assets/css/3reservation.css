@@ -1,84 +1,55 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-}
-.reservation-container {
-  width: 1500px;
-  margin: 0 auto;
-}
-
-.reservation-section {
-  width: calc(25% - 20px);
-  box-sizing: border-box;
-  float: left;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.divider {
-  width: 3px;
-  height: auto;
-  float: left;
-  background-color: #ddd;
-}
-
-.section-header {
-  background-color: #3498db;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-.section-content {
+form {
+  background-color: #fff;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 }
 
 h2 {
-  margin-top: 0;
+  text-align: center;
+  color: #333;
 }
 
-.info-label {
+label {
+  display: block;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
-.total-price {
-  width: calc(25% - 20px);
-  margin-right: 0;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.actions {
-  clear: both;
-  text-align: center;
-  margin-top: 28px;
-  position: relative;
-  bottom: 2rem;
-}
-
-.confirm-button {
+input[type="submit"] {
   background-color: #4caf50;
-  color: white;
+  color: #fff;
+  padding: 10px 15px;
   border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-right: 10px;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-.cancel-button {
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
