@@ -35,6 +35,7 @@
                 $stmt->bind_param("iissds", $departureLocation, $arrivalLocation, $departureDate, $arrivalDate, $price, $airline);
                 $stmt->execute();
                 $stmt->close();
+                header('Location: Vols.php');
                 break;
             case 'Ajouter un Lieu':
                 // Retrieve form data
@@ -57,6 +58,7 @@
                 move_uploaded_file($_FILES["images"]["tmp_name"], $imagePath);
 
                 $stmt->close();
+                header('Location: Lieu.php');
 
                 break;
             case 'Ajouter un Hotel':
@@ -95,7 +97,7 @@
                 move_uploaded_file($_FILES["images"]["tmp_name"], $imagePath);
 
                 $stmt->close();
-
+                header('Location: hotels.php');
 
                 break;
 
