@@ -111,17 +111,41 @@
                             <div class="reserve-option">
                                 <!-- ... Vos options de réservation ... -->
                             </div>
-                            <form action="reservation.php?HotelID=<?= $hotelID ?>">
-                                <label for="arrival-date">Arrivée:</label>
-                                <input type="date" id="arrival-date" name="arrival-date" required>
+                            <form method="post" action="reservation.php?HotelID=<?= $hotelID ?>">
+                                <label for="arrival-date<?= $hotelID ?>">Arrivée:</label>
+                                <input type="date" id="arrival-date<?= $hotelID ?>" name="checkInDate" required>
 
-                                <label for="departure-date">Départ:</label>
-                                <input type="date" id="departure-date" name="departure-date" required>
+                                <label for="departure-date<?= $hotelID ?>">Départ:</label>
+                                <input type="date" id="departure-date<?= $hotelID ?>" name="checkOutDate" required>
 
                                 <button type="submit" name="submit" class="reserve-button">
                                     Reserve Now
                                 </button>
                             </form>
+
+                            <script>
+                                // Get today's date in the format "YYYY-MM-DD"
+                                var today = new Date().toISOString().split('T')[0];
+                                // Set the minimum value of checkInDate to today
+                                document.getElementById('arrival-date<?= $hotelID ?>').min = today;
+                                document.getElementById('departure-date<?= $hotelID ?>').min = today;
+
+                                // Add an event listener to checkInDate
+                                document.getElementById('arrival-date<?= $hotelID ?>').addEventListener('change', function () {
+                                    // Get the selected value of checkInDate
+                                    var checkInDateValue = this.value;
+
+                                    // Update the min attribute of checkOutDate to be greater than checkInDate
+                                    document.getElementById('departure-date<?= $hotelID ?>').min = checkInDateValue;
+                                });
+                                document.getElementById('departure-date<?= $hotelID ?>').addEventListener('change', function () {
+                                    // Get the selected value of checkInDate
+                                    var checkInDateValue = this.value;
+
+                                    // Update the min attribute of checkOutDate to be greater than checkInDate
+                                    document.getElementById('arrival-date<?= $hotelID ?>').max = checkInDateValue;
+                                });
+                            </script>
                         </div>
 
                     </div>
@@ -142,8 +166,10 @@
                 <div class="arrow">⬅️</div>
                 <div class="thumbnail-container">
                     <!-- ... Vos miniatures ... -->
-                    Page
-                    <?= $PageNumber ?>
+                    <b>
+                        Page
+                        <?= $PageNumber ?>
+                    </b>
                 </div>
                 <div class="arrow">➡️</div>
             </div>
