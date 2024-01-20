@@ -262,33 +262,38 @@
 
     <section id="Hotels" class="hotel-section section">
         <h2 class="section_title">Stay in the <br> Best Hotels</h2>
-        <section class="hotels">
-            <div class="card">
-                <img src="assets/Images/Hotels/Home/1.jpg" alt="">
-                <h2 class="title">Mountain View</h2>
-                <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it,
-                    the mountains</p>
-                <button class="btn">View Trips</button>
+        <div class="hotels-container container">
+                <div class="hotels-type hotels">
+                    <div class="img-container">
+                        <img src="./assets/Images/destination/Ritz Paris.jpg" alt="Ritz Paris" />
+                        <div class="img-content">
+                            <h3>Ritz Paris</h3>
+                            <a href="hotel.html" class="btn btn-primary" target="blank">learn
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotels-type hotells">
+                    <div class="img-container">
+                        <img src="./assets/Images/destination/Hôtel Plaza Athénée.jpg" alt="Plaza Athénée" />
+                        <div class="img-content">
+                            <h3>Plaza Athénée</h3>
+                            <a href="hotel.html" class="btn btn-primary" target="blank">learn
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotels-type hotellls">
+                    <div class="img-container">
+                        <img src="./assets/Images/destination/Le Bristol Paris.jpg" alt="Le Bristol" />
+                        <div class="img-content">
+                            <h3>Le Bristol</h3>
+                            <a href="hotel.html" class="btn btn-primary" target="blank">learn
+                                more</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="assets/Images/Hotels/Home/2.jpg" alt="">
-                <h2 class="title">To The Beach</h2>
-                <p class="copy">Plan your next beach trip with these fabulous destinations</p>
-                <button class="btn">View Trips</button>
-            </div>
-            <div class="card">
-                <img src="assets/Images/Hotels/Home/3.jpg" alt="">
-                <h2 class="title">Desert Destinations</h2>
-                <p class="copy">It's the desert you've always dreamed of</p>
-                <button class="btn">Book Now</button>
-            </div>
-            <div class="card">
-                <img src="assets/Images/Hotels/Home/4.jpg" alt="">
-                <h2 class="title">Explore The Galaxy</h2>
-                <p class="copy">Seriously, straight up, just blast off into outer space today</p>
-                <button class="btn">Book Now</button>
-            </div>
-        </section>
     </section>
     <!-- 
         

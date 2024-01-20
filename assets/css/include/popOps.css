@@ -11,7 +11,7 @@
   aspect-ratio: 1.5/1;
   border: 5px solid #000;
   border-radius: 10%;
-  background-color: hsl(0, 0%, 97%);
+  background-color: rgb(255, 255, 255);
 }
 
 .PopOp-content {
