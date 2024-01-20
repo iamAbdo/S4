@@ -69,7 +69,7 @@
                 hotels.Description AS Description,
                 hotels.Rating,
                 hotels.ImageURLs
-                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID WHERE LocationID=$GETLocationID LIMIT 10";
+                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID WHERE hotels.LocationID=$GETLocationID LIMIT 10";
 
             $result = mysqli_query($conn, $sqlQuery);
 
