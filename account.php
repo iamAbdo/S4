@@ -342,7 +342,7 @@
                                 href="confirm.php">Confirmer</a>
                             <button class="cancel-button">Annuler</button>
                         <?php } else {
-                            echo "<h2>Reservation Confirmer</h2>";
+                            echo "<h2>Reservation Confirmer</h2><a href='ticket.html' class='confirm-button'>Votre ticket</a>";
                         }
                         ?>
 
