@@ -33,6 +33,8 @@
             <input type="date" name="DepartureDateTime">
             <label for="ArrivalDateTime">Arrival Date/Time: </label>
             <input type="date" name="ArrivalDateTime">
+
+            
         </div>
 
         <div class="container">
