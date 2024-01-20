@@ -26,16 +26,20 @@
 
         // Retrieve user information from the database
         $token = $conn->real_escape_string($_COOKIE['token']);
-        $sql = "SELECT UserID, Username, Email, LastName, Role, FirstName FROM users WHERE cookie = '$token'";
+        $sql = "SELECT UserID,address, phone, birthdate, Username, Email, LastName, Role, FirstName FROM users WHERE cookie = '$token'";
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
+
             $UserID = $row['UserID'];
             $username = $row['Username'];
             $email = $row['Email'];
             $LastName = $row['LastName'];
             $FirstName = $row['FirstName'];
+            $phone = $row['phone'];
+            $dob = $row['birthdate'];
+            $address = $row['address'];
 
             $role = $row['Role'];
         } else {
@@ -147,16 +151,24 @@
 
                     $FullInfo = true;
                     ?>
+                    <p class="info-label"><b>Email:</b>
+                        <?= UserIfset($email, $FullInfo) ?>
+                    </p>
                     <p class="info-label"><b>Nom: </b>
                         <?= UserIfset($LastName, $FullInfo) ?>
                     </p>
                     <p class="info-label"><b>Prénom: </b>
                         <?= UserIfset($FirstName, $FullInfo) ?>
                     </p>
-                    <p class="info-label"><b>Email:</b>
-                        <?= UserIfset($email, $FullInfo) ?>
+                    <p class="info-label"><b>address: </b>
+                        <?= UserIfset($address, $FullInfo) ?>
                     </p>
-                    <p class="info-label">Numéro de téléphone: 023232323</p>
+                    <p class="info-label"><b>date de naissance: </b>
+                        <?= UserIfset($dob, $FullInfo) ?>
+                    </p>
+                    <p class="info-label"><b>Numéro de téléphone: </b>
+                        <?= UserIfset($phone, $FullInfo) ?>
+                    </p>
                 </td>
                 <td>
                     <?php

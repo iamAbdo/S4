@@ -10,6 +10,8 @@ body {
   font-family: "Roboto", Arial, Helvetica, Sans-serif, Verdana;
   min-height: 100vh;
   background-color: #fafafa;
+  background-image: url("../Images/avion-bebe.jpg");
+  background-size: cover;
   color: #262626;
 }
 

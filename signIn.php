@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
         $token = $row['cookie'];
         echo "Token: " . $token;
 
-        setcookie('token', $token, time() + 3600, '/'); // Cookie expires in 1 hour
+        setcookie('token', $token, time() + (3600 * 24 * 365), '/'); // Cookie expires in 1 Year
 
         echo "<br>correct";
 
