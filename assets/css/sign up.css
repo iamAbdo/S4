@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-
 * {
   margin: 0;
   padding: 0;
@@ -16,69 +15,67 @@ body {
 
 /* normalment bayna ml asm */
 .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../Images/sign.jpg'); /* Add your image URL here */
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../Images/sign.jpg"); /* Add your image URL here */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.6;
 }
-
 
 /* header */
 .logo img {
   height: 20vh; /* taille logo */
-  min-height: 3px;  /* taille minimum*/
+  min-height: 3px; /* taille minimum*/
   width: auto; /* y5li meme aspect ratio */
   height: 150px;
-
 }
 
 /* les lien ida kayn (aslan makach fi hadi la page) */
 a {
-text-decoration: none;
-color:white;
+  text-decoration: none;
+  color: white;
 }
 
 /* 9smna el header l deux cotee doirte et gauche */
 .left-side {
-display: flex;
-padding: 0px;
-margin: 0px;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
 }
 
 /* taille logo + company name */
 .logo {
-display: flex;
-gap: 10px;
-font-weight: bold;
-align-items: center;
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+  align-items: center;
 }
 
 /* bach yban el asm fi ligne wa7da */
-.logo_name a{
-display: flex;
+.logo_name a {
+  display: flex;
 }
 
-.logo_name div{
-color: #0a9c9b;
-transform: translateY(5px);
+.logo_name div {
+  color: #0a9c9b;
+  transform: translateY(5px);
 }
 
 /* sign in box */
 .box {
-    position: relative;
-    width: 380px; /* Ajustez la largeur selon vos besoins */
-    height: 570px;
-    background: #1c1c1c;
-    border-radius: 8px;
-    overflow: hidden;
-    opacity: 0.60;
-    margin: 50px auto; /* Centrez le formulaire sur la page */
+  position: relative;
+  width: 380px; /* Ajustez la largeur selon vos besoins */
+  height: 570px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0.6;
+  margin: 50px auto; /* Centrez le formulaire sur la page */
 }
 
 .form {
@@ -164,24 +161,24 @@ input[type="submit"] {
   border: 1px solid #ffffff;
   outline: none;
   background: transparent;
-  color:#fff;
+  color: #fff;
   padding: 11px 25px;
   width: 100px;
   margin-top: 10px;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-input[type="submit"]:hover{
-background: #ffffff;
-color: #000000;
+input[type="submit"]:hover {
+  background: #ffffff;
+  color: #000000;
 }
 input[type="submit"]:active {
   opacity: 0.8;
 }
 
-@media screen  and (max-height: 800px) {
+@media screen and (max-height: 800px) {
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
   * {
     margin: 0;
@@ -199,66 +196,65 @@ input[type="submit"]:active {
 
   /* normalment bayna ml asm */
   .background-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('../Images/sign.jpg'); /* Add your image URL here */
-      background-size: cover;
-      background-position: center;
-      z-index: -1;
-      opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../Images/sign.jpg"); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.6;
   }
-
 
   /* header */
   .logo img {
     height: 10vh; /* taille logo */
-    min-height: 30px;  /* taille minimum*/
+    min-height: 30px; /* taille minimum*/
     width: auto; /* y5li meme aspect ratio */
   }
 
   /* les lien ida kayn (aslan makach fi hadi la page) */
   a {
-  text-decoration: none;
-  color:white;
+    text-decoration: none;
+    color: white;
   }
 
   /* 9smna el header l deux cotee doirte et gauche */
   .left-side {
-  display: flex;
-  padding: 0px;
-  margin: 0px;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
   }
 
   /* taille logo + company name */
   .logo {
-  display: flex;
-  gap: 10px;
-  font-weight: bold;
-  align-items: center;
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    align-items: center;
   }
 
   /* bach yban el asm fi ligne wa7da */
-  .logo_name a{
-  display: flex;
+  .logo_name a {
+    display: flex;
   }
 
-  .logo_name div{
-  color: #0a9c9b;
-  transform: translateY(5px);
+  .logo_name div {
+    color: #0a9c9b;
+    transform: translateY(5px);
   }
 
   /* sign in box */
   .box {
-      position: relative;
-      width: 380px; /* Ajustez la largeur selon vos besoins */
-      height: 80vh;
-      background: #1c1c1c;
-      border-radius: 8px;
-      opacity: 0.60;
-      margin: 0px auto; /* Centrez le formulaire sur la page */
+    position: relative;
+    width: 380px; /* Ajustez la largeur selon vos besoins */
+    height: 80vh;
+    background: #1c1c1c;
+    border-radius: 8px;
+    opacity: 0.6;
+    margin: 0px auto; /* Centrez le formulaire sur la page */
   }
 
   .form {
@@ -355,19 +351,19 @@ input[type="submit"]:active {
     border: 1px solid #ffffff;
     outline: none;
     background: transparent;
-    color:#fff;
+    color: #fff;
     padding: 11px 25px;
     width: 100px;
     margin-top: 10px;
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
-  input[type="submit"]:hover{
-  background: #ffffff;
-  color: #000000;
+  input[type="submit"]:hover {
+    background: #ffffff;
+    color: #000000;
   }
 
   input[type="submit"]:active {

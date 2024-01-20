@@ -25,7 +25,7 @@
         }
 
         // Retrieve user information from the database
-        $token = $conn->real_escape_string($_COOKIE['token']);
+        $token = $_COOKIE['token'];
         $sql = "SELECT UserID,address, phone, birthdate, Username, Email, LastName, Role, FirstName FROM users WHERE cookie = '$token'";
         $result = $conn->query($sql);
 
@@ -52,6 +52,27 @@
     } else {
         header('Location: sign In.html');
         exit;
+    }
+
+
+    $query = "SELECT status FROM bookings WHERE UserID = $UserID";
+    // Execute the query
+    $result = $conn->query($query);
+
+    if ($result) {
+        // Check if any row is returned
+        if ($result->num_rows > 0) {
+            // Fetch the status
+            $row = $result->fetch_assoc();
+            $status = $row['status'];
+        } else {
+            //echo "No booking found for the user.";
+            $status = "pending";
+        }
+        // Free the result set
+        $result->free();
+    } else {
+        echo "Error executing query: " . $conn->error;
     }
     ?>
 
@@ -86,7 +107,7 @@
                         <?php echo $username ?>
                     </h1>
 
-                    <a href="editProfile.php">
+                    <a href="EditAccount.php">
                         <button class="btn profile-edit-btn">Edit Profile</button>
                     </a>
                     <?php if ($role == "admin") { ?>
@@ -97,45 +118,16 @@
 
                 </div>
 
-                <div class="profile-stats">
+                <!--<div class="profile-stats">
 
                     <ul>
                         <li><span class="profile-stat-count">12</span> Reservations</li>
                         <li><span class="profile-stat-count">188</span> Comments</li>
                     </ul>
 
-                </div>
+                </div>-->
 
                 <div class="profile-bio">
-
-                    <p>
-                        <span class="profile-real-name">
-                            <?php echo "Personal Information:<br>" ?>
-                        </span>
-                        Your Email is :
-                        <?php echo $email ?>,
-                        <br>Date of Birth: 23-08-2002
-                        <br>We hope you the Best Memories 📷✈️🏕️
-                    </p>
-
-                </div>
-            </div>
-
-        </div>
-        <!-- End of profile section -->
-    </div>
-    <div class="Res-container">
-        <h1>Your Reservation</h1>
-        <br>
-        <table>
-            <tr>
-                <th>Informations Personnelles</th>
-                <th>Informations sur le Vol</th>
-                <th>Informations sur l'Hôtel</th>
-                <th>Prix Total</th>
-            </tr>
-            <tr>
-                <td>
                     <?php
                     //User Info
                     $prixTotal = 0.0;
@@ -151,6 +143,10 @@
 
                     $FullInfo = true;
                     ?>
+                    <p>
+                        <span class="profile-real-name">
+                            <?php echo "Personal Information:<br>" ?>
+                        </span>
                     <p class="info-label"><b>Email:</b>
                         <?= UserIfset($email, $FullInfo) ?>
                     </p>
@@ -169,7 +165,46 @@
                     <p class="info-label"><b>Numéro de téléphone: </b>
                         <?= UserIfset($phone, $FullInfo) ?>
                     </p>
-                </td>
+                    <br>We hope you the Best Memories 📷✈️🏕️
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End of profile section -->
+    </div>
+    <div class="Res-container">
+        <h1>Your Reservation</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Informations sur le Vol</th>
+                <th>Informations sur l'Hôtel</th>
+                <th>Prix Total</th>
+            </tr>
+            <tr>
+                <!--<td>
+
+                    <p class="info-label"><b>Email:</b>
+                        <= UserIfset($email, $FullInfo) ?>
+                    </p>
+                    <p class="info-label"><b>Nom: </b>
+                        <= UserIfset($LastName, $FullInfo) ?>
+                    </p>
+                    <p class="info-label"><b>Prénom: </b>
+                        <= UserIfset($FirstName, $FullInfo) ?>
+                    </p>
+                    <p class="info-label"><b>address: </b>
+                        <= UserIfset($address, $FullInfo) ?>
+                    </p>
+                    <p class="info-label"><b>date de naissance: </b>
+                        <= UserIfset($dob, $FullInfo) ?>
+                    </p>
+                    <p class="info-label"><b>Numéro de téléphone: </b>
+                        <= UserIfset($phone, $FullInfo) ?>
+                    </p>
+                </td>-->
                 <td>
                     <?php
                     $sql = "SELECT b.BookingID, b.FlightID,
@@ -299,11 +334,18 @@
                     </p>
                     <br>
                     <div class="actions">
-                        <button <?php if (!$FullInfo) {
-                            echo 'onclick="nonDefiniPopOp()" ';
-                        } ?>
-                            class="confirm-button">Confirmer</button>
-                        <button class="cancel-button">Annuler</button>
+                        <?php
+                        if ($status == "pending") { ?>
+                            <a <?php if (!$FullInfo) {
+                                echo 'onclick="nonDefiniPopOp()" ';
+                            } ?> class="confirm-button"
+                                href="confirm.php">Confirmer</a>
+                            <button class="cancel-button">Annuler</button>
+                        <?php } else {
+                            echo "<h2>Reservation Confirmer</h2>";
+                        }
+                        ?>
+
                     </div>
                 </td>
             </tr>

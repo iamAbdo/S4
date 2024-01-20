@@ -61,7 +61,7 @@
             echo "changer Hotel";
             // check if he has a booking
             $checkBookingQuery = "SELECT BookingID FROM bookings WHERE UserID = (SELECT UserID FROM users WHERE cookie = '$token')";
-            $bookingResult = $connection->query($checkBookingQuery);
+            $bookingResult = $conn->query($checkBookingQuery);
 
 
             if ($bookingResult->num_rows == 0) {
@@ -69,7 +69,7 @@
                 $insertBookingQuery = "INSERT INTO bookings (UserID, HotelID, FlightID, CheckInDate, CheckOutDate)
                                VALUES ((SELECT UserID FROM users WHERE cookie = '$token'), ?, ?, ?, ?)";
 
-                $stmt = $connection->prepare($insertBookingQuery);
+                $stmt = $conn->prepare($insertBookingQuery);
                 $stmt->bind_param("iissd", $HotelID, $flightID, $checkInDate, $checkOutDate);
                 $stmt->execute();
                 $stmt->close();
@@ -79,15 +79,11 @@
                 $bookingData = $bookingResult->fetch_assoc();
                 $bookingID = $bookingData['BookingID'];
 
-                $newHotelID = isset($_POST['newHotelID']) ? $_POST['newHotelID'] : null;
-                $newCheckInDate = isset($_POST['newCheckInDate']) ? $_POST['newCheckInDate'] : null;
-                $newCheckOutDate = isset($_POST['newCheckOutDate']) ? $_POST['newCheckOutDate'] : null;
-
                 // Update the existing booking with the new values
                 $updateBookingQuery = "UPDATE bookings SET HotelID = ?, CheckInDate = ?, CheckOutDate = ? WHERE BookingID = ?";
 
-                $stmt = $connection->prepare($updateBookingQuery);
-                $stmt->bind_param("isss", $newHotelID, $newCheckInDate, $newCheckOutDate, $bookingID);
+                $stmt = $conn->prepare($updateBookingQuery);
+                $stmt->bind_param("isss", $HotelID, $CheckInDate, $CheckOutDate, $bookingID);
                 $stmt->execute();
                 $stmt->close();
             }
@@ -98,14 +94,14 @@
             echo "changer Vol";
             // check if he has a booking
             $checkBookingQuery = "SELECT BookingID FROM bookings WHERE UserID = (SELECT UserID FROM users WHERE cookie = '$token')";
-            $bookingResult = $connection->query($checkBookingQuery);
+            $bookingResult = $conn->query($checkBookingQuery);
 
             if ($bookingResult->num_rows == 0) {
                 // Insert the new booking into the bookings table
                 $insertBookingQuery = "INSERT INTO bookings (UserID, HotelID, FlightID, CheckInDate, CheckOutDate)
                             VALUES ((SELECT UserID FROM users WHERE cookie = '$token'), ?, ?, ?, ?)";
 
-                $stmt = $connection->prepare($insertBookingQuery);
+                $stmt = $conn->prepare($insertBookingQuery);
                 $stmt->bind_param("iiss", $HotelID, $flightID, $checkInDate, $checkOutDate);
                 $stmt->execute();
                 $stmt->close();
@@ -117,7 +113,7 @@
                 // Update the existing booking with the new values
                 $updateBookingQuery = "UPDATE bookings SET FlightID = ? WHERE BookingID = ?";
 
-                $stmt = $connection->prepare($updateBookingQuery);
+                $stmt = $conn->prepare($updateBookingQuery);
                 $stmt->bind_param("isss", $flightID, $bookingID);
                 $stmt->execute();
                 $stmt->close();

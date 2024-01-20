@@ -65,8 +65,8 @@
 
                 $conn->close();
             } else {
-                echo '<a href="./sign up.html">Register</a>
-                      <a href="./sign in.html">Sign in</a>';
+                echo '<a href="./signup.php">Register</a>
+                      <a href="./signIn.php">Sign in</a>';
             }
             ?>
         </div>
@@ -92,8 +92,8 @@
             <a href="vols.php">Vols</a>
         </div>
         <div class="mobile-account">
-            <a href="./sign up.html">Register</a>
-            <a href="./sign in.html">Sign in</a>
+            <a href="./signup.php">Register</a>
+            <a href="./signIn.php">Sign in</a>
         </div>
     </div>
 </header>
