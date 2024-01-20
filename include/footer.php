@@ -26,7 +26,7 @@ if (isset($_COOKIE['token'])) {
 }
 ?>
 <footer class="footer">
-    <div class="footer__container container grid">
+    <div class="footer__container grid">
         <div class="footer__content grid">
             <div class="footer__data">
                 <h3 class="footer__title">Sahla Travel</h3>

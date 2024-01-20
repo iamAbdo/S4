@@ -3,12 +3,13 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+}
+#formulaire {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
-
 form {
   background-color: #fff;
   padding: 20px;

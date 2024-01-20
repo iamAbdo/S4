@@ -134,7 +134,7 @@
                 <td>
                     <?php
                     //User Info
-                    
+                    $prixTotal = 0.0;
                     function UserIfset($value, &$FullInfo)
                     {
                         if (isset($value)) {
@@ -186,6 +186,8 @@
                             $Price = $row['Price'];
                             $Airline = $row['Airline'];
 
+                            $prixTotal += floatval($Price);
+
                             $DepartureLocationName = $row['DepartureLocationName'];
                             $ArrivalLocationName = $row['ArrivalLocationName'];
                         } else {
@@ -225,13 +227,64 @@
                     <?php }
                     ?>
                 </td>
+
                 <td>
-                    <p>Nom de l'Hôtel:</p>
-                    <p class="info-label">Adresse de l'Hôtel:</p>
-                    <p class="info-label">Numéro de Réservation:</p>
+                    <?php
+                    $sql = "SELECT b.BookingID, b.HotelID,
+                    h.HotelID, h.Name AS HotelName, h.Price, h.Rating,
+                    l.Name AS LocationName
+                    FROM users u
+                    JOIN bookings b ON u.UserID = b.UserID
+                    LEFT JOIN hotels h ON b.HotelID = h.HotelID
+                    LEFT JOIN locations l ON h.LocationID = l.LocationID
+                    WHERE u.cookie = '$token'";
+
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+
+                        if ($row['HotelID'] !== null) {
+                            // User has booked a hotel
+                            $hasHotel = true;
+                            $HotelID = $row['HotelID'];
+                            $HotelName = $row['HotelName'];
+                            $Price = $row['Price'];
+                            $Rating = $row['Rating'];
+
+                            $prixTotal += floatval($Price);
+
+                            $LocationName = $row['LocationName'];
+                        } else {
+                            $hasHotel = false;
+                        }
+                    } else {
+                        $hasHotel = false;
+                    }
+                    if ($hasHotel) { // 3ndo Reservation Vol ?>
+                        <p class="info-label"><b>Nom de l'Hotel:</b>
+                            <?= $HotelName ?>
+                        </p>
+                        <p class="info-label"><b>Emplacement :</b>
+                            <?= $LocationName ?>
+                        </p>
+                        <p class="info-label"><b>Prix Hotel:</b>
+                            <?= $Price ?>
+                        </p>
+                    <?php } else { // Ma 3ndoch reservation Vol ?>
+                        <div class="actions">
+                            Vous avez pas un Hotel
+                            <a href="hotels.php" class="confirm-button">Book Now!</a>
+                        </div>
+                    <?php }
+                    ?>
+
                 </td>
+
                 <td class="total-price">
-                    <p class="info-label">Montant:</p>
+                    <p class="info-label">Montant:
+                        <?= $prixTotal ?>
+                    </p>
                     <br>
                     <div class="actions">
                         <button <?php if (!$FullInfo) {
