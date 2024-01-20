@@ -86,8 +86,8 @@
                 </thead>
                 <tbody>
                     <?php
-
-                    $sqlQuery = "SELECT HotelID, Name FROM Hotels LIMIT 10";
+                    //HotelID Name LocationID Description Price Rating ImageURLs
+                    $sqlQuery = "SELECT HotelID, Name,Description, Price  FROM Hotels LIMIT 10";
 
                     $result = mysqli_query($conn, $sqlQuery);
 
@@ -98,13 +98,15 @@
                         while ($row = mysqli_fetch_assoc($result)) {
                             $hotelName = $row['Name'];
                             $hotelID = $row['HotelID'];
+                            $hotelprice = $row['Price'];
+                            $hotelDescription = $row['Description'];
                             $type = "Hotel";
                             // Display the hotel card HTML structure
                             echo '<tr>';
                             echo "<td>$hotelID</td>";
                             echo "<td>$hotelName</td>";
-                            echo "<td>$hotelName</td>";
-                            echo "<td>$hotelName</td>";
+                            echo "<td>$hotelDescription</td>";
+                            echo "<td>$hotelprice</td>";
                             echo '<td>
                                     <a href="addHotel.php?id=' . $hotelID . '">
                                         <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
