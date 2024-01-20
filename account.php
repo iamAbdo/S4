@@ -26,13 +26,17 @@
 
         // Retrieve user information from the database
         $token = $conn->real_escape_string($_COOKIE['token']);
-        $sql = "SELECT username,email,Role FROM users WHERE cookie = '$token'";
+        $sql = "SELECT UserID, Username, Email, LastName, Role, FirstName FROM users WHERE cookie = '$token'";
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            $username = $row['username'];
-            $email = $row['email'];
+            $UserID = $row['UserID'];
+            $username = $row['Username'];
+            $email = $row['Email'];
+            $LastName = $row['LastName'];
+            $FirstName = $row['FirstName'];
+
             $role = $row['Role'];
         } else {
             header('Location: login.php');
@@ -40,7 +44,7 @@
         }
 
         // Close the database connection
-        $conn->close();
+    
     } else {
         header('Location: sign In.html');
         exit;
@@ -116,7 +120,132 @@
         </div>
         <!-- End of profile section -->
     </div>
+    <div class="Res-container">
+        <h1>Your Reservation</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Informations Personnelles</th>
+                <th>Informations sur le Vol</th>
+                <th>Informations sur l'Hôtel</th>
+                <th>Prix Total</th>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    //User Info
+                    
+                    function UserIfset($value, &$FullInfo)
+                    {
+                        if (isset($value)) {
+                            echo $value;
+                        } else {
+                            echo "non défini";
+                            $FullInfo = false;
+                        }
+                    }
 
+                    $FullInfo = true;
+                    ?>
+                    <p class="info-label"><b>Nom: </b>
+                        <?= UserIfset($LastName, $FullInfo) ?>
+                    </p>
+                    <p class="info-label"><b>Prénom: </b>
+                        <?= UserIfset($FirstName, $FullInfo) ?>
+                    </p>
+                    <p class="info-label"><b>Email:</b>
+                        <?= UserIfset($email, $FullInfo) ?>
+                    </p>
+                    <p class="info-label">Numéro de téléphone: 023232323</p>
+                </td>
+                <td>
+                    <?php
+                    $sql = "SELECT b.BookingID, b.FlightID,
+                        f.FlightID, f.DepartureLocationID, f.ArrivalLocationID, f.DepartureDateTime, f.ArrivalDateTime, f.Price, f.Airline,
+                        dl.Name AS DepartureLocationName, al.Name AS ArrivalLocationName
+                        FROM users u
+                        JOIN bookings b ON u.UserID = b.UserID
+                        LEFT JOIN flights f ON b.FlightID = f.FlightID
+                        LEFT JOIN locations dl ON f.DepartureLocationID = dl.LocationID
+                        LEFT JOIN locations al ON f.ArrivalLocationID = al.LocationID
+                        WHERE u.cookie = '$token'";
+
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+
+                        if ($row['FlightID'] !== null) {
+                            // User has booked a flight
+                            $hasFlight = true;
+                            $FlightID = $row['FlightID'];
+                            $DepartureLocationID = $row['DepartureLocationID'];
+                            $ArrivalLocationID = $row['ArrivalLocationID'];
+                            $DepartureDateTime = $row['DepartureDateTime'];
+                            $ArrivalDateTime = $row['ArrivalDateTime'];
+                            $Price = $row['Price'];
+                            $Airline = $row['Airline'];
+
+                            $DepartureLocationName = $row['DepartureLocationName'];
+                            $ArrivalLocationName = $row['ArrivalLocationName'];
+                        } else {
+                            $hasFlight = false;
+                        }
+                    } else {
+                        $hasFlight = false;
+                    }
+                    if ($hasFlight) { // 3ndo Reservation Vol ?>
+                        <p><b>Numéro de Vol:</b>
+                            <?= $FlightID ?>
+                        </p>
+                        <p class="info-label"><b>Du </b>
+                            <?= $DepartureLocationName ?>
+                            <b>Vers </b>
+                            <?= $ArrivalLocationName ?>
+                        </p>
+                        <p class="info-label"><b> Date et Heure de Départ: </b><br>
+                            Du
+                            <?= $DepartureDateTime ?>
+                            A
+                            <?= $ArrivalDateTime ?>
+                        </p>
+                        <p class="info-label"><b>Compagnie Aérienne: </b>
+                            <?= $Airline ?>
+                        </p>
+                        <p class="info-label"><b>Prix Vol: </b>
+                            <?= $Price ?>
+                        </p>
+
+
+                    <?php } else { // Ma 3ndoch reservation Vol ?>
+                        <div class="actions">
+                            Vous avez pas un vol
+                            <a href="vols.php" class="confirm-button">Book Now!</a>
+                        </div>
+                    <?php }
+                    ?>
+                </td>
+                <td>
+                    <p>Nom de l'Hôtel:</p>
+                    <p class="info-label">Adresse de l'Hôtel:</p>
+                    <p class="info-label">Numéro de Réservation:</p>
+                </td>
+                <td class="total-price">
+                    <p class="info-label">Montant:</p>
+                    <br>
+                    <div class="actions">
+                        <button <?php if (!$FullInfo) {
+                            echo 'onclick="nonDefiniPopOp()" ';
+                        } ?>
+                            class="confirm-button">Confirmer</button>
+                        <button class="cancel-button">Annuler</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+    </div>
 
     <!-- 
         #################### 

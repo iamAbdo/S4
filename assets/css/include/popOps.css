@@ -1,48 +1,48 @@
-#PopOp {
-    position: fixed;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    border: 5px solid #000;
-    border-radius: 10%;
-    background-color: beige;
+.PopOp {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border: 5px solid #000;
+  border-radius: 10%;
+  background-color: beige;
 }
 
-#PopOp-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.PopOp-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-#PopOp h1 {
-    font-weight: bold;
+.PopOp h1 {
+  font-weight: bold;
 }
 
-#PopOp button {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
+.PopOp button {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
 }
 
 #oui {
-    background-color: #4CAF50; /* Green */
+  background-color: #4caf50; /* Green */
 }
 
 #non {
-    background-color: #f44336; /* Red */
+  background-color: #f44336; /* Red */
 }
