@@ -48,7 +48,16 @@
                 $token = bin2hex(random_bytes(128));
                 $sql = "UPDATE users SET cookie = '$token' WHERE Email = '$email'";
                 $conn->query($sql);
-                setcookie('token', $token, time() + 3600, '/');
+
+                // Retrieve user information from the database
+                $sql = "SELECT cookie FROM users WHERE email = '$email'";
+                $result = $conn->query($sql);
+
+                $row = $result->fetch_assoc();
+                $token = $row['cookie'];
+
+                setcookie('token', $token, time() + (3600 * 24 * 365), '/'); // Cookie expires in 1 Year
+                echo $token;
                 header("Location: account.php");
             } else {
                 echo "erreur";
@@ -89,7 +98,7 @@
                     <i></i>
                 </div>
                 <div class="links">
-                    <a href="./sign in.html">Already have an account?</a>
+                    <a href="./signIn.php">Already have an account?</a>
                 </div>
 
                 <input type="submit" value="Sign Up">

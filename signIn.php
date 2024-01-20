@@ -66,7 +66,7 @@ if (isset($_POST['password']) && isset($_POST['email'])) {
     </header>
 
     <!-- partial:index.partial.html -->
-    <form action="signIn2.php" method="POST">
+    <form action="signIn.php" method="POST">
         <div class="box">
             <div class="form">
                 <h2>Sign in</h2>

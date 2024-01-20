@@ -25,7 +25,7 @@
         }
 
         // Retrieve user information from the database
-        $token = $conn->real_escape_string($_COOKIE['token']);
+        $token = $_COOKIE['token'];
         $sql = "SELECT UserID,address, phone, birthdate, Username, Email, LastName, Role, FirstName FROM users WHERE cookie = '$token'";
         $result = $conn->query($sql);
 
@@ -66,7 +66,8 @@
             $row = $result->fetch_assoc();
             $status = $row['status'];
         } else {
-            echo "No booking found for the user.";
+            //echo "No booking found for the user.";
+            $status = "pending";
         }
         // Free the result set
         $result->free();
