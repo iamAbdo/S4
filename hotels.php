@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/include/header.css">
-    <link rel="stylesheet" href="assets/css/bab.css">
+    <link rel="stylesheet" href="assets/css/hotels.css">
     <title>Document</title>
 </head>
 
@@ -23,6 +23,7 @@
 
         <div id="cat">
             <?PHP
+            $PageNumber = isset($_GET['page']) ? $_GET['page'] : 1;
             $GETLocationID = isset($_GET['LocationID']) ? $_GET['LocationID'] : null;
 
             require 'assets/db/connect.php';
@@ -59,7 +60,7 @@
                 hotels.Description AS Description,
                 hotels.Rating,
                 hotels.ImageURLs
-                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID;' :
+                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID LIMIT 10;' :
                 "SELECT
                 hotels.HotelID,
                 hotels.Name AS Name,
@@ -68,7 +69,7 @@
                 hotels.Description AS Description,
                 hotels.Rating,
                 hotels.ImageURLs
-                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID WHERE LocationID=$GETLocationID LIMIT 30";
+                FROM hotels JOIN locations ON hotels.LocationID = locations.LocationID WHERE LocationID=$GETLocationID LIMIT 10";
 
             $result = mysqli_query($conn, $sqlQuery);
 
@@ -110,7 +111,7 @@
                             <div class="reserve-option">
                                 <!-- ... Vos options de réservation ... -->
                             </div>
-                            <a href="reservation.php" class="reserve-button">
+                            <a href="reservation.php?HotelID=<?= $hotelID ?>" class="reserve-button">
                                 Reserve Now
                             </a>
                         </div>
@@ -130,14 +131,21 @@
 
 
             <div class="thumbnails">
+                <div class="arrow">⬅️</div>
                 <div class="thumbnail-container">
                     <!-- ... Vos miniatures ... -->
+                    Page
+                    <?= $PageNumber ?>
                 </div>
                 <div class="arrow">➡️</div>
             </div>
 
         </div>
     </div>
+
+    <?php
+    include 'include/footer.php';
+    ?>
 
     <script src="./assets/js/scroll_effect.js"></script>
 

@@ -24,7 +24,7 @@ function checkUserRoleAndRedirect()
             }
         } else {
             echo "<script>alert('Ok smart guy YOU ARE BANNED!')</script>";
-            header('Location: login.php');
+            header('Location: sign In.php');
             exit;
         }
 
@@ -32,7 +32,7 @@ function checkUserRoleAndRedirect()
         $conn->close();
     } else {
         echo "<script>alert('You need an Account to access this page')</script>";
-        header('Location: signIn.html');
+        header('Location: sign In.html');
         exit;
     }
 }

@@ -60,7 +60,7 @@
                 <p>Vacation Travel</p>
             </div>
 
-            <div class="icon" onclick="location.href='hotels.html'">
+            <div class="icon" onclick="location.href='hotels.php'">
                 <img src="./assets/Images/icons/Hotel_White.png" alt="Hotels Icon">
                 <p>Hotels</p>
             </div>
