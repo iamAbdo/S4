@@ -111,6 +111,12 @@
                             <div class="reserve-option">
                                 <!-- ... Vos options de réservation ... -->
                             </div>
+                            <label for="arrival-date">Arrivée:</label>
+                            <input type="date" id="arrival-date" name="arrival-date" required>
+
+                            <label for="departure-date">Départ:</label>
+                            <input type="date" id="departure-date" name="departure-date" required>
+
                             <a href="reservation.php?HotelID=<?= $hotelID ?>" class="reserve-button">
                                 Reserve Now
                             </a>
