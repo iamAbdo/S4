@@ -31,6 +31,8 @@
             <input type="date" name="DepartureDateTime">
             <label for="ArrivalDateTime">Arrival Date/Time: </label>
             <input type="date" name="ArrivalDateTime">
+
+            
         </div>
         <div id="Hotel-cards">
             <?php
@@ -53,11 +55,12 @@
                     $firstImageURL = './assets/Images/Airlines/' . $Airline . '.jpg';
 
                     $Description = "Du $DepartureLocationID vers $ArrivalLocationID Date: $DepartureDateTime to $ArrivalDateTime";
-
-                    echo "<a href='vol.php?vol=$FlightID'><div class='info-card'>";
-                    echo '<div class="images" style="background-image: url(' . $firstImageURL . ');"></div>';
-                    echo '<div class="title"> Flight-' . $FlightID . '</div>';
-                    echo '<div class="description">' . $Description . '</div>';
+                    
+                    
+                    echo "<a href='vol.php?vol=$FlightID'><div class='cat'>";
+                    echo '<div class="hotel-img" style="background-image: url(' . $firstImageURL . ');"></div>';
+                    echo '<div class="hotel-name"> Flight-' . $FlightID . '</div>';
+                    echo '<div class="hotel-desc">' . $Description . '</div>';
                     echo '</div></a>';
                 }
                 // Free result set
