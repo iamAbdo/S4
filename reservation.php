@@ -114,7 +114,7 @@
                 $updateBookingQuery = "UPDATE bookings SET FlightID = ? WHERE BookingID = ?";
 
                 $stmt = $conn->prepare($updateBookingQuery);
-                $stmt->bind_param("is", $flightID, $bookingID);
+                $stmt->bind_param("ii", $flightID, $bookingID);
                 $stmt->execute();
                 $stmt->close();
             }
