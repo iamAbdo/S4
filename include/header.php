@@ -24,7 +24,7 @@
         <div class="nav-links">
             <a href="index.php">Main</a>
             <a href="hotels.php">Hotels</a>
-            <a href="destinations.php">Destination</a>
+            <a href="lieu.php">Destination</a>
             <a href="vols.php">Vols</a>
         </div>
 
