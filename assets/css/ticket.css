@@ -1,39 +1,112 @@
-*{
-    font-family: 'Montserrat', serif;
-    margin: 0;
-    padding: 0;
+* {
+  font-family: "Montserrat", serif;
+  margin: 0;
+  padding: 0;
 }
 
-.pass{
-    position:relative;
-    font-size:2vw;
-    font-weight: bolder;
-    text-wrap: nowrap;
-    width: 100%;
+.pass {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 2vw;
+  font-weight: bolder;
+  text-wrap: nowrap;
+  width: 100%;
 }
-.pass img{
-    width: 100%;
-    height: auto;
+
+.pass img {
+  width: 100%;
+  height: auto;
 }
-#name{
-    position: absolute;
-    top: 42%;
-    left: 19%;
+
+#vol {
+  position: absolute;
+  top: 30.8%; /* Adjusted top value */
+  left: 15%;
 }
-#fligth{
-    position: absolute;
-    top: 34%;
-    left: 15%;
+
+#depart {
+  position: absolute;
+  top: 30.8%; /* Adjusted top value */
+  left: 29%;
 }
-#destination{
-    position: absolute;
-    top: 34%;
-    left: 30%;
-    word-spacing: 12vw;
+
+#arriver {
+  position: absolute;
+  top: 30.8%; /* Adjusted top value */
+  left: 46%;
 }
-#date{
-    position: absolute;
-    top:50%;
-    left: 12%;
-    word-spacing: 8vw;
+
+#NomPrenom {
+  position: absolute;
+  top: 35.8%; /* Adjusted top value */
+  left: 19%;
+}
+
+#date {
+  position: absolute;
+  top: 40.5%; /* Adjusted top value */
+  left: 12%;
+}
+
+#time {
+  position: absolute;
+  top: 40.5%; /* Adjusted top value */
+  left: 31%;
+}
+
+#boarding {
+  position: absolute;
+  top: 40.5%; /* Adjusted top value */
+  left: 51%;
+}
+
+#gate {
+  position: absolute;
+  top: 45.5%; /* Adjusted top value */
+  left: 12%;
+}
+
+#seat {
+  position: absolute;
+  top: 45.5%; /* Adjusted top value */
+  left: 31%;
+}
+
+#company {
+  position: absolute;
+  top: 15%; /* Adjusted top value */
+  left: 73%;
+  background-color: white;
+  border-radius: 50px;
+}
+
+#nomPrenom2 {
+  position: absolute;
+  top: 34.8%; /* Adjusted top value */
+  left: 70%;
+}
+
+#vol2 {
+  position: absolute;
+  top: 38%; /* Adjusted top value */
+  left: 70%;
+}
+
+#time2 {
+  position: absolute;
+  top: 38%; /* Adjusted top value */
+  left: 84%;
+}
+
+#gate2 {
+  position: absolute;
+  top: 44.7%; /* Adjusted top value */
+  left: 70%;
+}
+
+#seat2 {
+  position: absolute;
+  top: 44.7%; /* Adjusted top value */
+  left: 83.5%;
 }
