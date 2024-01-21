@@ -256,7 +256,7 @@
                     </div>
                 </div>
             </div>
-            <button><a href="hotels.php">See More!</a></button>
+            <button><a href="lieu.php">See More!</a></button>
         </section>
     </section>
 
@@ -294,6 +294,7 @@
                     </div>
                 </div>
             </div>
+            <button><a href="hotels.php">See More!</a></button>
     </section>
     <!-- 
         
