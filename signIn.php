@@ -99,7 +99,7 @@ if (isset($_POST['password']) && isset($_POST['email'])) {
         </div>
     </form>
     <!-- partial -->
-
+     
 </body>
 
 </html>

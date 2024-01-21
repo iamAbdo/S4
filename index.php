@@ -50,12 +50,12 @@
         </div>
 
         <div class="service-icons">
-            <div class="icon" onclick="location.href='work-travel.html'">
+            <div class="icon" onclick="location.href='vols.php'">
                 <img src="./assets/Images/icons/Work_White.png" alt="Work Travel Icon">
                 <p>Work Travel</p>
             </div>
 
-            <div class="icon" onclick="location.href='vacation-travel.html'">
+            <div class="icon" onclick="location.href='lieu.php'">
                 <img src="./assets/Images/icons/Vac_White.png" alt="Vacation Travel Icon">
                 <p>Vacation Travel</p>
             </div>
