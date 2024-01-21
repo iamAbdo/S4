@@ -86,9 +86,12 @@ body {
   margin-bottom: 20px;
   color: #555;
 }
-
+.buttons {
+  display: flex;
+  gap: 30px;
+}
 .reserve-button {
-  width: 95%;
+  width: 45%;
   background-color: #1877f2;
   color: #fff;
   padding: 15px;

@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/hotel.css">
+    <link rel="stylesheet" href="assets/css/include/header.css">
+    <link rel="stylesheet" href="assets/css/include/footer.css">
     <title>Document</title>
 </head>
 
 <body>
 
     <?php
-    include 'include/header.php';
-
+    //include 'include/header.php';
+    
     if (isset($_GET['hotel'])) {
         $hotelID = $_GET['hotel'];
     } else {
@@ -46,50 +48,30 @@
     <div class="info-card">
         <div class="images">
             <div class="main-imgs">
-                <?php
-                if ($imageURLs && is_array($imageURLs)) {
-                    foreach ($imageURLs as $imageURL) {
-                        $fullImageURL = "./assets/Images/Hotels/hotel-$hotelID/$imageURL";
-                        echo "<img src='$fullImageURL' alt='$fullImageURL' class='slide'>";
-                    }
-                } else {
-                    echo "No images available for this hotel.";
-                }
-                ?>
+                <img src="./assets/Images/img1.jpg" alt="./assets/Images/Hotels/hotel-4/img1.webp" class="slide"
+                    style="left: 0%;">
             </div>
             <div class="s-images">
-                <button onclick="imgBefore()" class="small-img" style='width: 10%'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                        <path
-                            d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z" />
-                        <path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z" />
-                    </svg>
-                </button>
-                <?php
 
-                if ($imageURLs && is_array($imageURLs)) {
-                    $cpt = 0;
-                    $imageSize = count($imageURLs);
-                    $totalWidth = 75;
-                    $smallImageWidth = 75 / $imageSize . "%";
-                    foreach ($imageURLs as $imageURL) {
-                        $fullImageURL = "./assets/Images/Hotels/hotel-$hotelID/$imageURL";
-                        //style='width: $smallImageWidth'
-                        echo "<div class='small-img' onclick='setCounterAndSlide($cpt)' >
-                                <img src='$fullImageURL' alt='$fullImageURL'></div>";
-                        $cpt++;
-                    }
-                } else {
-                    echo "No images";
-                }
-                ?>
-                <button onclick="imgAfter()" class="small-img" style='width: 10%'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                        <path
-                            d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z" />
-                        <path d="M9.293 8.707 12.586 12l-3.293 3.293 1.414 1.414L15.414 12l-4.707-4.707-1.414 1.414z" />
-                    </svg>
-                </button>
+
+
+                <div class="thumbnails">
+                    <div class="arrow left">&lt;</div>
+                    <div class="thumbnail-container">
+                        <?php
+                        if ($imageURLs && is_array($imageURLs)) {
+                            foreach ($imageURLs as $imageURL) {
+                                $fullImageURL = "./assets/Images/Hotels/hotel-$hotelID/$imageURL";
+                                //echo "<img src='$fullImageURL' alt='$fullImageURL' class='slide'>";
+                                echo '<div class="thumbnail" style="background-image: url(' . $fullImageURL . ');"></div>';
+                            }
+                        } else {
+                            echo "No images available for this hotel.";
+                        }
+                        ?>
+                    </div>
+                    <div class="arrow right">&gt;</div>
+                </div>
             </div>
         </div>
         <div class="detail">
@@ -116,15 +98,48 @@
                 Key card access<br>
                 Daily housekeeping<br>
             </div>
-            <div class="reserve-option">
-                2beds-1room 1bed 3beds-2rooms 2beds-2rooms
-            </div>
-            <a href="reservation.php">
-                <div class="reserve-button">
-                    Reserve Now
-                    <?php echo $hotelprice . "$" ?>
+
+
+            <form id="myForm" action="reservation.php" method="post">
+                <?php echo $hotelprice . "$" ?>
+                <div class="reserve-option">
+                    <label for="arrival-date">Arrivée:</label>
+                    <input type="date" id="arrival-date" name="arrival-date" required>
+
+                    <label for="departure-date">Départ:</label>
+                    <input type="date" id="departure-date" name="departure-date" required>
+
+                    <label for="num-people">Nombre de personnes:</label>
+                    <select id="num-people" name="num-people" required>
+                        <option value="1">1 personne</option>
+                        <option value="2">2 personnes</option>
+                        <option value="3">3 personnes</option>
+                        <!-- Ajoutez plus d'options au besoin -->
+                    </select>
+
+                    <label for="num-rooms">Nombre de chambres:</label>
+                    <select id="num-rooms" name="num-rooms" required>
+                        <option value="1">1 chambre</option>
+                        <option value="2">2 chambres</option>
+                        <option value="3">3 chambres</option>
+                        <!-- Ajoutez plus d'options au besoin -->
+                    </select>
                 </div>
-            </a>
+
+                <a href="reservation.html">
+                    <button class="btn" type="submit">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor"
+                                class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="text">RESERVER</span>
+                    </button>
+                </a>
+            </form>
         </div>
     </div>
 

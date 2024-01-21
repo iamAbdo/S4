@@ -119,9 +119,14 @@
                                 <input type="date" id="departure-date<?= $hotelID ?>" name="checkOutDate" required>
 
                                 <br><br>
-                                <button type="submit" name="submit" class="reserve-button">
-                                    Reserve Now
-                                </button>
+                                <div class="buttons">
+                                    <a href="hotel.php?hotel=<?= $hotelID ?>" class="reserve-button">
+                                        Plus de details
+                                    </a>
+                                    <button type="submit" name="submit" class="reserve-button">
+                                        Reserve Now
+                                    </button>
+                                </div>
                             </form>
 
                             <script>
