@@ -55,12 +55,12 @@
                 while ($row = $result->fetch_assoc()) {
                     $FirstName = $row['FirstName'];
                     $LastName = $row['LastName'];
-                    $flightNumber = $row['FlightID'];
+                    $FlightID = $row['FlightID'];
                     $departure = $row['DepartureLocationName'];
                     $arrival = $row['ArrivalLocationName'];
                     $date = date('Y-m-d', strtotime($row['DepartureDateTime']));
                     $time = date('H:i', strtotime($row['DepartureDateTime']));
-                    $boarding = $row['BookingID'];
+                    $bookingID = $row['BookingID'];
                     $gate = '12'; // You may need to retrieve this information based on your database structure
                     $seat = 'B05'; // You may need to retrieve this information based on your database structure
                     $airline = $row['Airline'];
