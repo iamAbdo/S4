@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <link rel="stylesheet" href="/assets/css/ticket.css">
+    <link rel="stylesheet" href="assets/css/ticket.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <div class="pass">
         <img src="assets/Images/sahla-ticket.png">
