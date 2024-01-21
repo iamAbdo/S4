@@ -17,6 +17,10 @@ body {
   width: 500px;
   height: 400px;
 }
+.h1{
+ position: relative;
+ left: 12rem; 
+}
 
 .form-group {
   margin-bottom: 20px;
