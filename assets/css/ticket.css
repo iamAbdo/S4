@@ -21,55 +21,55 @@
 
 #vol {
   position: absolute;
-  top: 30.8%; /* Adjusted top value */
+  top: 34%; /* Adjusted top value */
   left: 15%;
 }
 
 #depart {
   position: absolute;
-  top: 30.8%; /* Adjusted top value */
+  top: 34%; /* Adjusted top value */
   left: 29%;
 }
 
 #arriver {
   position: absolute;
-  top: 30.8%; /* Adjusted top value */
+  top: 34%; /* Adjusted top value */
   left: 46%;
 }
 
 #NomPrenom {
   position: absolute;
-  top: 35.8%; /* Adjusted top value */
+  top: 42%; /* Adjusted top value */
   left: 19%;
 }
 
 #date {
   position: absolute;
-  top: 40.5%; /* Adjusted top value */
+  top: 50%; /* Adjusted top value */
   left: 12%;
 }
 
 #time {
   position: absolute;
-  top: 40.5%; /* Adjusted top value */
+  top: 50%; /* Adjusted top value */
   left: 31%;
 }
 
 #boarding {
   position: absolute;
-  top: 40.5%; /* Adjusted top value */
+  top: 50%; /* Adjusted top value */
   left: 51%;
 }
 
 #gate {
   position: absolute;
-  top: 45.5%; /* Adjusted top value */
+  top: 58%; /* Adjusted top value */
   left: 12%;
 }
 
 #seat {
   position: absolute;
-  top: 45.5%; /* Adjusted top value */
+  top: 58%; /* Adjusted top value */
   left: 31%;
 }
 
@@ -89,24 +89,24 @@
 
 #vol2 {
   position: absolute;
-  top: 38%; /* Adjusted top value */
+  top: 45%; /* Adjusted top value */
   left: 70%;
 }
 
 #time2 {
   position: absolute;
-  top: 38%; /* Adjusted top value */
+  top: 45%; /* Adjusted top value */
   left: 84%;
 }
 
 #gate2 {
   position: absolute;
-  top: 44.7%; /* Adjusted top value */
+  top: 57%; /* Adjusted top value */
   left: 70%;
 }
 
 #seat2 {
   position: absolute;
-  top: 44.7%; /* Adjusted top value */
+  top: 57%; /* Adjusted top value */
   left: 83.5%;
 }
