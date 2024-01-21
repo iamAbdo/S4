@@ -120,7 +120,8 @@
 
                                 <br><br>
                                 <div class="buttons">
-                                    <a href="hotel.php?hotel=<?= $hotelID ?>" class="reserve-button">
+                                    <!--<a href="hotel.php?hotel=<= $hotelID ?>" class="reserve-button">-->
+                                    <a href="hotel.html" class="reserve-button">
                                         Plus de details
                                     </a>
                                     <button type="submit" name="submit" class="reserve-button">
