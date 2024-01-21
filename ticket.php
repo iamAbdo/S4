@@ -78,21 +78,51 @@
         }
         ?>
 
-        <div id="vol"><?= $FlightID ?></div>
-        <div id="depart"><?= $departure ?></div>
-        <div id="arriver"><?= $arrival ?></div>
-        <div id="NomPrenom"><?= $FirstName . " " . $LastName ?></div>
-        <div id="date"><?= $date ?></div>
-        <div id="time"><?= $time ?></div>
-        <div id="boarding"><?= $bookingID ?></div>
-        <div id="gate"><?= $gate ?></div>
-        <div id="seat"><?= $seat ?></div>
-        <div id="company"><?= $airline ?></div>
-        <div id="nomPrenom2"><?= $FirstName . " " . $LastName ?></div>
-        <div id="vol2"><?= $FlightID ?></div>
-        <div id="time2"><?= $time ?></div>
-        <div id="gate2"><?= $gate ?>15</div>
-        <div id="seat2"><?= $seat ?>34B</div><?php }
+        <div id="vol">
+            <?= $FlightID ?>
+        </div>
+        <div id="depart">
+            <?= $departure ?>
+        </div>
+        <div id="arriver">
+            <?= $arrival ?>
+        </div>
+        <div id="NomPrenom">
+            <?= $FirstName . " " . $LastName ?>
+        </div>
+        <div id="date">
+            <?= $date ?>
+        </div>
+        <div id="time">
+            <?= $time ?>
+        </div>
+        <div id="boarding">
+            <?= $bookingID ?>
+        </div>
+        <div id="gate">
+            <?= $gate ?>
+        </div>
+        <div id="seat">
+            <?= $seat ?>
+        </div>
+        <div id="company">
+            <?= $airline ?>
+        </div>
+        <div id="nomPrenom2">
+            <?= $FirstName . " " . $LastName ?>
+        </div>
+        <div id="vol2">
+            <?= $FlightID ?>
+        </div>
+        <div id="time2">
+            <?= $time ?>
+        </div>
+        <div id="gate2">
+            <?= $gate ?>15
+        </div>
+        <div id="seat2">
+            <?= $seat ?>34B
+        </div>
 
     </div>
 </body>
