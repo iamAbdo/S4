@@ -29,7 +29,7 @@ body {
 
 /* header */
 .logo img {
-  height: 20vh; /* taille logo */
+  height: 10vh; /* taille logo */
   min-height: 3px; /* taille minimum*/
   width: auto; /* y5li meme aspect ratio */
   height: 150px;
