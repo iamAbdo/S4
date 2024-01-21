@@ -86,9 +86,9 @@
                 $stmt->bind_param("isss", $HotelID, $CheckInDate, $CheckOutDate, $bookingID);
                 $stmt->execute();
                 $stmt->close();
-                header('Location: account.php');
-                exit;
             }
+            header('Location: account.php');
+            exit;
         }
 
         // Reservation Flight
@@ -119,9 +119,9 @@
                 $stmt->bind_param("ii", $flightID, $bookingID);
                 $stmt->execute();
                 $stmt->close();
-                header('Location: account.php');
-                exit;
             }
+            header('Location: account.php');
+            exit;
         }
     }
     ?>
