@@ -105,7 +105,8 @@
         <div id="seat">
             <?= $seat ?>
         </div>
-        <div id="company">
+        <div id="company"><img src="./assets/Images/Airlines/<?= $airline ?>.png" alt=""></div>
+        <div id="companyName">
             <?= $airline ?>
         </div>
         <div id="nomPrenom2">

@@ -77,8 +77,22 @@
   position: absolute;
   top: 15%; /* Adjusted top value */
   left: 73%;
-  background-color: white;
-  border-radius: 50px;
+  background-color: #c8dbea;
+  width: 5%;
+}
+
+#company img {
+  width: 100%;
+  background-color: #c8dbea;
+}
+#companyName {
+  position: absolute;
+  top: 15%;
+  left: 78%;
+  padding: 1%;
+  background-color: #c8dbea;
+  width: 10%;
+  overflow: hidden;
 }
 
 #nomPrenom2 {
