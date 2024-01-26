@@ -55,6 +55,7 @@
                 'SELECT
                 hotels.HotelID,
                 hotels.Name AS Name,
+                hotels.price AS price,
                 locations.LocationID,
                 locations.Name AS LocationName,
                 hotels.Description AS Description,
@@ -64,6 +65,7 @@
                 "SELECT
                 hotels.HotelID,
                 hotels.Name AS Name,
+                hotels.price AS price,
                 locations.LocationID,
                 locations.Name AS LocationName,
                 hotels.Description AS Description,
@@ -81,6 +83,7 @@
                     $locationName = $row['LocationName'];
                     $hotelID = $row['HotelID'];
                     $rating = $row['Rating'];
+                    $price = $row['price'];
                     $hotelDescription = $row['Description'];
                     $imageURLs = json_decode($row['ImageURLs']);
                     $firstImageURL = './assets/Images/Hotels/hotel-' . $hotelID . '/' . $imageURLs[0] . '';
@@ -98,7 +101,8 @@
                                 <?= $hotelName ?>
                             </h1>
                             <div class="stars">
-                                <?= $rating ?>/5 stars
+                                <?= $rating ?>/5 stars <br>
+                                Prix: <?= $price ?>$
                             </div>
                             <div class="description">
                                 <?= $locationName ?><br>

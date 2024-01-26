@@ -48,7 +48,7 @@
         JOIN 
             locations al ON f.ArrivalLocationID = al.LocationID
         WHERE 
-            u.cookie = $token";
+            u.cookie = '$token'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
